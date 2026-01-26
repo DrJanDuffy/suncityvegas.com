@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://www.delwebbnorthranchhomes.com";
+  const baseUrl = "https://www.suncityvegas.com";
 
   return [
     // Homepage - Priority 1.0, Daily
@@ -18,15 +18,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "daily",
       priority: 0.9,
     },
-    {
-      url: `${baseUrl}/floor-plans`,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
     // Secondary Pages - Priority 0.8
     {
       url: `${baseUrl}/amenities`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/lifestyle`,
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.8,
@@ -45,7 +45,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     // Tertiary Pages - Priority 0.7
     {
-      url: `${baseUrl}/lifestyle`,
+      url: `${baseUrl}/home-value`,
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.7,

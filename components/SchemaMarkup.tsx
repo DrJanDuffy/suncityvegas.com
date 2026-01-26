@@ -1,32 +1,32 @@
 import Script from 'next/script';
 
 export default function SchemaMarkup() {
-  const baseUrl = 'https://www.delwebbnorthranchhomes.com';
+  const baseUrl = 'https://www.suncityvegas.com';
 
   // Organization Schema
   const organizationSchema = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     '@id': `${baseUrl}/#organization`,
-    name: 'Del Webb North Ranch 55+ Real Estate | Homes by Dr. Jan Duffy',
-    alternateName: 'Dr. Jan Duffy Real Estate',
+    name: 'Sun City Summerlin Homes for Sale | Dr. Jan Duffy',
+    alternateName: 'Sun City Vegas Real Estate',
     url: baseUrl,
     logo: `${baseUrl}/images/logo/logo.svg`,
-    telephone: '+1-702-500-1064',
-    email: 'sales@delwebbnorthranchhomes.com',
+    telephone: '+1-702-222-1964',
+    email: 'jan@drjanduffy.com',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: '2290 Beauty Vista Avenue',
-      addressLocality: 'North Las Vegas',
+      streetAddress: '9107 Del Webb Blvd',
+      addressLocality: 'Las Vegas',
       addressRegion: 'NV',
-      postalCode: '89086',
+      postalCode: '89134',
       addressCountry: 'US',
     },
     sameAs: [
-      'https://www.youtube.com/@DrDuffy',
-      'https://www.instagram.com/delwebbnorthranchhomes/',
-      'https://www.linkedin.com/company/del-webb-north-ranch-homes',
-      'https://www.facebook.com/DellWebbNorthRanch',
+      'https://www.youtube.com/@drjanduffy',
+      'https://www.instagram.com/drjanduffy',
+      'https://www.linkedin.com/in/drjanduffy',
+      'https://www.facebook.com/drjanduffy',
     ],
     parentOrganization: {
       '@type': 'Organization',
@@ -38,7 +38,7 @@ export default function SchemaMarkup() {
   const websiteSchema = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    name: 'Del Webb North Ranch 55+ Real Estate | Homes by Dr. Jan Duffy',
+    name: 'Sun City Summerlin Homes for Sale | Dr. Jan Duffy',
     url: baseUrl,
     potentialAction: {
       '@type': 'SearchAction',
@@ -50,7 +50,7 @@ export default function SchemaMarkup() {
     },
     publisher: {
       '@type': 'Organization',
-      name: 'Del Webb North Ranch 55+ Real Estate | Homes by Dr. Jan Duffy',
+      name: 'Sun City Summerlin Homes for Sale | Dr. Jan Duffy',
       logo: {
         '@type': 'ImageObject',
         url: `${baseUrl}/images/logo/logo.svg`,
@@ -63,24 +63,27 @@ export default function SchemaMarkup() {
     '@context': 'https://schema.org',
     '@type': 'RealEstateAgent',
     name: 'Dr. Jan Duffy',
-    alternateName: 'Dr. Janet Duffy',
     url: baseUrl,
     image: `${baseUrl}/images/about/dr-jan-duffy.jpg`,
-    telephone: '+1-702-500-1064',
-    email: 'sales@delwebbnorthranchhomes.com',
+    telephone: '+1-702-222-1964',
+    email: 'jan@drjanduffy.com',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: '2290 Beauty Vista Avenue',
-      addressLocality: 'North Las Vegas',
+      streetAddress: '9107 Del Webb Blvd',
+      addressLocality: 'Las Vegas',
       addressRegion: 'NV',
-      postalCode: '89086',
+      postalCode: '89134',
       addressCountry: 'US',
     },
     areaServed: [
       {
-        '@type': 'City',
-        name: 'North Las Vegas',
-        addressRegion: 'NV',
+        '@type': 'Place',
+        name: 'Sun City Summerlin',
+        address: {
+          '@type': 'PostalAddress',
+          addressLocality: 'Las Vegas',
+          addressRegion: 'NV',
+        },
       },
       {
         '@type': 'City',
@@ -89,19 +92,14 @@ export default function SchemaMarkup() {
       },
       {
         '@type': 'City',
-        name: 'Henderson',
-        addressRegion: 'NV',
-      },
-      {
-        '@type': 'City',
-        name: 'Clark County',
+        name: 'Summerlin',
         addressRegion: 'NV',
       },
     ],
-    priceRange: '$400,000-$600,000',
+    priceRange: '$300,000-$800,000+',
     worksFor: {
       '@type': 'Organization',
-      name: 'Del Webb North Ranch 55+ Real Estate | Homes by Dr. Jan Duffy',
+      name: 'Sun City Summerlin Homes for Sale | Dr. Jan Duffy',
     },
     memberOf: {
       '@type': 'Organization',
