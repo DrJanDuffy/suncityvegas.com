@@ -245,6 +245,19 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
       <head>
         <link rel="icon" href="/favicon.ico" />
+        {/* Google Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-NHQBT9NYXR"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-NHQBT9NYXR');
+          `}
+        </Script>
         {/* Calendly Badge Widget CSS */}
         <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
         {/* Structured Data - Consolidated Schema Markup */}
