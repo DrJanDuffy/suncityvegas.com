@@ -16,14 +16,14 @@
 - ✅ **Organization Schema**: Added brokerage information
 - ✅ **WebSite Schema**: Added with SearchAction for site search
 - ✅ **Place Schema**: Added for local SEO (community location with coordinates)
-- ✅ **BreadcrumbList Schema**: Added to floor plan detail pages and blog posts
+- ✅ **BreadcrumbList Schema**: Added to detail pages and blog posts
   - Desktop SERPs: Full breadcrumb trail visible
   - Mobile SERPs: Only root domain (Google 2025 change)
   - On-page UX: Helps users navigate and understand site structure
 - ✅ All schemas use XSS-safe JSON.stringify with `</g, "\\u003c"` replacement
 
 ### 3. Canonical URLs
-- ✅ All pages updated to use `https://www.delwebbnorthranchhomes.com`
+- ✅ All pages updated to use `https://www.suncityvegas.com`
 - ✅ Consistent domain across all metadata
 
 ### 4. Sitemap & Robots
@@ -36,7 +36,7 @@
 
 ### Step 1: Verify Site Ownership
 1. Go to [Google Search Console](https://search.google.com/search-console)
-2. Add property: `https://www.delwebbnorthranchhomes.com`
+2. Add property: `https://www.suncityvegas.com`
 3. Choose verification method:
    - **HTML tag** (recommended): Add meta tag to `src/app/layout.tsx` in `verification.google`
    - **HTML file**: Upload to `public/` directory
@@ -45,14 +45,15 @@
 
 ### Step 2: Submit Sitemap
 1. In Search Console, go to **Sitemaps**
-2. Submit: `https://www.delwebbnorthranchhomes.com/sitemap.xml`
+2. Submit: `https://www.suncityvegas.com/sitemap.xml`
 3. Verify it's processed (usually within 24 hours)
 
 ### Step 3: Request Indexing
 1. Use **URL Inspection** tool for key pages:
    - Homepage
    - Homes for Sale
-   - Floor Plans
+   - Amenities
+   - Lifestyle
    - About
    - Contact
 2. Click "Request Indexing" for each
@@ -67,7 +68,7 @@
 
 ### Metadata
 - ✅ Unique titles per page with location keywords
-- ✅ Descriptions include: "Del Webb North Ranch", "55+", "North Las Vegas"
+- ✅ Descriptions include: "Sun City Summerlin", "55+", "Las Vegas"
 - ✅ Canonical URLs on every page
 - ✅ OpenGraph tags for social sharing
 - ✅ Twitter Card metadata
@@ -78,9 +79,7 @@
 - ✅ WebSite schema (site search)
 - ✅ Place schema (community location for local SEO)
 - ✅ FAQPage schema (FAQ page)
-- ✅ Product schema (floor plans)
-- ✅ ItemList schema (floor plans listing)
-- ✅ BreadcrumbList schema (floor plan details & blog posts)
+- ✅ BreadcrumbList schema (detail pages & blog posts)
 
 ### Technical SEO
 - ✅ Semantic HTML5 structure
@@ -100,7 +99,7 @@
 
 ### 1. Google Business Profile
 - Ensure GBP is verified and optimized
-- Add website link: `https://www.delwebbnorthranchhomes.com`
+- Add website link: `https://www.suncityvegas.com`
 - Sync NAP information
 - Add photos and posts regularly
 
@@ -146,8 +145,8 @@
 
 ## 🔗 Important URLs
 
-- **Sitemap**: `https://www.delwebbnorthranchhomes.com/sitemap.xml`
-- **Robots**: `https://www.delwebbnorthranchhomes.com/robots.txt`
+- **Sitemap**: `https://www.suncityvegas.com/sitemap.xml`
+- **Robots**: `https://www.suncityvegas.com/robots.txt`
 - **Google Search Console**: https://search.google.com/search-console
 - **Rich Results Test**: https://search.google.com/test/rich-results
 - **PageSpeed Insights**: https://pagespeed.web.dev/
@@ -157,4 +156,4 @@
 - All canonical URLs use `www` subdomain for consistency
 - Structured data validated against Schema.org
 - Ready for Google Search Console verification
-- Sitemap includes all 11 main pages with proper priorities
+- Sitemap includes all main pages with proper priorities

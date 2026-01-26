@@ -1,43 +1,43 @@
 ---
-description: Accessibility, SEO, and Next.js 15 best practices for Del Webb North Ranch website
+description: Accessibility, SEO, and Next.js 15 best practices for Sun City Summerlin website
 globs: components/**/*.tsx,src/app/**/*.tsx,src/components/**/*.tsx
 alwaysApply: true
 ---
 
-# Del Webb North Ranch - Development Rules
+# Sun City Summerlin - Development Rules
 
 ## 🎯 Project Context
 - **Stack:** Next.js 15 App Router, React 19, TypeScript, Tailwind CSS 4
 - **Focus:** Real estate website for Dr. Jan Duffy, REALTOR®
-- **Community:** Del Webb North Ranch, 55+ active adult community in North Las Vegas
+- **Community:** Sun City Summerlin, Las Vegas' premier 55+ active adult community
 - **SEO Priority:** Local SEO, Google Business Profile integration, WCAG AA compliance
 
 ## 🚫 Accessibility - Color Contrast (WCAG AA)
 
 ### CRITICAL: Never Use These Combinations
-- ❌ `text-accent` (#c9a227 gold) on light backgrounds → Use `text-primary` (#1e3a5f navy)
-- ❌ `bg-accent` or `bg-amber-500` for buttons with white text → Use `bg-primary` or `bg-amber-700+`
-- ❌ `text-amber-500` for icons on light backgrounds → Use `text-primary`
+- ❌ `text-accent` (#D4AF37 gold) on light backgrounds → Use `text-[#8B5E3C]` (warm brown)
+- ❌ `bg-accent` for buttons with white text → Use `bg-[#8B5E3C]`
+- ❌ Light text on light backgrounds
 
 ### ✅ Correct Patterns
 ```tsx
 // Text on light background
-<span className="text-primary font-bold">${price}</span>  // ✅
-<span className="text-accent">${price}</span>            // ❌
+<span className="text-[#8B5E3C] font-bold">${price}</span>  // ✅
+<span className="text-[#D4AF37]">${price}</span>            // ❌
 
 // Buttons
-<button className="bg-primary text-white">Click</button>  // ✅
-<button className="bg-accent text-white">Click</button> // ❌
+<button className="bg-[#8B5E3C] text-white">Click</button>  // ✅
+<button className="bg-[#D4AF37] text-white">Click</button>  // ❌ (low contrast)
 
 // Icons
-<ChevronDown className="w-5 h-5 text-primary" />         // ✅
-<ChevronDown className="w-5 h-5 text-amber-500" />       // ❌
+<ChevronDown className="w-5 h-5 text-[#8B5E3C]" />         // ✅
 ```
 
 ### Color Usage Rules
-- **Primary (#1e3a5f navy):** Text on light backgrounds, button backgrounds, links, icons
-- **Accent (#c9a227 gold):** ONLY for decorative elements on dark backgrounds or hover states on dark text
-- **Amber:** Use `amber-700` or darker for buttons, avoid `amber-500`/`amber-600`
+- **Primary (#8B5E3C brown):** Text on light backgrounds, button backgrounds, links, icons
+- **Accent (#D4AF37 gold):** Decorative elements on dark backgrounds, hover accents
+- **Background (#FDF8F3 cream):** Section backgrounds
+- **Text (#2D2A26 dark brown):** Body text
 
 ## 🎯 Touch Target Sizes (WCAG AA)
 
@@ -49,17 +49,7 @@ All interactive elements MUST be minimum 44x44px (11 Tailwind units = `h-11 w-11
 // ✅ Correct
 <button className="min-h-[44px] min-w-[44px] ...">
 <Link className="min-h-[44px] min-w-[44px] ...">
-
-// Navigation dots (testimonials)
-<button className="h-11 w-11 rounded-full ...">
-  <span className="h-2 w-2 rounded-full ..." />  {/* Inner indicator */}
-</button>
-
-// ❌ Incorrect
-<button className="h-2 w-2 ...">  {/* Too small */}
 ```
-
-**Note:** Base Button component already includes `min-h-[44px] min-w-[44px]` - ensure custom buttons also include this.
 
 ## 📝 ARIA Attributes
 
@@ -68,19 +58,9 @@ All interactive elements MUST be minimum 44x44px (11 Tailwind units = `h-11 w-11
 ```tsx
 // ✅ Correct
 aria-expanded={isOpen ? 'true' : 'false'}
-// OR
-const ariaExpanded = isOpen ? 'true' : 'false';
-aria-expanded={ariaExpanded}
 
 // ❌ Incorrect
 aria-expanded={isOpen}  // Boolean, causes linter error
-```
-
-### ARIA Labels
-Always include descriptive labels for interactive elements:
-```tsx
-<button aria-label="View testimonial 2">...</button>
-<input aria-label="Purchase price slider" />
 ```
 
 ## 🏗️ Next.js 15 App Router Patterns
@@ -88,44 +68,28 @@ Always include descriptive labels for interactive elements:
 ### Server vs Client Components
 - **Default:** Server Components (no `'use client'`)
 - **Use `'use client'` ONLY for:** useState, useEffect, event handlers, browser APIs
-- **Pattern:** Fetch data in Server Component, pass to Client Component as props
-
-```tsx
-// ✅ Server Component (page.tsx)
-export default async function Page() {
-  const data = await fetchData()
-  return <InteractiveComponent initialData={data} />
-}
-
-// ✅ Client Component (when needed)
-'use client'
-export function InteractiveComponent({ initialData }) {
-  const [state, setState] = useState(initialData)
-  // Interactive logic
-}
-```
 
 ### Metadata & SEO
 Every page MUST include:
 ```tsx
 export const metadata: Metadata = {
-  title: "Page Title | Del Webb North Ranch | North Las Vegas",
-  description: "Description including 'Del Webb North Ranch,' '55+,' and 'North Las Vegas'",
+  title: "Page Title | Sun City Summerlin | Las Vegas",
+  description: "Description including 'Sun City Summerlin,' '55+,' and 'Las Vegas'",
   alternates: {
-    canonical: "https://www.delwebbnorthranchhomes.com/page-path",
+    canonical: "https://www.suncityvegas.com/page-path",
   },
   openGraph: {
-    title: "Page Title | Del Webb North Ranch",
-    url: "https://www.delwebbnorthranchhomes.com/page-path",
-    siteName: "Del Webb North Ranch 55+ Real Estate | Homes by Dr. Jan Duffy",
+    title: "Page Title | Sun City Summerlin",
+    url: "https://www.suncityvegas.com/page-path",
+    siteName: "Sun City Summerlin Homes for Sale | Dr. Jan Duffy",
   },
 }
 ```
 
 **Required keywords in descriptions:**
-- "Del Webb North Ranch" (community name)
+- "Sun City Summerlin" (community name)
 - "55+" or "active adult community"
-- "North Las Vegas" (location)
+- "Las Vegas" (location)
 - "Dr. Jan Duffy" (when relevant)
 
 ### Dynamic Routes
@@ -158,59 +122,12 @@ import Image from 'next/image'
 />
 ```
 
-**Rules:**
-- Always include descriptive `alt` text
-- Use `priority` for hero/above-fold images
-- Use `fill` with `sizes` for responsive images
-- Use `placeholder="blur"` with `blurDataURL` for better UX
-
-## 🎨 Tailwind CSS Patterns
-
-### Spacing Scale
-- Use Tailwind spacing scale: `p-4` (1rem), `p-6` (1.5rem), `p-8` (2rem)
-- Don't hardcode pixel values
-- Mobile-first: `text-base md:text-lg lg:text-xl`
-
-### Responsive Patterns
-```tsx
-// Grid
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-
-// Flex
-<div className="flex flex-col sm:flex-row gap-4">
-
-// Text
-<h1 className="text-3xl md:text-4xl lg:text-5xl">
-```
-
-## 📊 Structured Data (JSON-LD)
-
-### Always Include XSS Protection
-```tsx
-<script
-  type="application/ld+json"
-  dangerouslySetInnerHTML={{
-    __html: JSON.stringify(schema).replace(/</g, "\\u003c")
-  }}
-/>
-```
-
-### Required Schemas
-- **LocalBusiness** (in layout.tsx) - Google Business Profile integration
-- **RealEstateAgent** (in layout.tsx)
-- **Organization** (in layout.tsx)
-- **WebSite** with SearchAction (in layout.tsx)
-- **Place** (in layout.tsx) - Local SEO
-- **BreadcrumbList** (on detail pages)
-- **FAQPage** (on FAQ page)
-- **Product** (on floor plan pages)
-
 ## 🔍 SEO Requirements
 
 ### Every Page Must Have
 - [ ] Unique title with location/keywords
-- [ ] Meta description with "Del Webb North Ranch," "55+," "North Las Vegas"
-- [ ] Canonical URL (always `https://www.delwebbnorthranchhomes.com`)
+- [ ] Meta description with "Sun City Summerlin," "55+," "Las Vegas"
+- [ ] Canonical URL (always `https://www.suncityvegas.com`)
 - [ ] OpenGraph tags
 - [ ] Twitter card
 - [ ] Proper H1 heading
@@ -218,7 +135,7 @@ import Image from 'next/image'
 - [ ] Relevant structured data
 
 ### URL Format
-- **Base URL:** `https://www.delwebbnorthranchhomes.com`
+- **Base URL:** `https://www.suncityvegas.com`
 - **Always use www subdomain**
 - **Always use HTTPS**
 
@@ -231,7 +148,7 @@ Before committing:
 - [ ] All images have descriptive alt text
 - [ ] Metadata includes required keywords
 - [ ] Canonical URLs are correct
-- [ ] Structured data is valid (test with Google Rich Results Test)
+- [ ] Structured data is valid
 
 ## 🚨 Common Mistakes to Avoid
 
@@ -240,7 +157,6 @@ Before committing:
 - ❌ Missing `min-h-[44px] min-w-[44px]` on custom buttons
 - ❌ Using boolean for `aria-expanded`
 - ❌ Forgetting `'use client'` when using hooks
-- ❌ Fetching data in client components
 - ❌ Missing canonical URLs
 - ❌ Generic meta descriptions without location/keywords
 - ❌ Missing alt text on images

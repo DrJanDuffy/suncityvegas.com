@@ -1,4 +1,4 @@
-# Next.js 15 Best Practices - Del Webb North Ranch
+# Next.js 15 Best Practices - Sun City Summerlin
 
 ## ✅ Image Optimization
 
@@ -9,7 +9,7 @@ import Image from 'next/image'
 
 <Image
   src="/images/hero/hero-bg.jpg"
-  alt="Del Webb North Ranch community entrance with beautiful landscaping"
+  alt="Sun City Summerlin community with Red Rock Canyon views"
   width={1920}
   height={1080}
   priority // for above-fold hero images
@@ -25,7 +25,7 @@ import Image from 'next/image'
 ## ✅ Server vs Client Components
 
 ### Server Components (Default)
-- Data fetching (`getDelWebbListings()`, API calls)
+- Data fetching (`getSunCitySummerlinListings()`, API calls)
 - SEO-critical content
 - Static rendering
 - No `"use client"` directive needed
@@ -62,16 +62,16 @@ export function ClientComponent({ initialData }) {
 ### Static Pages
 ```tsx
 export const metadata: Metadata = {
-  title: "Page Title | Del Webb North Ranch | North Las Vegas",
-  description: "Description including 'Del Webb North Ranch,' '55+,' and 'North Las Vegas'",
+  title: "Page Title | Sun City Summerlin | Las Vegas",
+  description: "Description including 'Sun City Summerlin,' '55+,' and 'Las Vegas'",
   alternates: {
-    canonical: "https://delwebbnorthranchhomes.com/page-path",
+    canonical: "https://www.suncityvegas.com/page-path",
   },
   openGraph: {
-    title: "Page Title | Del Webb North Ranch",
+    title: "Page Title | Sun City Summerlin",
     description: "OG description",
-    url: "https://delwebbnorthranchhomes.com/page-path",
-    siteName: "Del Webb North Ranch Homes",
+    url: "https://www.suncityvegas.com/page-path",
+    siteName: "Sun City Summerlin Homes for Sale | Dr. Jan Duffy",
     locale: "en_US",
     type: "website",
   },
@@ -93,15 +93,15 @@ export async function generateMetadata({
   const post = await getPost(params.slug)
   
   return {
-    title: `${post.title} | Del Webb North Ranch Blog | North Las Vegas`,
-    description: `${post.excerpt} Read more about Del Webb North Ranch, a premier 55+ community in North Las Vegas.`,
+    title: `${post.title} | Sun City Summerlin Blog | Las Vegas`,
+    description: `${post.excerpt} Read more about Sun City Summerlin, Las Vegas' premier 55+ community.`,
     alternates: {
-      canonical: `https://delwebbnorthranchhomes.com/blog/${params.slug}`,
+      canonical: `https://www.suncityvegas.com/blog/${params.slug}`,
     },
     openGraph: {
-      title: `${post.title} | Del Webb North Ranch`,
+      title: `${post.title} | Sun City Summerlin`,
       description: post.excerpt,
-      url: `https://delwebbnorthranchhomes.com/blog/${params.slug}`,
+      url: `https://www.suncityvegas.com/blog/${params.slug}`,
       type: "article",
       publishedTime: post.date,
     },
@@ -117,9 +117,9 @@ export async function generateMetadata({
 - ❌ Don't hardcode metadata—use `generateMetadata` for dynamic pages
 - ❌ Don't forget canonical URLs on every page
 - ❌ Don't use generic descriptions—always include:
-  - "Del Webb North Ranch"
+  - "Sun City Summerlin"
   - "55+" or "active adult community"
-  - "North Las Vegas"
+  - "Las Vegas"
 
 ## 📁 Project Structure
 
@@ -130,11 +130,11 @@ app/
 ├── homes-for-sale/
 │   └── page.tsx          # MLS listings (async server component)
 ├── floor-plans/
-│   └── page.tsx          # Cottage, Classic, Retreat series
+│   └── page.tsx          # Home styles and sizes
 ├── amenities/
-│   └── page.tsx          # Pool, fitness, pickleball, clubhouse
+│   └── page.tsx          # 4 golf courses, 3 rec centers
 ├── lifestyle/
-│   └── page.tsx          # Active adult living content
+│   └── page.tsx          # 80+ clubs and activities
 ├── about/
 │   └── page.tsx          # Dr. Jan Duffy bio
 ├── blog/
@@ -153,7 +153,7 @@ app/
 
 Every page should have:
 - [ ] Unique, descriptive title (includes location/keywords)
-- [ ] Meta description (includes "Del Webb North Ranch," "55+," "North Las Vegas")
+- [ ] Meta description (includes "Sun City Summerlin," "55+," "Las Vegas")
 - [ ] Canonical URL
 - [ ] OpenGraph tags
 - [ ] Twitter card
@@ -164,11 +164,11 @@ Every page should have:
 ## 📝 Content Guidelines
 
 **Always include in descriptions:**
-- "Del Webb North Ranch" (community name)
+- "Sun City Summerlin" (community name)
 - "55+" or "active adult community" (target demographic)
-- "North Las Vegas" (location)
+- "Las Vegas" (location)
 - "Dr. Jan Duffy" (agent name when relevant)
-- Price range "$400K-$600K" (when relevant)
+- Price range "$275K-$1.2M+" (when relevant)
 
 **Example:**
-> "Discover luxury single-story living in Del Webb North Ranch, a vibrant 55+ community in North Las Vegas with mountain views and resort-style amenities."
+> "Discover luxury single-story living in Sun City Summerlin, Las Vegas' premier 55+ community with Red Rock Canyon views, 4 golf courses, and resort-style amenities."

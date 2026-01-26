@@ -1,15 +1,17 @@
-# Del Webb North Ranch - Real Estate Website
+# Sun City Summerlin - Real Estate Website
 
-A modern, responsive Next.js website for Dr. Jan Duffy, REALTOR® specializing in Del Webb North Ranch, a premier 55+ active adult community in North Las Vegas, Nevada.
+A modern, responsive Next.js website for Dr. Jan Duffy, REALTOR® specializing in Sun City Summerlin, Las Vegas' premier 55+ active adult community.
 
 ## 🏡 About
 
-This website showcases Del Webb North Ranch, featuring:
-- **394 single-family residences** in a gated 55+ community
-- **9 floor plans** across 3 series (Cottage, Classic, Retreat)
-- **Price range:** $400K - $600K
-- **HOA:** $215/month (No SIDs or LIDs)
-- **All homes:** Single-story, 2-3 bed, 2-2.5 bath, 2-car garage
+This website showcases Sun City Summerlin, featuring:
+- **7,779 single-family residences** in a guard-gated 55+ community
+- **4 Championship Golf Courses** (Highland Falls, Palm Valley, Eagle Crest, Stonebridge)
+- **3 Recreation Centers** (125,000+ sq ft total)
+- **80+ Active Clubs** and social activities
+- **Price range:** $275K - $1.2M+
+- **HOA:** ~$165/month
+- **All homes:** Single-story, 2-4 bed, 2-3.5 bath, 2-3 car garage
 
 ## ✨ Features
 
@@ -24,14 +26,15 @@ This website showcases Del Webb North Ranch, featuring:
 
 - **Homepage** (`/`) - Complete landing page with all sections
 - **Homes for Sale** (`/homes-for-sale`) - RealScout embed for browsing listings
-- **Floor Plans** (`/floor-plans`) - All 9 floor plans with Matterport tour placeholders
-- **Amenities** (`/amenities`) - Detailed amenities gallery and information
+- **Home Styles** (`/floor-plans`) - Variety of home sizes available
+- **Amenities** (`/amenities`) - 4 golf courses, 3 rec centers, and more
+- **Lifestyle** (`/lifestyle`) - 80+ clubs and activities
 - **About** (`/about`) - Dr. Jan Duffy's bio and credentials
 - **Contact** (`/contact`) - Contact form and information
 
 ## 🛠️ Tech Stack
 
-- **Next.js 16** (App Router)
+- **Next.js 15** (App Router)
 - **TypeScript**
 - **Tailwind CSS 4**
 - **Lucide React** (Icons)
@@ -41,34 +44,16 @@ This website showcases Del Webb North Ranch, featuring:
 ## 🎨 Design System
 
 ### Colors
-- **Primary:** Navy Blue (#1e3a5f)
-- **Accent:** Warm Gold (#c9a227)
-- **Success/CTA:** Teal (#0d9488)
-- **Background:** White (#ffffff) and Light Gray (#f8f9fa)
+- **Primary:** Warm Brown (#8B5E3C)
+- **Accent:** Gold (#D4AF37)
+- **Success/CTA:** Sage Green (#5D7A5D)
+- **Background:** White (#ffffff) and Cream (#FDF8F3)
+- **Text:** Dark Brown (#2D2A26)
 
 ### Typography
 - **Headings:** Playfair Display (serif)
 - **Body:** Inter (sans-serif)
 - **Minimum body text:** 16px for readability
-
-## 📝 TODO Items
-
-### High Priority
-- [ ] Add RealScout embed code to `/homes-for-sale` page
-- [ ] Add Matterport tour embeds to `/floor-plans` page
-- [ ] Add actual images:
-  - Hero background image
-  - Dr. Jan Duffy headshot
-  - Floor plan images for each series
-  - Amenity photos
-- [ ] Connect contact form to backend API
-- [ ] Add OpenGraph and Twitter images to metadata
-
-### Medium Priority
-- [ ] Add Equal Housing Opportunity logo to footer
-- [ ] Create privacy policy page
-- [ ] Add sitemap.xml
-- [ ] Add robots.txt
 
 ## 🚀 Getting Started
 
@@ -89,13 +74,13 @@ npm start
 ## 📧 Contact
 
 **Dr. Jan Duffy, REALTOR®**
-- **Phone:** (702) 500-1064
-- **Email:** sales@delwebbnorthranchhomes.com
+- **Phone:** (702) 222-1964
+- **Email:** jan@drjanduffy.com
 - **License:** S.0197614.LLC
 - **Brokerage:** Berkshire Hathaway HomeServices Nevada Properties
 
 **Community Address:**
-2290 Beauty Vista Avenue, North Las Vegas, NV 89086
+9107 Del Webb Blvd, Las Vegas, NV 89134
 
 ## 📄 License
 
