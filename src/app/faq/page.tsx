@@ -8,34 +8,34 @@ import { getAllQuestions } from '@/lib/faqData';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Frequently Asked Questions | Del Webb North Ranch 55+ Real Estate | Homes by Dr. Jan Duffy',
+  title: 'Frequently Asked Questions | Sun City Summerlin | Dr. Jan Duffy',
   description:
-    'Find answers to frequently asked questions about Del Webb North Ranch, a 55+ active adult community in North Las Vegas. Learn about HOA fees, amenities, age requirements, and more.',
+    'Find answers to frequently asked questions about Sun City Summerlin, Las Vegas\' premier 55+ community. Learn about HOA fees, amenities, age requirements, golf courses, and more.',
   alternates: {
-    canonical: 'https://www.delwebbnorthranchhomes.com/faq',
+    canonical: 'https://www.suncityvegas.com/faq',
   },
   openGraph: {
-    title: 'Frequently Asked Questions | Del Webb North Ranch 55+ Real Estate | Homes by Dr. Jan Duffy',
+    title: 'Frequently Asked Questions | Sun City Summerlin | Dr. Jan Duffy',
     description:
-      'Find answers to frequently asked questions about Del Webb North Ranch, a 55+ active adult community in North Las Vegas. Learn about HOA fees, amenities, age requirements, and more.',
-    url: 'https://www.delwebbnorthranchhomes.com/faq',
-    siteName: 'Del Webb North Ranch 55+ Real Estate | Homes by Dr. Jan Duffy',
+      'Find answers to frequently asked questions about Sun City Summerlin, Las Vegas\' premier 55+ active adult community.',
+    url: 'https://www.suncityvegas.com/faq',
+    siteName: 'Sun City Summerlin Homes for Sale | Dr. Jan Duffy',
     locale: 'en_US',
     type: 'website',
     images: [
       {
-        url: 'https://www.delwebbnorthranchhomes.com/images/amenities/resort-pool.jpeg',
+        url: 'https://www.suncityvegas.com/images/amenities/resort-pool.jpeg',
         width: 1200,
         height: 630,
-        alt: 'Del Webb North Ranch FAQ',
+        alt: 'Sun City Summerlin FAQ',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Frequently Asked Questions | Del Webb North Ranch 55+ Real Estate | Homes by Dr. Jan Duffy',
-    description: 'Find answers to frequently asked questions about Del Webb North Ranch 55+ community.',
-    images: ['https://www.delwebbnorthranchhomes.com/images/amenities/resort-pool.jpeg'],
+    title: 'Frequently Asked Questions | Sun City Summerlin | Dr. Jan Duffy',
+    description: 'Find answers to frequently asked questions about Sun City Summerlin 55+ community.',
+    images: ['https://www.suncityvegas.com/images/amenities/resort-pool.jpeg'],
   },
 };
 
@@ -60,7 +60,7 @@ export default function FAQPage() {
       <Navbar />
       <Breadcrumbs
         items={[
-          { label: "Del Webb North Ranch", href: "/" },
+          { label: "Sun City Summerlin", href: "/" },
           { label: "FAQ", href: "/faq" },
         ]}
       />
@@ -70,22 +70,22 @@ export default function FAQPage() {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
         />
         {/* Hero Section */}
-        <section className="relative bg-stone-100 py-16 md:py-24 overflow-hidden">
+        <section className="relative bg-[#FDF8F3] py-16 md:py-24 overflow-hidden">
           <div className="absolute inset-0 opacity-10">
             <Image
               src="/images/amenities/resort-pool.jpeg"
-              alt="Del Webb North Ranch resort-style pool"
+              alt="Sun City Summerlin resort-style pool"
               fill
               className="object-cover"
               priority
             />
           </div>
           <div className="relative max-w-4xl mx-auto px-4 text-center z-10">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 font-playfair">
-              Frequently Asked Questions | Del Webb North Ranch 55+ Community
+            <h1 className="text-4xl md:text-5xl font-bold text-[#8B5E3C] mb-4 font-playfair">
+              Frequently Asked Questions | Sun City Summerlin
             </h1>
-            <p className="text-xl text-gray-600">
-              Everything you need to know about Del Webb North Ranch
+            <p className="text-xl text-[#2D2A26]">
+              Everything you need to know about Sun City Summerlin
             </p>
           </div>
         </section>
@@ -101,19 +101,35 @@ export default function FAQPage() {
 
               {/* Visual Sidebar */}
               <div className="lg:col-span-1 space-y-6">
-                {/* Clubhouse Image */}
+                {/* Golf Course Image */}
                 <div className="relative aspect-[4/3] rounded-lg overflow-hidden shadow-lg">
                   <Image
-                    src="/images/amenities/clubhouse.jpeg"
-                    alt="Del Webb North Ranch 10,000 sq ft clubhouse amenity center"
+                    src="/images/amenities/resort-pool.jpeg"
+                    alt="Sun City Summerlin championship golf courses"
                     fill
                     className="object-cover"
                     sizes="(max-width: 1024px) 100vw, 33vw"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                   <div className="absolute bottom-4 left-4 right-4 text-white">
-                    <p className="text-sm font-semibold">10,000 sq ft Clubhouse</p>
-                    <p className="text-xs opacity-90">Opened October 2021</p>
+                    <p className="text-sm font-semibold">4 Golf Courses</p>
+                    <p className="text-xs opacity-90">Highland Falls, Palm Valley, Eagle Crest, Stonebridge</p>
+                  </div>
+                </div>
+
+                {/* Recreation Center Image */}
+                <div className="relative aspect-[4/3] rounded-lg overflow-hidden shadow-lg">
+                  <Image
+                    src="/images/amenities/clubhouse.jpeg"
+                    alt="Sun City Summerlin recreation centers"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 1024px) 100vw, 33vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                  <div className="absolute bottom-4 left-4 right-4 text-white">
+                    <p className="text-sm font-semibold">3 Recreation Centers</p>
+                    <p className="text-xs opacity-90">125,000+ sq ft of amenities</p>
                   </div>
                 </div>
 
@@ -121,48 +137,28 @@ export default function FAQPage() {
                 <div className="relative aspect-[4/3] rounded-lg overflow-hidden shadow-lg">
                   <Image
                     src="/images/amenities/resort-pool.jpeg"
-                    alt="Del Webb North Ranch resort-style pool and spa"
+                    alt="Sun City Summerlin pool and spa"
                     fill
                     className="object-cover"
                     sizes="(max-width: 1024px) 100vw, 33vw"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                   <div className="absolute bottom-4 left-4 right-4 text-white">
-                    <p className="text-sm font-semibold">Resort-Style Pool</p>
-                    <p className="text-xs opacity-90">Heated lap pool & spa</p>
+                    <p className="text-sm font-semibold">Multiple Pools & Spas</p>
+                    <p className="text-xs opacity-90">Indoor & outdoor at all rec centers</p>
                   </div>
                 </div>
 
-                {/* Pickleball Courts */}
-                <div className="relative aspect-[4/3] rounded-lg overflow-hidden shadow-lg">
-                  <Image
-                    src="/images/amenities/pickleball-courts.jpeg"
-                    alt="Del Webb North Ranch lighted pickleball courts"
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 1024px) 100vw, 33vw"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                  <div className="absolute bottom-4 left-4 right-4 text-white">
-                    <p className="text-sm font-semibold">Pickleball Courts</p>
-                    <p className="text-xs opacity-90">Lighted for evening play</p>
-                  </div>
-                </div>
-
-                {/* Community Sign */}
-                <div className="relative aspect-[4/3] rounded-lg overflow-hidden shadow-lg">
-                  <Image
-                    src="/images/hero/community-sign.jpg"
-                    alt="Del Webb North Ranch gated community entrance"
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 1024px) 100vw, 33vw"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                  <div className="absolute bottom-4 left-4 right-4 text-white">
-                    <p className="text-sm font-semibold">Gated Community</p>
-                    <p className="text-xs opacity-90">24/7 security & virtual concierge</p>
-                  </div>
+                {/* Community Stats */}
+                <div className="bg-[#FDF8F3] p-6 rounded-lg shadow-lg">
+                  <h3 className="text-lg font-bold text-[#8B5E3C] mb-4 font-playfair">Quick Facts</h3>
+                  <ul className="space-y-2 text-[#2D2A26]">
+                    <li><strong>Homes:</strong> 7,779</li>
+                    <li><strong>Built:</strong> 1989-2002</li>
+                    <li><strong>HOA Fee:</strong> ~$165/month</li>
+                    <li><strong>Clubs:</strong> 80+</li>
+                    <li><strong>Age:</strong> 55+ (one resident)</li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -170,20 +166,20 @@ export default function FAQPage() {
         </section>
 
         {/* Contact CTA */}
-        <section className="bg-primary py-16">
+        <section className="bg-[#8B5E3C] py-16">
           <div className="max-w-4xl mx-auto px-4 text-center">
             <h2 className="text-2xl md:text-3xl font-bold text-white mb-4 font-playfair">
               Still Have Questions?
             </h2>
             <p className="text-white/90 mb-8">
-              Dr. Jan Duffy is here to help you find your perfect home in Del Webb North Ranch.
+              Dr. Jan Duffy is here to help you find your perfect home in Sun City Summerlin.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="tel:7025001064"
-                className="inline-flex items-center justify-center px-8 py-3 bg-white text-primary font-semibold rounded-lg hover:bg-gray-100 transition-colors"
+                href="tel:7022221964"
+                className="inline-flex items-center justify-center px-8 py-3 bg-white text-[#8B5E3C] font-semibold rounded-lg hover:bg-gray-100 transition-colors"
               >
-                Call (702) 500-1064
+                Call (702) 222-1964
               </a>
               <Link
                 href="/contact"
