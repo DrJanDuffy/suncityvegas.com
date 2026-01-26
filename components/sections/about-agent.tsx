@@ -17,7 +17,7 @@ export default function AboutAgentSection() {
               <div className="relative aspect-square max-w-md mx-auto lg:mx-0">
                 <Image
                   src="/images/about/dr-jan-duffy.jpg"
-                  alt="Dr. Jan Duffy, REALTOR® specializing in Del Webb North Ranch"
+                  alt="Dr. Jan Duffy, REALTOR® specializing in Sun City Summerlin"
                   fill
                   className="object-cover rounded-lg shadow-three"
                   placeholder="blur"
@@ -29,27 +29,26 @@ export default function AboutAgentSection() {
 
             <ScrollAnimation delay={100}>
               <div>
-                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4 md:mb-6 font-playfair">
-                  Your Del Webb North Ranch Expert
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#8B5E3C] mb-4 md:mb-6 font-playfair">
+                  Your Sun City Summerlin Expert
                 </h2>
                 <div className="prose prose-lg max-w-none space-y-4">
-                  <p className="text-base md:text-lg text-text-dark leading-relaxed">
-                    Dr. Jan Duffy isn't a builder's sales rep. She's an
-                    independent REALTOR® with Berkshire Hathaway HomeServices
-                    who specializes exclusively in Del Webb North Ranch.
+                  <p className="text-base md:text-lg text-[#2D2A26] leading-relaxed">
+                    Dr. Jan Duffy is an independent REALTOR® with Berkshire Hathaway 
+                    HomeServices who specializes exclusively in Sun City Summerlin.
                   </p>
-                  <p className="text-base md:text-lg text-text-dark leading-relaxed">
-                    She knows which floor plans get the best morning light. Which
-                    homesites have the best views. Which resale homes are worth
-                    considering and which to skip.
+                  <p className="text-base md:text-lg text-[#2D2A26] leading-relaxed">
+                    She knows which neighborhoods have the best Red Rock views. Which 
+                    homes offer the best value. And which resale opportunities are 
+                    worth considering.
                   </p>
-                  <p className="text-base md:text-lg text-text-dark leading-relaxed font-semibold">
+                  <p className="text-base md:text-lg text-[#2D2A26] leading-relaxed font-semibold">
                     When you work with her, you get honest guidance—not a sales
                     pitch.
                   </p>
                 </div>
                 <div className="mt-6 md:mt-8">
-                  <Button asChild variant="default" size="lg" className="w-full sm:w-auto">
+                  <Button asChild variant="default" size="lg" className="w-full sm:w-auto bg-[#8B5E3C] hover:bg-[#8B5E3C]/90 text-white">
                     <Link href="/about">Meet Dr. Jan Duffy</Link>
                   </Button>
                 </div>

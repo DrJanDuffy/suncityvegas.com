@@ -1,48 +1,41 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { Home, Layout, Sparkles, Users, HelpCircle, Phone } from 'lucide-react';
+import { Home, Sparkles, Users, HelpCircle, Phone } from 'lucide-react';
 import { Button } from '../ui/button';
 
 const exploreCards = [
   {
     title: 'Homes for Sale',
-    description: 'Browse available single-story homes from $400K-$600K',
+    description: 'Browse available homes from $300K-$800K+',
     href: '/homes-for-sale',
     icon: Home,
     image: '/images/amenities/resort-pool.jpeg',
     primary: true,
   },
   {
-    title: 'Floor Plans',
-    description: 'Explore 1,285-2,015 sq ft designs across 3 collections',
-    href: '/floor-plans',
-    icon: Layout,
-    image: '/images/floor-plans/haven.avif',
-  },
-  {
     title: 'Amenities',
-    description: '10,000 sq ft clubhouse, pools, pickleball & more',
+    description: '4 golf courses, 3 rec centers, 80+ clubs',
     href: '/amenities',
     icon: Sparkles,
     image: '/images/amenities/clubhouse.jpeg',
   },
   {
     title: 'Lifestyle',
-    description: 'Discover active adult living in North Las Vegas',
+    description: 'Discover active adult living with Red Rock views',
     href: '/lifestyle',
     icon: Users,
     image: '/images/lifestyle/community-life.jpeg',
   },
   {
     title: 'About Dr. Jan Duffy',
-    description: 'Meet your trusted REALTOR® and community expert',
+    description: 'Meet your trusted Sun City Summerlin specialist',
     href: '/about',
     icon: Users,
     image: '/images/about/dr-jan-duffy.jpg',
   },
   {
     title: 'FAQ',
-    description: 'Get answers to common questions about the community',
+    description: 'Get answers about Sun City Summerlin living',
     href: '/faq',
     icon: HelpCircle,
     image: '/images/amenities/resort-pool.jpeg',
@@ -55,11 +48,11 @@ export default function ExploreCommunitySection() {
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4 font-playfair">
-              Explore Our Community
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#8B5E3C] mb-4 font-playfair">
+              Explore Sun City Summerlin
             </h2>
             <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
-              Discover everything Del Webb North Ranch has to offer—from luxury homes to resort-style amenities
+              Discover everything Las Vegas&apos; premier 55+ community has to offer—from luxury homes to resort-style amenities
             </p>
           </div>
 
@@ -70,7 +63,7 @@ export default function ExploreCommunitySection() {
                 <Link
                   key={card.href}
                   href={card.href}
-                  className="group relative block bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-gray-200"
+                  className="group relative block bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-[#C4A574]/20"
                 >
                   <div className="relative aspect-[4/3] overflow-hidden">
                     <Image
@@ -83,23 +76,23 @@ export default function ExploreCommunitySection() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
                     <div className="absolute top-4 left-4">
                       <div className="bg-white/90 backdrop-blur-sm rounded-full p-3">
-                        <Icon className="w-6 h-6 text-primary" />
+                        <Icon className="w-6 h-6 text-[#8B5E3C]" />
                       </div>
                     </div>
                     {card.primary && (
                       <div className="absolute top-4 right-4">
-                        <span className="bg-primary text-white px-3 py-1 rounded-full text-xs font-semibold">
+                        <span className="bg-[#D4AF37] text-[#2D2A26] px-3 py-1 rounded-full text-xs font-semibold">
                           Popular
                         </span>
                       </div>
                     )}
                   </div>
                   <div className="p-6">
-                    <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary transition-colors">
+                    <h3 className="text-xl font-bold text-[#2D2A26] mb-2 group-hover:text-[#8B5E3C] transition-colors">
                       {card.title}
                     </h3>
                     <p className="text-gray-600 text-sm mb-4">{card.description}</p>
-                    <span className="text-primary font-semibold text-sm group-hover:underline">
+                    <span className="text-[#8B5E3C] font-semibold text-sm group-hover:underline">
                       Learn More →
                     </span>
                   </div>
@@ -109,7 +102,7 @@ export default function ExploreCommunitySection() {
           </div>
 
           <div className="mt-12 text-center">
-            <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
+            <Button asChild size="lg" className="bg-[#8B5E3C] hover:bg-[#8B5E3C]/90 text-white">
               <Link href="/contact" className="inline-flex items-center gap-2">
                 <Phone className="w-5 h-5" />
                 Schedule a Tour
