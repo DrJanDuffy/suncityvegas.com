@@ -232,6 +232,20 @@ export const clubs = [
   '...and many more!',
 ];
 
+// Homesites by collection (for floor plans page compatibility)
+export type HomesiteCollection = {
+  count: string;
+  sqftRange: string;
+};
+
+export function getHomesitesByCollection(): Record<string, HomesiteCollection> {
+  return {
+    cottage: { count: '2,500+', sqftRange: '1,200-1,500' },
+    classic: { count: '3,000+', sqftRange: '1,500-1,800' },
+    retreat: { count: '2,200+', sqftRange: '1,800-2,400' },
+  };
+}
+
 // Helper functions
 export function getCommunityInfo(): CommunityInfo {
   return communityInfo;
