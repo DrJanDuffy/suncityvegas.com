@@ -1,15 +1,15 @@
 import type { Listing } from "@/types/listing";
 
 /**
- * Fetches Del Webb North Ranch listings
+ * Fetches Sun City Summerlin listings
  * TODO: Replace with actual RealScout API integration
  * For now, returns mock data matching the community specifications
  */
-export async function getDelWebbListings(): Promise<Listing[]> {
+export async function getSunCitySummerlinListings(): Promise<Listing[]> {
   // TODO: Replace with RealScout API call
   // Example:
   // const response = await fetch(
-  //   `https://api.realscout.com/v3/listings?community=del-webb-north-ranch`,
+  //   `https://api.realscout.com/v3/listings?community=sun-city-summerlin`,
   //   {
   //     headers: {
   //       Authorization: `Bearer ${process.env.REALSCOUT_API_KEY}`,
@@ -24,54 +24,48 @@ export async function getDelWebbListings(): Promise<Listing[]> {
   return [
     {
       id: "1",
-      address: "2290 Beauty Vista Avenue",
-      city: "North Las Vegas",
+      address: "9107 Del Webb Blvd",
+      city: "Las Vegas",
       state: "NV",
-      zipCode: "89086",
-      price: 485000,
+      zipCode: "89134",
+      price: 425000,
       bedrooms: 2,
       bathrooms: 2,
-      squareFeet: 1425,
-      yearBuilt: 2020,
-      imageUrl: "/images/floor-plans/haven-1.avif",
+      squareFeet: 1650,
+      yearBuilt: 1995,
+      imageUrl: "/images/listings/listing-1.jpg",
       status: "active",
-      description: "Beautiful single-story home in Del Webb North Ranch",
-      floorPlan: "Haven",
-      series: "Cottage",
+      description: "Beautiful single-story home in Sun City Summerlin with golf course views",
     },
     {
       id: "2",
-      address: "2310 Beauty Vista Avenue",
-      city: "North Las Vegas",
+      address: "2810 High Range Dr",
+      city: "Las Vegas",
       state: "NV",
-      zipCode: "89086",
-      price: 525000,
+      zipCode: "89134",
+      price: 575000,
       bedrooms: 3,
       bathrooms: 2.5,
-      squareFeet: 1750,
-      yearBuilt: 2021,
-      imageUrl: "/images/floor-plans/haven-2.avif",
+      squareFeet: 2200,
+      yearBuilt: 1998,
+      imageUrl: "/images/listings/listing-2.jpg",
       status: "active",
-      description: "Spacious retreat series home with den",
-      floorPlan: "Retreat Haven",
-      series: "Retreat",
+      description: "Spacious home with pool and Red Rock views",
     },
     {
       id: "3",
-      address: "2330 Beauty Vista Avenue",
-      city: "North Las Vegas",
+      address: "9401 Eagle Valley Dr",
+      city: "Las Vegas",
       state: "NV",
-      zipCode: "89086",
-      price: 450000,
+      zipCode: "89134",
+      price: 350000,
       bedrooms: 2,
       bathrooms: 2,
-      squareFeet: 1285,
-      yearBuilt: 2019,
-      imageUrl: "/images/floor-plans/haven.avif",
+      squareFeet: 1400,
+      yearBuilt: 1992,
+      imageUrl: "/images/listings/listing-3.jpg",
       status: "active",
-      description: "Cozy cottage series home perfect for downsizing",
-      floorPlan: "Cottage Haven",
-      series: "Cottage",
+      description: "Cozy home perfect for active adults looking to downsize",
     },
   ];
 }

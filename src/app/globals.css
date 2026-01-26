@@ -19,13 +19,13 @@
   --color-white: #ffffff;
   --color-black: #121723;
   
-  /* Del Webb North Ranch Color Palette */
-  --color-primary: #1e3a5f; /* Navy blue */
-  --color-accent: #c9a227; /* Warm gold */
-  --color-success: #0d9488; /* Teal */
-  --color-bg-light: #f8f9fa; /* Light gray */
-  --color-text-dark: #333333; /* Dark gray */
-  --color-footer-bg: #1a1a1a; /* Dark gray for footer */
+  /* Sun City Summerlin Color Palette */
+  --color-primary: #8B5E3C; /* Warm brown */
+  --color-accent: #D4AF37; /* Gold */
+  --color-success: #5D7A5D; /* Sage green */
+  --color-bg-light: #FDF8F3; /* Cream */
+  --color-text-dark: #2D2A26; /* Dark brown */
+  --color-footer-bg: #2D2A26; /* Dark brown for footer */
 
   --color-body-color: #788293;
   --color-body-color-dark: #959cb1;

@@ -9,12 +9,12 @@ export type Flyer = {
 
 export const flyers: Flyer[] = [
   {
-    slug: "north-ranch-digital-brochure",
-    title: "North Ranch Digital Brochure",
-    description: "Complete community guide with floor plans, amenities, and community information for Del Webb North Ranch.",
-    filePath: "/images/floor-plans/North Ranch Digital Brochure.pdf",
+    slug: "sun-city-summerlin-guide",
+    title: "Sun City Summerlin Community Guide",
+    description: "Complete community guide with amenities, lifestyle information, and community details for Sun City Summerlin.",
+    filePath: "/images/flyers/sun-city-summerlin-guide.pdf",
     category: "Community Guide",
-    content: "This comprehensive brochure includes detailed information about Del Webb North Ranch, including all floor plans, community amenities, pricing information, and lifestyle features. Perfect for sharing with family and friends or keeping as a reference guide.",
+    content: "This comprehensive brochure includes detailed information about Sun City Summerlin, including 4 golf courses, 3 recreation centers, 80+ clubs, HOA information, and lifestyle features. Perfect for sharing with family and friends or keeping as a reference guide.",
   },
 ];
 
