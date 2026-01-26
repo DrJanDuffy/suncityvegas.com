@@ -22,6 +22,8 @@ const dropdownMenus = [
   {
     label: "More",
     items: [
+      { href: "/community", label: "Community" },
+      { href: "/selling", label: "Selling" },
       { href: "/home-value", label: "Home Value" },
       { href: "/blog", label: "Blog" },
       { href: "/faq", label: "FAQ" },
@@ -35,6 +37,8 @@ const allNavLinks = [
   { href: "/homes-for-sale", label: "Homes for Sale" },
   { href: "/amenities", label: "Amenities" },
   { href: "/lifestyle", label: "Lifestyle" },
+  { href: "/community", label: "Community" },
+  { href: "/selling", label: "Selling" },
   { href: "/home-value", label: "Home Value" },
   { href: "/about", label: "About" },
   { href: "/blog", label: "Blog" },
