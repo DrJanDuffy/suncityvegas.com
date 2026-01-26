@@ -27,6 +27,7 @@ export type CommunityInfo = {
 export type RecreationCenter = {
   name: string;
   size: string;
+  description: string;
   features: string[];
 };
 
@@ -34,6 +35,7 @@ export type GolfCourse = {
   name: string;
   holes: number;
   type: string;
+  description: string;
   designer?: string;
 };
 
@@ -69,6 +71,7 @@ export const recreationCenters: RecreationCenter[] = [
   {
     name: 'Mountain Shadows',
     size: '45,000 sq ft',
+    description: 'The original recreation center featuring comprehensive fitness facilities, indoor pool, racquetball courts, and extensive arts and crafts studios.',
     features: [
       'Fitness center',
       'Indoor pool',
@@ -82,6 +85,7 @@ export const recreationCenters: RecreationCenter[] = [
   {
     name: 'Desert Vista',
     size: '48,000 sq ft',
+    description: 'The largest recreation center with state-of-the-art fitness equipment, indoor pool and spa, tennis and pickleball courts, plus a grand ballroom for events.',
     features: [
       'Fitness center',
       'Indoor pool & spa',
@@ -95,6 +99,7 @@ export const recreationCenters: RecreationCenter[] = [
   {
     name: 'Pinnacle',
     size: '34,000 sq ft',
+    description: 'A welcoming recreation center offering fitness facilities, pool and spa, tennis courts, bocce ball courts, and versatile multi-purpose spaces.',
     features: [
       'Fitness center',
       'Pool & spa',
@@ -111,23 +116,27 @@ export const golfCourses: GolfCourse[] = [
     name: 'Highland Falls',
     holes: 18,
     type: 'Championship',
+    description: 'A challenging championship course with dramatic elevation changes and stunning views of the Las Vegas Valley and Red Rock Canyon.',
     designer: 'Billy Casper & Greg Nash',
   },
   {
     name: 'Palm Valley',
     holes: 18,
     type: 'Championship',
+    description: 'A beautifully landscaped championship course featuring mature palm trees, water features, and strategic bunkering throughout.',
     designer: 'Billy Casper & Greg Nash',
   },
   {
     name: 'Eagle Crest',
     holes: 18,
     type: 'Executive',
+    description: 'An executive-length course perfect for a quick round, offering scenic views and a more relaxed pace of play.',
   },
   {
     name: 'Stonebridge (at Sun City)',
     holes: 27,
     type: 'Championship',
+    description: 'A 27-hole championship facility offering three distinct 9-hole combinations, providing variety and challenge for golfers of all skill levels.',
   },
 ];
 

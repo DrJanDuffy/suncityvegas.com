@@ -187,7 +187,7 @@ export default async function FlyerPage({
                 <Button
                   asChild
                   variant="default"
-                  className="flex-1 bg-[#8B5E3C] hover:bg-[#8B5E3C]/90"
+                  className="flex-1 bg-[#8B5E3C] hover:bg-[#8B5E3C]/90 min-h-[48px] px-6"
                 >
                   <Link href="/contact">Schedule a Tour</Link>
                 </Button>

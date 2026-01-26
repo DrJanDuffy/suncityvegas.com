@@ -98,7 +98,7 @@ export default function HomeCollectionsSection() {
         </div>
 
         <div className="text-center">
-          <Button asChild variant="default" size="lg" className="w-full sm:w-auto min-h-[44px] min-w-[44px] bg-[#8B5E3C] hover:bg-[#8B5E3C]/90">
+          <Button asChild variant="default" size="lg" className="w-full sm:w-auto min-h-[48px] min-w-[48px] px-6 bg-[#8B5E3C] hover:bg-[#8B5E3C]/90">
             <Link href="/homes-for-sale">View Available Homes</Link>
           </Button>
         </div>

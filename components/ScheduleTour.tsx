@@ -76,7 +76,7 @@ export default function ScheduleTour({
       onClick={handleScheduleClick}
       variant={variant}
       size={size}
-      className={`${className} flex items-center gap-2`}
+      className={`${className} flex items-center gap-2 min-h-[48px] px-6`}
     >
       <Calendar className="w-5 h-5" />
       Schedule a Tour

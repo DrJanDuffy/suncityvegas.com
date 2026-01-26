@@ -70,7 +70,7 @@ export default function FlyersSection() {
               asChild
               variant="outline"
               size="lg"
-              className="w-full sm:w-auto min-h-[44px] min-w-[44px] border-[#8B5E3C] text-[#8B5E3C] hover:bg-[#8B5E3C]/10"
+              className="w-full sm:w-auto min-h-[48px] min-w-[48px] px-6 border-[#8B5E3C] text-[#8B5E3C] hover:bg-[#8B5E3C]/10"
             >
               <Link href="/flyers">View All Flyers & Brochures</Link>
             </Button>

@@ -177,13 +177,13 @@ export default function FAQPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="tel:7022221964"
-                className="inline-flex items-center justify-center px-8 py-3 bg-white text-[#8B5E3C] font-semibold rounded-lg hover:bg-gray-100 transition-colors"
+                className="inline-flex items-center justify-center px-8 py-4 bg-white text-[#8B5E3C] font-semibold rounded-lg hover:bg-gray-100 transition-colors min-h-[48px] touch-manipulation"
               >
                 Call (702) 222-1964
               </a>
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white/10 transition-colors"
+                className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white/10 transition-colors min-h-[48px] touch-manipulation"
               >
                 Schedule a Tour
               </Link>

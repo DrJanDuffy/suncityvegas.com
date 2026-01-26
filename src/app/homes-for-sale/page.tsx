@@ -194,12 +194,12 @@ export default async function HomesForSalePage() {
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                   <a
                     href="tel:7022221964"
-                    className="flex items-center gap-2 px-6 py-3 bg-[#8B5E3C] text-white rounded-md font-semibold hover:bg-[#8B5E3C]/90 transition-colors"
+                    className="flex items-center justify-center gap-2 px-6 py-4 bg-[#8B5E3C] text-white rounded-md font-semibold hover:bg-[#8B5E3C]/90 transition-colors min-h-[48px] touch-manipulation"
                   >
                     <Phone className="w-5 h-5" />
                     Call (702) 222-1964
                   </a>
-                  <Button asChild variant="accent" size="lg" className="bg-[#D4AF37] hover:bg-[#D4AF37]/90 text-[#2D2A26]">
+                  <Button asChild variant="accent" size="lg" className="bg-[#D4AF37] hover:bg-[#D4AF37]/90 text-[#2D2A26] min-h-[48px] px-6">
                     <Link href="/contact">Schedule a Tour</Link>
                   </Button>
                 </div>

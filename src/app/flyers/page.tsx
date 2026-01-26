@@ -120,13 +120,13 @@ export default function FlyersPage() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="tel:7022221964"
-                  className="inline-flex items-center justify-center px-8 py-3 bg-[#8B5E3C] text-white font-semibold rounded-lg hover:bg-[#8B5E3C]/90 transition-colors"
+                  className="inline-flex items-center justify-center px-8 py-4 bg-[#8B5E3C] text-white font-semibold rounded-lg hover:bg-[#8B5E3C]/90 transition-colors min-h-[48px] touch-manipulation"
                 >
                   Call (702) 222-1964
                 </a>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center justify-center px-8 py-3 border-2 border-[#8B5E3C] text-[#8B5E3C] font-semibold rounded-lg hover:bg-[#8B5E3C]/5 transition-colors"
+                  className="inline-flex items-center justify-center px-8 py-4 border-2 border-[#8B5E3C] text-[#8B5E3C] font-semibold rounded-lg hover:bg-[#8B5E3C]/5 transition-colors min-h-[48px] touch-manipulation"
                 >
                   Schedule a Tour
                 </Link>

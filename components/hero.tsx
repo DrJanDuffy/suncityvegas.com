@@ -43,19 +43,19 @@ export default function Hero() {
               Homes from $300K-$800K+ | 7,779 Homes | Guard-Gated
             </p>
           </div>
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-stretch sm:items-center px-4">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-stretch sm:items-center px-4">
             <div className="w-full sm:w-auto sm:min-w-[200px]">
               <ScheduleTour
                 variant="accent"
                 size="lg"
-                className="w-full sm:w-auto text-base md:text-lg py-3 md:py-4 bg-[#8B5E3C] hover:bg-[#8B5E3C]/90"
+                className="w-full sm:w-auto text-base md:text-lg px-6 py-4 bg-[#8B5E3C] hover:bg-[#8B5E3C]/90 min-h-[48px]"
               />
             </div>
             <Button
               asChild
               variant="outline"
               size="lg"
-              className="border-2 border-[#D4AF37] text-[#D4AF37] hover:bg-[#D4AF37] hover:text-[#2D2A26] w-full sm:w-auto sm:min-w-[200px] min-h-[44px] text-base md:text-lg py-3 md:py-4"
+              className="border-2 border-[#D4AF37] text-[#D4AF37] hover:bg-[#D4AF37] hover:text-[#2D2A26] w-full sm:w-auto sm:min-w-[200px] min-h-[48px] text-base md:text-lg px-6 py-4"
             >
               <Link href="/homes-for-sale">Browse Available Homes</Link>
             </Button>

@@ -235,7 +235,7 @@ export default function Navbar() {
               <div className="mt-2 pt-2 border-t border-[#C4A574]/20">
                 <a
                   href="tel:7022221964"
-                  className="flex items-center gap-2 text-[#2D2A26] hover:text-[#8B5E3C] transition-colors px-3 py-3 rounded-md min-h-[44px]"
+                  className="flex items-center gap-2 text-[#2D2A26] hover:text-[#8B5E3C] transition-colors px-4 py-3 rounded-md min-h-[48px] touch-manipulation"
                 >
                   <Phone className="w-4 h-4" />
                   <span className="font-medium">(702) 222-1964</span>
@@ -243,7 +243,7 @@ export default function Navbar() {
                 <Button
                   asChild
                   variant="default"
-                  className="w-full mt-2 bg-[#8B5E3C] hover:bg-[#8B5E3C]/90 text-white"
+                  className="w-full mt-4 bg-[#8B5E3C] hover:bg-[#8B5E3C]/90 text-white min-h-[48px] px-6"
                 >
                   <Link href="/contact" onClick={() => setIsOpen(false)}>
                     Schedule a Tour

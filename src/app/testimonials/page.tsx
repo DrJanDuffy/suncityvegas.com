@@ -105,13 +105,13 @@ export default function TestimonialsPage() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="/contact"
-                  className="inline-flex items-center justify-center px-8 py-4 bg-[#D4AF37] hover:bg-[#D4AF37]/90 text-[#2D2A26] rounded-md font-semibold transition-colors"
+                  className="inline-flex items-center justify-center px-8 py-4 bg-[#D4AF37] hover:bg-[#D4AF37]/90 text-[#2D2A26] rounded-md font-semibold transition-colors min-h-[48px] touch-manipulation"
                 >
                   Schedule a Tour
                 </a>
                 <a
                   href="tel:7022221964"
-                  className="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-white text-white rounded-md font-semibold hover:bg-white hover:text-[#8B5E3C] transition-colors"
+                  className="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-white text-white rounded-md font-semibold hover:bg-white hover:text-[#8B5E3C] transition-colors min-h-[48px] touch-manipulation"
                 >
                   Call (702) 222-1964
                 </a>

@@ -194,7 +194,7 @@ export default function HomeStylesPage() {
                         <Button
                           asChild
                           variant="default"
-                          className="w-full bg-[#8B5E3C] hover:bg-[#8B5E3C]/90"
+                          className="w-full bg-[#8B5E3C] hover:bg-[#8B5E3C]/90 min-h-[48px] px-6"
                         >
                           <Link href="/homes-for-sale">
                             View Available Homes

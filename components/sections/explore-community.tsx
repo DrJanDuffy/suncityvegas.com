@@ -102,8 +102,8 @@ export default function ExploreCommunitySection() {
           </div>
 
           <div className="mt-12 text-center">
-            <Button asChild size="lg" className="bg-[#8B5E3C] hover:bg-[#8B5E3C]/90 text-white">
-              <Link href="/contact" className="inline-flex items-center gap-2">
+            <Button asChild size="lg" className="bg-[#8B5E3C] hover:bg-[#8B5E3C]/90 text-white min-h-[48px] px-6">
+              <Link href="/contact" className="inline-flex items-center gap-2 min-h-[48px]">
                 <Phone className="w-5 h-5" />
                 Schedule a Tour
               </Link>
