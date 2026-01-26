@@ -13,7 +13,7 @@ type BreadcrumbsProps = {
 };
 
 export default function Breadcrumbs({ items, className }: BreadcrumbsProps) {
-  const baseUrl = 'https://www.delwebbnorthranchhomes.com';
+  const baseUrl = 'https://www.suncityvegas.com';
 
   // Generate BreadcrumbList schema
   const breadcrumbSchema = {
@@ -37,32 +37,32 @@ export default function Breadcrumbs({ items, className }: BreadcrumbsProps) {
       />
       <nav
         aria-label="Breadcrumb"
-        className={cn('py-4 border-b border-gray-200 bg-white', className)}
+        className={cn('py-4 border-b border-[#C4A574]/20 bg-[#FDF8F3]', className)}
       >
         <div className="container mx-auto px-4">
-          <ol className="flex items-center space-x-2 text-sm text-gray-600">
+          <ol className="flex items-center space-x-2 text-sm text-[#2D2A26]">
             {items.map((item, index) => (
               <li key={item.href} className="flex items-center">
                 {index > 0 && (
-                  <ChevronRight className="w-4 h-4 mx-2 text-gray-400" aria-hidden="true" />
+                  <ChevronRight className="w-4 h-4 mx-2 text-[#C4A574]" aria-hidden="true" />
                 )}
                 {index === 0 ? (
                   <Link
                     href={item.href}
-                    className="flex items-center hover:text-primary transition-colors"
+                    className="flex items-center hover:text-[#8B5E3C] transition-colors"
                     aria-label={item.label}
                   >
                     <Home className="w-4 h-4 mr-1" />
                     <span className="sr-only">{item.label}</span>
                   </Link>
                 ) : index === items.length - 1 ? (
-                  <span className="text-gray-900 font-medium" aria-current="page">
+                  <span className="text-[#8B5E3C] font-medium" aria-current="page">
                     {item.label}
                   </span>
                 ) : (
                   <Link
                     href={item.href}
-                    className="hover:text-primary transition-colors"
+                    className="hover:text-[#8B5E3C] transition-colors"
                   >
                     {item.label}
                   </Link>

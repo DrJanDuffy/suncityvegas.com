@@ -22,11 +22,11 @@ const getCommonQuestions = () => {
     faqData
       .find((cat) => cat.category === 'Pets & Lifestyle')
       ?.questions.find((q) => q.question.toLowerCase().includes('pets allowed')),
-    // 4. "Is Del Webb North Ranch gated?"
+    // 4. "Is the community gated?"
     faqData
       .find((cat) => cat.category === 'About the Community')
       ?.questions.find((q) => q.question.toLowerCase().includes('gated')),
-  ].filter(Boolean) as Array<{ question: string; answer: string }>; // Remove any undefined values
+  ].filter(Boolean) as Array<{ question: string; answer: string }>;
 
   return questions;
 };
@@ -40,15 +40,15 @@ export default function QuickFAQ() {
   };
 
   return (
-    <section className="py-12 md:py-16 bg-stone-50">
+    <section className="py-12 md:py-16 bg-[#FDF8F3]">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-8">
-            <h2 className="text-2xl md:text-3xl font-bold text-primary mb-2 font-playfair">
+            <h2 className="text-2xl md:text-3xl font-bold text-[#8B5E3C] mb-2 font-playfair">
               Common Questions
             </h2>
-            <p className="text-base md:text-lg text-text-dark">
-              Quick answers about Del Webb North Ranch
+            <p className="text-base md:text-lg text-[#2D2A26]">
+              Quick answers about Sun City Summerlin
             </p>
           </div>
 
@@ -60,21 +60,21 @@ export default function QuickFAQ() {
               return (
                 <div
                   key={index}
-                  className="bg-white rounded-lg shadow-two overflow-hidden border border-gray-200"
+                  className="bg-white rounded-lg shadow-two overflow-hidden border border-[#C4A574]/20"
                 >
                   <button
                     onClick={() => toggleQuestion(index)}
-                    className="w-full px-6 py-4 flex items-center justify-between text-left hover:bg-stone-50 transition-colors"
+                    className="w-full px-6 py-4 flex items-center justify-between text-left hover:bg-[#FDF8F3] transition-colors"
                     aria-expanded={ariaExpanded}
                   >
-                    <span className="font-semibold text-text-dark pr-4 flex-1">
+                    <span className="font-semibold text-[#2D2A26] pr-4 flex-1">
                       {faq.question}
                     </span>
                     <div className="flex-shrink-0">
                       {isOpen ? (
-                        <ChevronUp className="w-5 h-5 text-primary" />
+                        <ChevronUp className="w-5 h-5 text-[#8B5E3C]" />
                       ) : (
-                        <ChevronDown className="w-5 h-5 text-primary" />
+                        <ChevronDown className="w-5 h-5 text-[#8B5E3C]" />
                       )}
                     </div>
                   </button>
@@ -84,8 +84,8 @@ export default function QuickFAQ() {
                       isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
                     )}
                   >
-                    <div className="px-6 py-4 border-t border-gray-200 bg-stone-50">
-                      <p className="text-text-dark leading-relaxed">{faq.answer}</p>
+                    <div className="px-6 py-4 border-t border-[#C4A574]/20 bg-[#FDF8F3]">
+                      <p className="text-[#2D2A26] leading-relaxed">{faq.answer}</p>
                     </div>
                   </div>
                 </div>
@@ -96,7 +96,7 @@ export default function QuickFAQ() {
           <div className="text-center">
             <Link
               href="/faq"
-              className="inline-flex items-center gap-2 px-6 py-3 min-h-[44px] min-w-[44px] bg-amber-700 hover:bg-amber-800 text-white font-semibold rounded-md transition-colors"
+              className="inline-flex items-center gap-2 px-6 py-3 min-h-[44px] min-w-[44px] bg-[#8B5E3C] hover:bg-[#8B5E3C]/90 text-white font-semibold rounded-md transition-colors"
             >
               View All FAQs
               <ArrowRight className="w-5 h-5" />
