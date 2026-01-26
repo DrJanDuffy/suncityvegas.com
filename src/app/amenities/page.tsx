@@ -6,134 +6,118 @@ import Breadcrumbs from "@/../components/Breadcrumbs";
 import { Button } from "@/../components/ui/button";
 import Link from "next/link";
 import ScrollAnimation from "@/../components/scroll-animation";
-import { oldSiteData } from "@/lib/old-site-data";
-import { getAmenities, getCommunityInfo } from "@/lib/communityData";
+import { getAmenities, getRecreationCenters, getGolfCourses } from "@/lib/communityData";
 import RealScoutListings from "@/../components/RealScoutListings";
 import {
   Activity,
   Users,
   Sparkles,
-  Waves,
-  Dumbbell,
-  UtensilsCrossed,
-  TreePine,
-  Gamepad2,
   CheckCircle2,
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Resort-Style Amenities | Del Webb North Ranch 55+ Real Estate | Homes by Dr. Jan Duffy",
+  title: "Amenities | Sun City Summerlin | 4 Golf Courses & 3 Rec Centers",
   description:
-    "Discover resort-style amenities at Del Webb North Ranch, a premier 55+ community in North Las Vegas. Pool, fitness center, pickleball courts, clubhouse, walking trails, and more.",
+    "Discover world-class amenities at Sun City Summerlin: 4 championship golf courses, 3 recreation centers, 80+ clubs, pools, tennis, pickleball. Las Vegas' premier 55+ community.",
   alternates: {
-    canonical: "https://www.delwebbnorthranchhomes.com/amenities",
+    canonical: "https://www.suncityvegas.com/amenities",
   },
   openGraph: {
-    title: "Resort-Style Amenities | Del Webb North Ranch 55+ Real Estate | Homes by Dr. Jan Duffy",
+    title: "Amenities | Sun City Summerlin | 4 Golf Courses & 3 Rec Centers",
     description:
-      "Resort-style amenities including pool, fitness center, pickleball courts, and clubhouse in Del Webb North Ranch 55+ community.",
-    url: "https://www.delwebbnorthranchhomes.com/amenities",
-    siteName: "Del Webb North Ranch 55+ Real Estate | Homes by Dr. Jan Duffy",
+      "World-class amenities: 4 golf courses, 3 rec centers, 80+ clubs, pools, tennis, pickleball at Sun City Summerlin.",
+    url: "https://www.suncityvegas.com/amenities",
+    siteName: "Sun City Summerlin Homes for Sale | Dr. Jan Duffy",
     locale: "en_US",
     type: "website",
     images: [
       {
-        url: "https://www.delwebbnorthranchhomes.com/images/amenities/resort-pool.jpeg",
+        url: "https://www.suncityvegas.com/images/amenities/resort-pool.jpeg",
         width: 1200,
         height: 630,
-        alt: "Del Webb North Ranch resort-style amenities",
+        alt: "Sun City Summerlin resort-style amenities",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Resort-Style Amenities | Del Webb North Ranch 55+ Real Estate | Homes by Dr. Jan Duffy",
-    description: "Resort-style amenities in North Las Vegas's premier 55+ community.",
-    images: ["https://www.delwebbnorthranchhomes.com/images/amenities/resort-pool.jpeg"],
+    title: "Amenities | Sun City Summerlin | 4 Golf Courses & 3 Rec Centers",
+    description: "World-class amenities at Las Vegas' premier 55+ community.",
+    images: ["https://www.suncityvegas.com/images/amenities/resort-pool.jpeg"],
   },
 };
 
 const amenities = [
   {
-    category: "Stay Active",
-    icon: <Activity className="w-8 h-8" />,
+    category: "Golf Courses",
+    icon: <Activity className="w-8 h-8 text-[#5D7A5D]" />,
     items: [
       {
-        name: "Resort-Style Pool",
-        description: "Large pool with plenty of space for swimming and lounging",
+        name: "Highland Falls Golf Course",
+        description: "18-hole championship course designed by Billy Casper & Greg Nash",
         image: "/images/amenities/resort-pool.jpeg",
       },
       {
-        name: "Heated Lap Pool",
-        description: "Perfect for morning swims and year-round exercise",
-        image: "/images/amenities/lap-pool.jpeg",
+        name: "Palm Valley Golf Course",
+        description: "18-hole championship course with stunning mountain views",
+        image: "/images/amenities/resort-pool.jpeg",
       },
       {
-        name: "Fitness Center",
-        description: "Modern equipment for your daily workout routine",
+        name: "Eagle Crest Golf Course",
+        description: "18-hole executive course perfect for a quick round",
+        image: "/images/amenities/resort-pool.jpeg",
+      },
+      {
+        name: "Stonebridge Golf Course",
+        description: "27-hole championship course at Sun City",
+        image: "/images/amenities/resort-pool.jpeg",
+      },
+    ],
+  },
+  {
+    category: "Recreation Centers",
+    icon: <Users className="w-8 h-8 text-[#8B5E3C]" />,
+    items: [
+      {
+        name: "Mountain Shadows",
+        description: "45,000 sq ft with fitness center, indoor pool, racquetball, arts & crafts",
         image: "/images/amenities/clubhouse.jpeg",
       },
       {
-        name: "Pickleball Courts",
-        description: "Lighted courts for evening games and tournaments",
+        name: "Desert Vista",
+        description: "48,000 sq ft with fitness center, pool & spa, tennis, pickleball, ballroom",
+        image: "/images/amenities/clubhouse.jpeg",
+      },
+      {
+        name: "Pinnacle",
+        description: "34,000 sq ft with fitness center, pool, tennis, bocce ball, card rooms",
+        image: "/images/amenities/clubhouse.jpeg",
+      },
+    ],
+  },
+  {
+    category: "Activities & Sports",
+    icon: <Sparkles className="w-8 h-8 text-[#D4AF37]" />,
+    items: [
+      {
+        name: "Swimming Pools",
+        description: "Multiple indoor and outdoor pools and spas across rec centers",
+        image: "/images/amenities/resort-pool.jpeg",
+      },
+      {
+        name: "Tennis & Pickleball",
+        description: "Courts available at multiple rec centers for year-round play",
         image: "/images/amenities/pickleball-courts.jpeg",
       },
       {
-        name: "Bocce Courts",
-        description: "Classic lawn game courts for friendly competition",
-        image: "/images/amenities/event-lawn.jpeg",
-      },
-    ],
-  },
-  {
-    category: "Stay Connected",
-    icon: <Users className="w-8 h-8" />,
-    items: [
-      {
-        name: "Clubhouse",
-        description: "Spacious gathering place for clubs, classes, and events",
+        name: "Fitness Centers",
+        description: "State-of-the-art equipment at all three recreation centers",
         image: "/images/amenities/clubhouse.jpeg",
       },
       {
-        name: "Clubhouse Main Entrance",
-        description: "Welcoming entrance to the community clubhouse",
-        image: "/images/amenities/clubhouse-main-entrance.jpeg",
-      },
-      {
-        name: "Event Lawn",
-        description: "Large lawn for community celebrations and gatherings",
-        image: "/images/amenities/event-lawn.jpeg",
-      },
-      {
-        name: "Billiards Room",
-        description: "Relaxed space for games and socializing",
-        image: "/images/amenities/billiards-room.jpeg",
-      },
-      {
-        name: "Social Room",
-        description: "Community gathering space for events and activities",
-        image: "/images/amenities/social-room.jpeg",
-      },
-    ],
-  },
-  {
-    category: "Stay Relaxed",
-    icon: <Sparkles className="w-8 h-8" />,
-    items: [
-      {
-        name: "Reception Desk",
-        description: "Welcome center and information desk",
-        image: "/images/amenities/reception-desk.jpeg",
-      },
-      {
         name: "Walking Trails",
-        description: "Scenic trails with beautiful mountain views",
-        image: "/images/amenities/event-lawn-club.jpeg",
-      },
-      {
-        name: "Dog Park",
-        description: "Dedicated space for your furry friends to play",
-        image: "/images/amenities/dog-park.jpeg",
+        description: "Miles of scenic trails with Red Rock Canyon views",
+        image: "/images/amenities/event-lawn.jpeg",
       },
     ],
   },
@@ -152,7 +136,7 @@ function AmenityCard({
   return (
     <ScrollAnimation delay={index * 50}>
       <div className="bg-white rounded-lg shadow-two hover:shadow-three transition-shadow overflow-hidden">
-        <div className="relative h-48 bg-bg-light">
+        <div className="relative h-48 bg-[#FDF8F3]">
           <Image
             src={amenity.image}
             alt={amenity.name}
@@ -164,10 +148,10 @@ function AmenityCard({
           />
         </div>
         <div className="p-6">
-          <h3 className="text-xl font-bold text-primary mb-2 font-playfair">
+          <h3 className="text-xl font-bold text-[#8B5E3C] mb-2 font-playfair">
             {amenity.name}
           </h3>
-          <p className="text-text-dark leading-relaxed">
+          <p className="text-[#2D2A26] leading-relaxed">
             {amenity.description}
           </p>
         </div>
@@ -177,28 +161,56 @@ function AmenityCard({
 }
 
 export default function AmenitiesPage() {
+  const communityAmenities = getAmenities();
+  const recCenters = getRecreationCenters();
+  const golfCourses = getGolfCourses();
+
   return (
     <>
       <Navbar />
       <Breadcrumbs
         items={[
-          { label: "Del Webb North Ranch", href: "/" },
+          { label: "Sun City Summerlin", href: "/" },
           { label: "Amenities", href: "/amenities" },
         ]}
       />
       <main className="pt-16 md:pt-20">
         {/* Hero Section */}
-        <section className="bg-primary text-white py-12 md:py-16 lg:py-20">
+        <section className="bg-[#8B5E3C] text-white py-12 md:py-16 lg:py-20">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 font-playfair">
-                Resort-Style Amenities | Del Webb North Ranch 55+ Community
+                World-Class Amenities | Sun City Summerlin
               </h1>
               <p className="text-lg md:text-xl text-gray-100 leading-relaxed">
-                Del Webb North Ranch offers resort-style amenities designed to
-                help you live your best life. Every amenity is fully built and
-                ready to enjoy. Explore <Link href="/floor-plans" className="text-white hover:text-gray-200 underline">homes with these amenities</Link> or view <Link href="/homes-for-sale" className="text-white hover:text-gray-200 underline">available homes for sale</Link>.
+                Sun City Summerlin offers unmatched amenities: 4 championship golf courses, 
+                3 recreation centers totaling over 125,000 sq ft, and 80+ clubs. 
+                View <Link href="/homes-for-sale" className="text-[#D4AF37] hover:text-white underline">homes with access to these amenities</Link>.
               </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Quick Stats */}
+        <section className="py-8 bg-[#FDF8F3]">
+          <div className="container mx-auto px-4">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+              <div className="p-4">
+                <p className="text-3xl md:text-4xl font-bold text-[#8B5E3C]">4</p>
+                <p className="text-[#2D2A26]">Golf Courses</p>
+              </div>
+              <div className="p-4">
+                <p className="text-3xl md:text-4xl font-bold text-[#8B5E3C]">3</p>
+                <p className="text-[#2D2A26]">Rec Centers</p>
+              </div>
+              <div className="p-4">
+                <p className="text-3xl md:text-4xl font-bold text-[#8B5E3C]">80+</p>
+                <p className="text-[#2D2A26]">Clubs</p>
+              </div>
+              <div className="p-4">
+                <p className="text-3xl md:text-4xl font-bold text-[#8B5E3C]">125K+</p>
+                <p className="text-[#2D2A26]">Sq Ft Rec Space</p>
+              </div>
             </div>
           </div>
         </section>
@@ -208,16 +220,16 @@ export default function AmenitiesPage() {
           <section
             key={category.category}
             className={`py-12 md:py-16 lg:py-20 ${
-              categoryIndex % 2 === 0 ? "bg-white" : "bg-bg-light"
+              categoryIndex % 2 === 0 ? "bg-white" : "bg-[#FDF8F3]"
             }`}
           >
             <div className="container mx-auto px-4">
               <div className="mb-8 md:mb-12">
                 <div className="flex items-center justify-center gap-4 mb-4">
-                  <div className="flex items-center justify-center w-16 h-16 bg-success/10 rounded-full">
+                  <div className="flex items-center justify-center w-16 h-16 bg-[#8B5E3C]/10 rounded-full">
                     {category.icon}
                   </div>
-                  <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary font-playfair">
+                  <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#8B5E3C] font-playfair">
                     {category.category}
                   </h2>
                 </div>
@@ -235,40 +247,19 @@ export default function AmenitiesPage() {
           </section>
         ))}
 
-        {/* Home Features */}
-        <section className="py-12 md:py-16 bg-bg-light">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <h2 className="text-2xl md:text-3xl font-bold text-primary mb-6 text-center font-playfair">
-                Home Features
-              </h2>
-              <div className="bg-white rounded-lg shadow-two p-6 md:p-8">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  {oldSiteData.amenities.homeFeatures.map((feature, index) => (
-                    <div key={feature} className="flex items-start gap-3">
-                      <CheckCircle2 className="w-5 h-5 text-success flex-shrink-0 mt-0.5" />
-                      <span className="text-text-dark">{feature}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* Complete Community Features List */}
         <section className="py-12 md:py-16 bg-white">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-2xl md:text-3xl font-bold text-primary mb-6 text-center font-playfair">
-                Complete Community Features
+              <h2 className="text-2xl md:text-3xl font-bold text-[#8B5E3C] mb-6 text-center font-playfair">
+                Complete Amenities List
               </h2>
-              <div className="bg-bg-light rounded-lg shadow-two p-6 md:p-8">
+              <div className="bg-[#FDF8F3] rounded-lg shadow-two p-6 md:p-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  {getAmenities().map((amenity, index) => (
+                  {communityAmenities.map((amenity) => (
                     <div key={amenity} className="flex items-start gap-3">
-                      <CheckCircle2 className="w-5 h-5 text-success flex-shrink-0 mt-0.5" />
-                      <span className="text-text-dark">{amenity}</span>
+                      <CheckCircle2 className="w-5 h-5 text-[#5D7A5D] flex-shrink-0 mt-0.5" />
+                      <span className="text-[#2D2A26]">{amenity}</span>
                     </div>
                   ))}
                 </div>
@@ -277,26 +268,26 @@ export default function AmenitiesPage() {
           </div>
         </section>
 
-        {/* RealScout Listings - Lead Generator */}
-        <RealScoutListings h2Text="View Available Homes in Del Webb North Ranch with These Amazing Amenities" />
+        {/* RealScout Listings */}
+        <RealScoutListings h2Text="View Available Homes in Sun City Summerlin with These Amazing Amenities" />
 
         {/* CTA Section */}
-        <section className="py-12 md:py-16 bg-primary text-white">
+        <section className="py-12 md:py-16 bg-[#8B5E3C] text-white">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-2xl md:text-3xl font-bold mb-4 font-playfair">
                 Experience These Amenities for Yourself
               </h2>
               <p className="text-lg text-gray-100 mb-6">
-                Schedule a tour with <Link href="/about" className="text-white hover:text-gray-200 underline">Dr. Jan Duffy</Link> to see the amenities and
-                community in person. Learn more about the <Link href="/lifestyle" className="text-white hover:text-gray-200 underline">active adult lifestyle</Link> at Del Webb North Ranch.
+                Schedule a tour with <Link href="/about" className="text-[#D4AF37] hover:text-white underline">Dr. Jan Duffy</Link> to see the amenities and
+                community in person. Learn more about the <Link href="/lifestyle" className="text-[#D4AF37] hover:text-white underline">active adult lifestyle</Link> at Sun City Summerlin.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button
                   asChild
                   variant="accent"
                   size="lg"
-                  className="bg-primary hover:bg-primary/90 text-white"
+                  className="bg-[#D4AF37] hover:bg-[#D4AF37]/90 text-[#2D2A26]"
                 >
                   <Link href="/contact">Schedule Your Tour</Link>
                 </Button>
