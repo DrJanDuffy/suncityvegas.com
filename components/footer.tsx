@@ -57,6 +57,22 @@ export default function Footer() {
               </li>
               <li>
                 <Link
+                  href="/community"
+                  className="text-gray-300 hover:text-[#D4AF37] transition-colors"
+                >
+                  Community
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/selling"
+                  className="text-gray-300 hover:text-[#D4AF37] transition-colors"
+                >
+                  Selling
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/home-value"
                   className="text-gray-300 hover:text-[#D4AF37] transition-colors"
                 >

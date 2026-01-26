@@ -75,4 +75,12 @@ export const breadcrumbPaths = {
     { name: "Home", url: "https://www.suncityvegas.com" },
     { name: "Schedule Tour", url: "https://www.suncityvegas.com/schedule" },
   ],
+  community: [
+    { name: "Home", url: "https://www.suncityvegas.com" },
+    { name: "Community", url: "https://www.suncityvegas.com/community" },
+  ],
+  selling: [
+    { name: "Home", url: "https://www.suncityvegas.com" },
+    { name: "Selling", url: "https://www.suncityvegas.com/selling" },
+  ],
 };
