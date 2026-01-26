@@ -31,7 +31,7 @@ export async function POST(request: NextRequest) {
 
     // TODO: Send email notification
     // await sendEmail({
-    //   to: "sales@delwebbnorthranchhomes.com",
+    //   to: "jan@drjanduffy.com",
     //   subject: `New Contact Form Submission from ${name}`,
     //   html: `
     //     <h2>New Contact Form Submission</h2>

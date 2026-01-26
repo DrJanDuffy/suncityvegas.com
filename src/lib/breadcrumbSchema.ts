@@ -25,55 +25,54 @@ export function generateBreadcrumbSchema(items: BreadcrumbItem[]) {
  * Common breadcrumb paths for the site
  */
 export const breadcrumbPaths = {
-  homepage: [{ name: "Home", url: "https://www.delwebbnorthranchhomes.com" }],
+  homepage: [{ name: "Home", url: "https://www.suncityvegas.com" }],
   homesForSale: [
-    { name: "Home", url: "https://www.delwebbnorthranchhomes.com" },
-    { name: "Homes for Sale", url: "https://www.delwebbnorthranchhomes.com/homes-for-sale" },
-  ],
-  floorPlans: [
-    { name: "Home", url: "https://www.delwebbnorthranchhomes.com" },
-    { name: "Floor Plans", url: "https://www.delwebbnorthranchhomes.com/floor-plans" },
-  ],
-  floorPlanDetail: (planName: string, planSlug: string) => [
-    { name: "Home", url: "https://www.delwebbnorthranchhomes.com" },
-    { name: "Floor Plans", url: "https://www.delwebbnorthranchhomes.com/floor-plans" },
-    { name: planName, url: `https://www.delwebbnorthranchhomes.com/floor-plans/${planSlug}` },
+    { name: "Home", url: "https://www.suncityvegas.com" },
+    { name: "Homes for Sale", url: "https://www.suncityvegas.com/homes-for-sale" },
   ],
   amenities: [
-    { name: "Home", url: "https://www.delwebbnorthranchhomes.com" },
-    { name: "Amenities", url: "https://www.delwebbnorthranchhomes.com/amenities" },
+    { name: "Home", url: "https://www.suncityvegas.com" },
+    { name: "Amenities", url: "https://www.suncityvegas.com/amenities" },
   ],
   lifestyle: [
-    { name: "Home", url: "https://www.delwebbnorthranchhomes.com" },
-    { name: "Lifestyle", url: "https://www.delwebbnorthranchhomes.com/lifestyle" },
+    { name: "Home", url: "https://www.suncityvegas.com" },
+    { name: "Lifestyle", url: "https://www.suncityvegas.com/lifestyle" },
   ],
   about: [
-    { name: "Home", url: "https://www.delwebbnorthranchhomes.com" },
-    { name: "About", url: "https://www.delwebbnorthranchhomes.com/about" },
+    { name: "Home", url: "https://www.suncityvegas.com" },
+    { name: "About", url: "https://www.suncityvegas.com/about" },
   ],
   blog: [
-    { name: "Home", url: "https://www.delwebbnorthranchhomes.com" },
-    { name: "Blog", url: "https://www.delwebbnorthranchhomes.com/blog" },
+    { name: "Home", url: "https://www.suncityvegas.com" },
+    { name: "Blog", url: "https://www.suncityvegas.com/blog" },
   ],
   blogPost: (postTitle: string, postSlug: string) => [
-    { name: "Home", url: "https://www.delwebbnorthranchhomes.com" },
-    { name: "Blog", url: "https://www.delwebbnorthranchhomes.com/blog" },
-    { name: postTitle, url: `https://www.delwebbnorthranchhomes.com/blog/${postSlug}` },
+    { name: "Home", url: "https://www.suncityvegas.com" },
+    { name: "Blog", url: "https://www.suncityvegas.com/blog" },
+    { name: postTitle, url: `https://www.suncityvegas.com/blog/${postSlug}` },
   ],
   faq: [
-    { name: "Home", url: "https://www.delwebbnorthranchhomes.com" },
-    { name: "FAQ", url: "https://www.delwebbnorthranchhomes.com/faq" },
+    { name: "Home", url: "https://www.suncityvegas.com" },
+    { name: "FAQ", url: "https://www.suncityvegas.com/faq" },
   ],
   contact: [
-    { name: "Home", url: "https://www.delwebbnorthranchhomes.com" },
-    { name: "Contact", url: "https://www.delwebbnorthranchhomes.com/contact" },
+    { name: "Home", url: "https://www.suncityvegas.com" },
+    { name: "Contact", url: "https://www.suncityvegas.com/contact" },
   ],
   testimonials: [
-    { name: "Home", url: "https://www.delwebbnorthranchhomes.com" },
-    { name: "Testimonials", url: "https://www.delwebbnorthranchhomes.com/testimonials" },
+    { name: "Home", url: "https://www.suncityvegas.com" },
+    { name: "Testimonials", url: "https://www.suncityvegas.com/testimonials" },
   ],
   privacy: [
-    { name: "Home", url: "https://www.delwebbnorthranchhomes.com" },
-    { name: "Privacy Policy", url: "https://www.delwebbnorthranchhomes.com/privacy" },
+    { name: "Home", url: "https://www.suncityvegas.com" },
+    { name: "Privacy Policy", url: "https://www.suncityvegas.com/privacy" },
+  ],
+  homeValue: [
+    { name: "Home", url: "https://www.suncityvegas.com" },
+    { name: "Home Value", url: "https://www.suncityvegas.com/home-value" },
+  ],
+  schedule: [
+    { name: "Home", url: "https://www.suncityvegas.com" },
+    { name: "Schedule Tour", url: "https://www.suncityvegas.com/schedule" },
   ],
 };

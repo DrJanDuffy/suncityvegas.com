@@ -12,10 +12,10 @@ export default function SolutionSection() {
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <ScrollAnimation>
-              <div className="relative aspect-square rounded-lg overflow-hidden shadow-three bg-bg-light">
+              <div className="relative aspect-square rounded-lg overflow-hidden shadow-three bg-[#FDF8F3]">
                 <Image
                   src="/images/hero/community-sign.jpg"
-                  alt="Del Webb North Ranch community entrance sign"
+                  alt="Sun City Summerlin community entrance"
                   fill
                   className="object-cover"
                   placeholder="blur"
@@ -26,19 +26,19 @@ export default function SolutionSection() {
             </ScrollAnimation>
             <ScrollAnimation delay={100}>
               <div>
-                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4 md:mb-6 font-playfair px-2">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#8B5E3C] mb-4 md:mb-6 font-playfair px-2">
                   A Community Built for Living
                 </h2>
                 <div className="prose prose-lg max-w-none space-y-4 md:space-y-6">
-                  <p className="text-base sm:text-lg md:text-xl text-text-dark leading-relaxed px-2">
-                    Del Webb North Ranch is a gated 55+ community with 394 single-story homes on 80 acres, built for people who want to live, not just exist.
+                  <p className="text-base sm:text-lg md:text-xl text-[#2D2A26] leading-relaxed px-2">
+                    Sun City Summerlin is Las Vegas&apos; premier 55+ community with 7,779 homes, 4 championship golf courses, and 3 recreation centers—built for people who want to live, not just exist.
                   </p>
-                  <p className="text-base sm:text-lg md:text-xl text-text-dark leading-relaxed px-2">
-                    Every home is single-story. No stairs to worry about now or later. The landscaping is handled. The 10,000 sq ft <Link href="/amenities" className="text-primary hover:text-accent underline">clubhouse is fully built and ready</Link>. Gated with 24/7 security. The neighbors are your age and actually want to meet you. Explore the <Link href="/lifestyle" className="text-primary hover:text-accent underline">active adult lifestyle</Link> and <Link href="/floor-plans" className="text-primary hover:text-accent underline">9 floor plans</Link> available. And Nevada has no state income tax—so more of your money stays yours.
+                  <p className="text-base sm:text-lg md:text-xl text-[#2D2A26] leading-relaxed px-2">
+                    Over 125,000 sq ft of <Link href="/amenities" className="text-[#8B5E3C] hover:text-[#5D7A5D] underline">world-class amenities</Link> are ready and waiting. Guard-gated with 24/7 security. Red Rock Canyon views from your backyard. 80+ clubs to join. Neighbors your age who actually want to meet you. Explore the <Link href="/lifestyle" className="text-[#8B5E3C] hover:text-[#5D7A5D] underline">active adult lifestyle</Link> today. And Nevada has no state income tax—so more of your money stays yours.
                   </p>
-                  <p className="text-base sm:text-lg md:text-xl text-text-dark leading-relaxed font-semibold px-2">
-                    This isn't a place to slow down. It's a place to finally do
-                    everything you've been putting off.
+                  <p className="text-base sm:text-lg md:text-xl text-[#2D2A26] leading-relaxed font-semibold px-2">
+                    This isn&apos;t a place to slow down. It&apos;s a place to finally do
+                    everything you&apos;ve been putting off.
                   </p>
                 </div>
               </div>
