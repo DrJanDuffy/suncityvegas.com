@@ -18,6 +18,8 @@ import RealScoutListings from "../../components/RealScoutListings";
 import QuickFAQ from "../../components/QuickFAQ";
 import ExploreCommunitySection from "../../components/sections/explore-community";
 import FlyersSection from "../../components/sections/flyers-section";
+import FeaturedListingSection from "../../components/sections/featured-listing";
+import MarketStatsSection from "../../components/sections/market-stats";
 
 // Homepage metadata - optimized for SEO and sitelinks
 export const metadata: Metadata = {
@@ -57,10 +59,14 @@ export default function Home() {
       <Navbar />
       <main id="main-content" className="pt-16 md:pt-20">
         <Hero />
+        {/* Featured Listing Section - Enable in component when listing is available */}
+        <FeaturedListingSection />
         {/* Explore Community Section - Prominent internal linking for sitelinks */}
         <ExploreCommunitySection />
         {/* RealScout Listings - Main Lead Generator - Prominently placed after hero */}
         <RealScoutListings h2Text="Browse Homes for Sale in Sun City Summerlin | Las Vegas 55+ Community" />
+        {/* Market Statistics */}
+        <MarketStatsSection />
         <ProblemSection />
         <SolutionSection />
         <ValuePropsSection />
