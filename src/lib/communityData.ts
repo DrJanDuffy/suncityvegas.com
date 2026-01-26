@@ -21,6 +21,7 @@ export type CommunityInfo = {
   propertyTaxRate: string;
   petPolicy: string;
   ageRequirement: string;
+  sidLid: string;
 };
 
 export type RecreationCenter = {
@@ -61,6 +62,7 @@ export const communityInfo: CommunityInfo = {
   propertyTaxRate: '~0.75% of assessed value',
   petPolicy: 'Pets welcome with community guidelines',
   ageRequirement: 'At least one resident must be 55+',
+  sidLid: 'None',
 };
 
 export const recreationCenters: RecreationCenter[] = [
