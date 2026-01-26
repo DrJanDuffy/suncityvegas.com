@@ -28,6 +28,9 @@ export type CommunityInfo = {
 };
 
 export const oldSiteData = {
+  // Virtual tours - empty for Sun City Summerlin (resale community)
+  virtualTours: [] as { model: string; sqft: string; beds: number | string; baths: number | string; series: string; embedUrl: string | null }[],
+
   // All testimonials
   testimonials: [
     {

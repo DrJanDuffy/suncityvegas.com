@@ -2,6 +2,9 @@
 // Utility to structure data for Sun City Summerlin
 
 export const oldSiteData = {
+  // Virtual tours - empty for Sun City Summerlin (resale community)
+  virtualTours: [],
+
   // All testimonials
   testimonials: [
     {

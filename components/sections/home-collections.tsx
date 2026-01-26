@@ -24,7 +24,7 @@ function CollectionCard({
   return (
     <ScrollAnimation delay={delay}>
       <div className="bg-white p-6 md:p-8 rounded-lg shadow-two hover:shadow-three transition-shadow h-full flex flex-col">
-        <div className="relative h-48 md:h-56 rounded-lg mb-4 md:mb-6 overflow-hidden bg-bg-light">
+        <div className="relative h-48 md:h-56 rounded-lg mb-4 md:mb-6 overflow-hidden bg-[#FDF8F3]">
           <Image
             src={imagePath}
             alt={`${title} home exterior`}
@@ -35,13 +35,13 @@ function CollectionCard({
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
         </div>
-        <h3 className="text-xl md:text-2xl font-bold text-primary mb-2 md:mb-3 font-playfair">
+        <h3 className="text-xl md:text-2xl font-bold text-[#8B5E3C] mb-2 md:mb-3 font-playfair">
           {title}
         </h3>
-        <p className="text-base md:text-lg font-semibold text-primary mb-3 md:mb-4">
+        <p className="text-base md:text-lg font-semibold text-[#8B5E3C] mb-3 md:mb-4">
           {specs}
         </p>
-        <p className="text-sm md:text-base text-text-dark leading-relaxed flex-grow">
+        <p className="text-sm md:text-base text-[#2D2A26] leading-relaxed flex-grow">
           {description}
         </p>
       </div>
@@ -52,37 +52,36 @@ function CollectionCard({
 export default function HomeCollectionsSection() {
   const collections = [
     {
-      title: "Cottage Series",
-      specs: "1,285-1,509 sq ft",
+      title: "Cozy Homes",
+      specs: "1,000-1,400 sq ft | $275K-$375K",
       description:
-        "Efficient, comfortable, easy to maintain. Perfect if you want cozy without cramped.",
+        "Perfect for easy maintenance and efficient living. These charming homes offer comfortable spaces without excess.",
       imagePath: "/images/floor-plans/haven.avif",
     },
     {
-      title: "Classic Series",
-      specs: "1,451-1,770 sq ft",
+      title: "Mid-Size Homes",
+      specs: "1,400-2,000 sq ft | $375K-$525K",
       description:
-        "Room to spread out. Optional dens for hobbies or home offices.",
+        "The most popular size in Sun City Summerlin. Room for guests, a home office, and comfortable daily living.",
       imagePath: "/images/floor-plans/classic-getaway.jpg",
     },
     {
-      title: "Retreat Series",
-      specs: "1,716-2,015 sq ft",
+      title: "Spacious Homes",
+      specs: "2,000-3,500+ sq ft | $525K-$1.2M+",
       description:
-        "Spacious living for those who love to entertain or want extra room for visiting family.",
+        "Generous living spaces ideal for entertaining. Many feature premium lots, pools, and golf course views.",
       imagePath: "/images/floor-plans/retreat-haven.jpg",
     },
   ];
 
   return (
-    <section id="floor-plans" className="py-16 md:py-20 lg:py-24 bg-bg-light">
+    <section id="home-styles" className="py-16 md:py-20 lg:py-24 bg-[#FDF8F3]">
       <div className="container mx-auto px-4">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-3 md:mb-4 text-center font-playfair px-4">
-          Three Collections. Nine Floor Plans. One Perfect Fit.
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#8B5E3C] mb-3 md:mb-4 text-center font-playfair px-4">
+          Find Your Perfect Home Size
         </h2>
-        <p className="text-center text-base md:text-lg text-text-dark mb-8 md:mb-12 max-w-2xl mx-auto px-4">
-          Every home is single-story with 2-3 bedrooms, 2-2.5 baths, and a
-          2-car garage. Choose the size that fits your lifestyle.
+        <p className="text-center text-base md:text-lg text-[#2D2A26] mb-8 md:mb-12 max-w-2xl mx-auto px-4">
+          With 7,779 homes built 1989-2002, Sun City Summerlin offers incredible variety. All single-story with 2-4 bedrooms and attached garages.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 mb-8 md:mb-12">
@@ -99,8 +98,8 @@ export default function HomeCollectionsSection() {
         </div>
 
         <div className="text-center">
-          <Button asChild variant="default" size="lg" className="w-full sm:w-auto min-h-[44px] min-w-[44px]">
-            <Link href="/floor-plans">Explore Floor Plans</Link>
+          <Button asChild variant="default" size="lg" className="w-full sm:w-auto min-h-[44px] min-w-[44px] bg-[#8B5E3C] hover:bg-[#8B5E3C]/90">
+            <Link href="/homes-for-sale">View Available Homes</Link>
           </Button>
         </div>
       </div>
