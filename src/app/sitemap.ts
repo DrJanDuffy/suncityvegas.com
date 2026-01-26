@@ -3,7 +3,17 @@ import { MetadataRoute } from "next";
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://www.suncityvegas.com";
 
-  return [
+  // Blog post slugs - keep in sync with blog/[slug]/page.tsx
+  const blogPosts = [
+    "welcome-to-sun-city-summerlin",
+    "golf-courses-at-sun-city-summerlin",
+    "nevada-tax-benefits-for-retirees",
+    "80-clubs-and-activities",
+    "recreation-centers-guide",
+    "why-sun-city-summerlin",
+  ];
+
+  const staticPages: MetadataRoute.Sitemap = [
     // Homepage - Priority 1.0, Daily
     {
       url: baseUrl,
@@ -27,6 +37,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/lifestyle`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/floor-plans`,
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.8,
@@ -60,6 +76,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${baseUrl}/blog`,
       lastModified: new Date(),
       changeFrequency: "daily",
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/flyers`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
       priority: 0.7,
     },
     // Lower Priority Pages
@@ -100,4 +122,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.4,
     },
   ];
+
+  // Add blog post pages dynamically
+  const blogPages: MetadataRoute.Sitemap = blogPosts.map((slug) => ({
+    url: `${baseUrl}/blog/${slug}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly" as const,
+    priority: 0.6,
+  }));
+
+  return [...staticPages, ...blogPages];
 }
