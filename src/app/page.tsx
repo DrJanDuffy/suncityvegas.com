@@ -21,32 +21,32 @@ import FlyersSection from "../../components/sections/flyers-section";
 
 // Homepage metadata - optimized for SEO and sitelinks
 export const metadata: Metadata = {
-  title: "Del Webb North Ranch 55+ Real Estate | Homes by Dr. Jan Duffy",
+  title: "Sun City Summerlin Homes for Sale | Las Vegas 55+ Community | Dr. Jan Duffy",
   description:
-    "Discover 55+ luxury homes for sale at Del Webb North Ranch in North Las Vegas. Single-story living from $400K-$600K with resort amenities. Contact Dr. Jan Duffy at (702) 500-1064.",
+    "Find your dream home in Sun City Summerlin, Las Vegas' premier 55+ community. 4 golf courses, 3 rec centers, 80+ clubs. Homes $300K-$800K+. Call Dr. Jan Duffy: (702) 222-1964",
   alternates: {
-    canonical: "https://www.delwebbnorthranchhomes.com",
+    canonical: "https://www.suncityvegas.com",
   },
   openGraph: {
-    title: "Del Webb North Ranch 55+ Real Estate | Homes by Dr. Jan Duffy",
+    title: "Sun City Summerlin Homes for Sale | Las Vegas 55+ Community",
     description:
-      "Discover 55+ luxury homes for sale at Del Webb North Ranch in North Las Vegas. Single-story living from $400K-$600K with resort amenities.",
-    url: "https://www.delwebbnorthranchhomes.com",
-    siteName: "Del Webb North Ranch 55+ Real Estate | Homes by Dr. Jan Duffy",
+      "Find your dream home in Sun City Summerlin, Las Vegas' premier 55+ community. 4 golf courses, 3 rec centers, 80+ clubs. Homes $300K-$800K+.",
+    url: "https://www.suncityvegas.com",
+    siteName: "Sun City Summerlin Homes for Sale | Dr. Jan Duffy",
     images: [
       {
         url: "/images/amenities/resort-pool.jpeg",
         width: 1200,
         height: 630,
-        alt: "Del Webb North Ranch resort-style pool",
+        alt: "Sun City Summerlin golf course community with mountain views",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Del Webb North Ranch 55+ Real Estate | Homes by Dr. Jan Duffy",
+    title: "Sun City Summerlin Homes for Sale | Las Vegas 55+ Community",
     description:
-      "Discover 55+ luxury homes for sale at Del Webb North Ranch in North Las Vegas. Single-story living from $400K-$600K with resort amenities.",
+      "Find your dream home in Sun City Summerlin, Las Vegas' premier 55+ community. 4 golf courses, 3 rec centers, 80+ clubs. Homes $300K-$800K+.",
     images: ["/images/amenities/resort-pool.jpeg"],
   },
 };
@@ -60,7 +60,7 @@ export default function Home() {
         {/* Explore Community Section - Prominent internal linking for sitelinks */}
         <ExploreCommunitySection />
         {/* RealScout Listings - Main Lead Generator - Prominently placed after hero */}
-        <RealScoutListings h2Text="Browse Available Homes for Sale in Del Webb North Ranch | North Las Vegas 55+ Community" />
+        <RealScoutListings h2Text="Browse Homes for Sale in Sun City Summerlin | Las Vegas 55+ Community" />
         <ProblemSection />
         <SolutionSection />
         <ValuePropsSection />
