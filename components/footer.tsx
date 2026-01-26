@@ -1,34 +1,32 @@
 import Link from "next/link";
 import { Phone, Mail, MapPin, Youtube, Calendar, FileText, Instagram, Linkedin, Facebook } from "lucide-react";
-import { oldSiteData } from "@/lib/fetchOldSiteData";
 
 export default function Footer() {
   return (
-    <footer className="bg-footer-bg text-white py-12 md:py-16">
+    <footer className="bg-[#2D2A26] text-white py-12 md:py-16">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-8">
           {/* Site Info */}
           <div>
-            <h3 className="text-2xl font-bold mb-4 font-playfair">
-              Del Webb North Ranch
+            <h3 className="text-2xl font-bold mb-4 font-playfair text-[#D4AF37]">
+              Sun City Summerlin
             </h3>
             <p className="text-gray-300 mb-4">
-              Your premier 55+ active adult community in North Las Vegas.
+              Las Vegas&apos; premier 55+ active adult community with 4 golf courses, 3 recreation centers, and 80+ clubs.
             </p>
-            {/* TODO: Add Equal Housing Opportunity logo */}
             <div className="mt-4 text-sm text-gray-400">
               Equal Housing Opportunity
             </div>
           </div>
 
-          {/* Quick Links - Enhanced for sitelinks */}
+          {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
+            <h4 className="text-lg font-semibold mb-4 text-[#C4A574]">Quick Links</h4>
             <ul className="space-y-2">
               <li>
                 <Link
                   href="/"
-                  className="text-gray-300 hover:text-white transition-colors"
+                  className="text-gray-300 hover:text-[#D4AF37] transition-colors"
                 >
                   Home
                 </Link>
@@ -36,23 +34,15 @@ export default function Footer() {
               <li>
                 <Link
                   href="/homes-for-sale"
-                  className="text-gray-300 hover:text-white transition-colors"
+                  className="text-gray-300 hover:text-[#D4AF37] transition-colors"
                 >
                   Homes for Sale
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/floor-plans"
-                  className="text-gray-300 hover:text-white transition-colors"
-                >
-                  Floor Plans
-                </Link>
-              </li>
-              <li>
-                <Link
                   href="/amenities"
-                  className="text-gray-300 hover:text-white transition-colors"
+                  className="text-gray-300 hover:text-[#D4AF37] transition-colors"
                 >
                   Amenities
                 </Link>
@@ -60,7 +50,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/lifestyle"
-                  className="text-gray-300 hover:text-white transition-colors"
+                  className="text-gray-300 hover:text-[#D4AF37] transition-colors"
                 >
                   Lifestyle
                 </Link>
@@ -68,7 +58,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/home-value"
-                  className="text-gray-300 hover:text-white transition-colors"
+                  className="text-gray-300 hover:text-[#D4AF37] transition-colors"
                 >
                   Home Value
                 </Link>
@@ -76,15 +66,15 @@ export default function Footer() {
               <li>
                 <Link
                   href="/about"
-                  className="text-gray-300 hover:text-white transition-colors"
+                  className="text-gray-300 hover:text-[#D4AF37] transition-colors"
                 >
-                  About
+                  About Dr. Jan
                 </Link>
               </li>
               <li>
                 <Link
                   href="/blog"
-                  className="text-gray-300 hover:text-white transition-colors"
+                  className="text-gray-300 hover:text-[#D4AF37] transition-colors"
                 >
                   Blog
                 </Link>
@@ -92,7 +82,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/faq"
-                  className="text-gray-300 hover:text-white transition-colors"
+                  className="text-gray-300 hover:text-[#D4AF37] transition-colors"
                 >
                   FAQ
                 </Link>
@@ -100,7 +90,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/contact"
-                  className="text-gray-300 hover:text-white transition-colors"
+                  className="text-gray-300 hover:text-[#D4AF37] transition-colors"
                 >
                   Contact
                 </Link>
@@ -110,33 +100,33 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Contact</h4>
+            <h4 className="text-lg font-semibold mb-4 text-[#C4A574]">Contact Dr. Jan Duffy</h4>
             <ul className="space-y-3">
               <li>
                 <a
-                  href="tel:7025001064"
-                  className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors"
+                  href="tel:7022221964"
+                  className="flex items-center gap-2 text-gray-300 hover:text-[#D4AF37] transition-colors"
                 >
                   <Phone className="w-4 h-4" />
-                  (702) 500-1064
+                  (702) 222-1964
                 </a>
               </li>
               <li>
                 <a
-                  href="mailto:sales@delwebbnorthranchhomes.com"
-                  className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors"
+                  href="mailto:jan@drjanduffy.com"
+                  className="flex items-center gap-2 text-gray-300 hover:text-[#D4AF37] transition-colors"
                 >
                   <Mail className="w-4 h-4" />
-                  sales@delwebbnorthranchhomes.com
+                  jan@drjanduffy.com
                 </a>
               </li>
               <li>
                 <div className="flex items-start gap-2 text-gray-300">
                   <MapPin className="w-4 h-4 mt-1 flex-shrink-0" />
                   <span>
-                    2290 Beauty Vista Avenue
+                    9107 Del Webb Blvd
                     <br />
-                    North Las Vegas, NV 89086
+                    Las Vegas, NV 89134
                   </span>
                 </div>
               </li>
@@ -145,56 +135,43 @@ export default function Footer() {
 
           {/* Resources & Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Resources</h4>
+            <h4 className="text-lg font-semibold mb-4 text-[#C4A574]">Resources</h4>
             <ul className="space-y-2">
               <li>
                 <a
-                  href={oldSiteData.integrations.calendly}
+                  href="https://calendly.com/drjanduffy"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors"
+                  className="flex items-center gap-2 text-gray-300 hover:text-[#D4AF37] transition-colors"
                 >
                   <Calendar className="w-4 h-4" />
-                  Schedule Appointment
+                  Schedule a Tour
                 </a>
               </li>
               <li>
-                <a
-                  href={oldSiteData.integrations.realscout}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors"
+                <Link
+                  href="/homes-for-sale"
+                  className="flex items-center gap-2 text-gray-300 hover:text-[#D4AF37] transition-colors"
                 >
                   <span className="w-4 h-4">🏠</span>
                   Browse Homes
-                </a>
+                </Link>
               </li>
               <li>
                 <a
-                  href={oldSiteData.integrations.youtube}
+                  href="https://youtube.com/@drjanduffy"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors"
+                  className="flex items-center gap-2 text-gray-300 hover:text-[#D4AF37] transition-colors"
                 >
                   <Youtube className="w-4 h-4" />
                   YouTube Channel
                 </a>
               </li>
               <li>
-                <a
-                  href={oldSiteData.integrations.brochurePdf}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors"
-                >
-                  <FileText className="w-4 h-4" />
-                  Download Brochure
-                </a>
-              </li>
-              <li>
                 <Link
                   href="/testimonials"
-                  className="text-gray-300 hover:text-white transition-colors"
+                  className="text-gray-300 hover:text-[#D4AF37] transition-colors"
                 >
                   Testimonials
                 </Link>
@@ -204,14 +181,14 @@ export default function Footer() {
 
           {/* Social Media */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Follow Us</h4>
+            <h4 className="text-lg font-semibold mb-4 text-[#C4A574]">Follow Us</h4>
             <ul className="space-y-2">
               <li>
                 <a
-                  href="https://www.facebook.com/DellWebbNorthRanch"
+                  href="https://www.facebook.com/drjanduffy"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors"
+                  className="flex items-center gap-2 text-gray-300 hover:text-[#D4AF37] transition-colors"
                 >
                   <Facebook className="w-4 h-4" />
                   Facebook
@@ -219,10 +196,10 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="https://www.instagram.com/delwebbnorthranchhomes/"
+                  href="https://www.instagram.com/drjanduffy"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors"
+                  className="flex items-center gap-2 text-gray-300 hover:text-[#D4AF37] transition-colors"
                 >
                   <Instagram className="w-4 h-4" />
                   Instagram
@@ -230,10 +207,10 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="https://www.linkedin.com/company/del-webb-north-ranch-homes"
+                  href="https://www.linkedin.com/in/drjanduffy"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors"
+                  className="flex items-center gap-2 text-gray-300 hover:text-[#D4AF37] transition-colors"
                 >
                   <Linkedin className="w-4 h-4" />
                   LinkedIn
@@ -241,10 +218,10 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href={oldSiteData.integrations.youtube}
+                  href="https://youtube.com/@drjanduffy"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors"
+                  className="flex items-center gap-2 text-gray-300 hover:text-[#D4AF37] transition-colors"
                 >
                   <Youtube className="w-4 h-4" />
                   YouTube
@@ -253,146 +230,9 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Related Communities */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Other Communities</h4>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <a
-                  href="https://heyberkshirehomes.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-300 hover:text-white transition-colors"
-                >
-                  Hey Berkshire Homes
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://askberkshirehomes.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-300 hover:text-white transition-colors"
-                >
-                  Ask Berkshire Homes
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://searchforhomesvegas.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-300 hover:text-white transition-colors"
-                >
-                  Search for Homes Vegas
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://californiaforeverbroker.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-300 hover:text-white transition-colors"
-                >
-                  California Forever Broker
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://californiaforeverrealestateagent.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-300 hover:text-white transition-colors"
-                >
-                  California Forever Real Estate
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://californiaforeverrealty.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-300 hover:text-white transition-colors"
-                >
-                  California Forever Realty
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://heartlandlasvegas.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-300 hover:text-white transition-colors"
-                >
-                  Heartland Las Vegas
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://yourdivorcerealtor.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-300 hover:text-white transition-colors"
-                >
-                  Your Divorce Realtor
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://greenvalleyranchinsider.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-300 hover:text-white transition-colors"
-                >
-                  Green Valley Ranch Insider
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://maravillahomesforsale.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-300 hover:text-white transition-colors"
-                >
-                  Maravilla Homes for Sale
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://arieshenderson.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-300 hover:text-white transition-colors"
-                >
-                  Aries Henderson
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://craigranchhomes.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-300 hover:text-white transition-colors"
-                >
-                  Craig Ranch Homes
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://silverstoneranchhomes.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-300 hover:text-white transition-colors"
-                >
-                  Silverstone Ranch Homes
-                </a>
-              </li>
-            </ul>
-          </div>
-
           {/* Legal Info */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Information</h4>
+            <h4 className="text-lg font-semibold mb-4 text-[#C4A574]">Information</h4>
             <ul className="space-y-2 text-sm text-gray-300">
               <li>
                 <strong>License:</strong> S.0197614.LLC
@@ -404,7 +244,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/privacy"
-                  className="hover:text-white transition-colors"
+                  className="hover:text-[#D4AF37] transition-colors"
                 >
                   Privacy Policy
                 </Link>
@@ -412,7 +252,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/terms"
-                  className="hover:text-white transition-colors"
+                  className="hover:text-[#D4AF37] transition-colors"
                 >
                   Terms of Service
                 </Link>
@@ -420,7 +260,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/accessibility"
-                  className="hover:text-white transition-colors"
+                  className="hover:text-[#D4AF37] transition-colors"
                 >
                   Accessibility
                 </Link>
@@ -428,7 +268,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/sitemap-page"
-                  className="hover:text-white transition-colors"
+                  className="hover:text-[#D4AF37] transition-colors"
                 >
                   Sitemap
                 </Link>
@@ -440,10 +280,13 @@ export default function Footer() {
         {/* Copyright */}
         <div className="border-t border-gray-700 pt-8 mt-8 text-center text-sm text-gray-400">
           <p>
-            © 2026 Del Webb North Ranch | Homes by Dr. Jan Duffy All rights reserved.
+            © 2026 Sun City Summerlin | Homes by Dr. Jan Duffy. All rights reserved.
           </p>
           <p className="mt-2">
-            Berkshire Hathaway HomeServices Nevada Properties | S.0197614.LLC
+            Berkshire Hathaway HomeServices Nevada Properties | License S.0197614.LLC
+          </p>
+          <p className="mt-2">
+            <a href="tel:7022221964" className="text-[#D4AF37] hover:underline">(702) 222-1964</a>
           </p>
         </div>
       </div>

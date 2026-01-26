@@ -18,27 +18,27 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.delwebbnorthranchhomes.com"),
+  metadataBase: new URL("https://www.suncityvegas.com"),
   title: {
-    default: "Del Webb North Ranch 55+ Real Estate | Homes by Dr. Jan Duffy",
-    template: "%s | Del Webb North Ranch 55+ Real Estate | Homes by Dr. Jan Duffy",
+    default: "Sun City Summerlin Homes for Sale | Las Vegas 55+ Community | Dr. Jan Duffy",
+    template: "%s | Sun City Summerlin | Dr. Jan Duffy",
   },
   description:
-    "Discover luxury single-story living in a vibrant 55+ community with mountain views, resort-style amenities, and no state income tax. Dr. Jan Duffy, REALTOR®.",
+    "Find your perfect home in Sun City Summerlin, Las Vegas' premier 55+ active adult community. 4 golf courses, 3 rec centers, 80+ clubs. Call Dr. Jan Duffy: 702-222-1964",
   keywords: [
-    "Del Webb North Ranch",
-    "55+ community",
-    "North Las Vegas",
+    "Sun City Summerlin",
+    "Sun City Vegas",
+    "Sun City Summerlin homes for sale",
+    "55+ community Las Vegas",
     "active adult community",
-    "senior living",
-    "single-story homes",
+    "senior living Las Vegas",
+    "Del Webb Las Vegas",
     "Dr. Jan Duffy",
     "REALTOR",
-    "luxury homes",
-    "resort-style amenities",
-    "gated community",
-    "North Las Vegas real estate",
-    "55+ homes for sale",
+    "Las Vegas 55+ homes",
+    "retirement community Las Vegas",
+    "golf course homes Las Vegas",
+    "Summerlin real estate",
   ],
   authors: [{ name: "Dr. Jan Duffy" }],
   creator: "Dr. Jan Duffy",
@@ -51,28 +51,28 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://www.delwebbnorthranchhomes.com",
-    siteName: "Del Webb North Ranch 55+ Real Estate | Homes by Dr. Jan Duffy",
-    title: "Del Webb North Ranch 55+ Real Estate | Homes by Dr. Jan Duffy",
+    url: "https://www.suncityvegas.com",
+    siteName: "Sun City Summerlin Homes for Sale | Dr. Jan Duffy",
+    title: "Sun City Summerlin Homes for Sale | Las Vegas 55+ Community",
     description:
-      "Single-story homes from $400K-$600K in a gated 55+ community. Resort pool, pickleball, fitness center—all fully built.",
+      "Las Vegas' premier 55+ community with 4 golf courses, 3 rec centers, and 80+ clubs. Homes from $300K-$800K+. Call Dr. Jan Duffy: 702-222-1964",
     images: [
       {
         url: "/images/hero/hero-bg.jpg",
         width: 1200,
         height: 630,
-        alt: "Del Webb North Ranch community entrance",
+        alt: "Sun City Summerlin community with mountain views",
         type: "image/jpeg",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Del Webb North Ranch 55+ Real Estate | Homes by Dr. Jan Duffy",
+    title: "Sun City Summerlin Homes for Sale | Las Vegas 55+ Community",
     description:
-      "Single-story homes from $400K-$600K in a gated 55+ community. Resort pool, pickleball, fitness center—all fully built.",
+      "Las Vegas' premier 55+ community with 4 golf courses, 3 rec centers, and 80+ clubs. Homes from $300K-$800K+.",
     images: ["/images/hero/hero-bg.jpg"],
-    creator: "@DrDuffy",
+    creator: "@DrJanDuffy",
   },
   robots: {
     index: true,
@@ -86,7 +86,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://www.delwebbnorthranchhomes.com",
+    canonical: "https://www.suncityvegas.com",
   },
   verification: {
     // Add Google Search Console verification code here when available
@@ -104,32 +104,30 @@ export default function RootLayout({
   const localBusinessSchema = {
     "@context": "https://schema.org",
     "@type": "RealEstateAgent",
-    "@id": "https://www.delwebbnorthranchhomes.com/#localbusiness",
-    name: "Del Webb North Ranch 55+ Real Estate | Homes by Dr. Jan Duffy",
-    alternateName: "Dr. Jan Duffy Real Estate",
-    description: "Helping buyers 55+ find their dream retirement home in Las Vegas' premier active adult community! Resort-style pools, state-of-the-art fitness center, pickleball courts, 20+ social clubs & activities. Free community tours, market analysis, and expert negotiation support.",
-    image: "https://www.delwebbnorthranchhomes.com/images/about/dr-jan-duffy.jpg",
-    url: "https://www.delwebbnorthranchhomes.com",
-    telephone: "+1-702-500-1064",
-    email: "sales@delwebbnorthranchhomes.com",
+    "@id": "https://www.suncityvegas.com/#agent",
+    name: "Dr. Jan Duffy - Sun City Summerlin Specialist",
+    alternateName: "Sun City Vegas Real Estate",
+    description: "Your Sun City Summerlin real estate expert! Helping buyers 55+ find their dream retirement home in Las Vegas' premier active adult community. 4 championship golf courses, 3 recreation centers, 80+ clubs & activities. Free community tours, market analysis, and expert negotiation support.",
+    image: "https://www.suncityvegas.com/images/about/dr-jan-duffy.jpg",
+    url: "https://www.suncityvegas.com",
+    telephone: "+1-702-222-1964",
+    email: "jan@drjanduffy.com",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "2290 Beauty Vista Avenue",
-      addressLocality: "North Las Vegas",
+      streetAddress: "9107 Del Webb Blvd",
+      addressLocality: "Las Vegas",
       addressRegion: "NV",
-      postalCode: "89086",
+      postalCode: "89134",
       addressCountry: "US",
     },
     areaServed: {
-      "@type": "City",
-      name: "North Las Vegas",
-      addressRegion: "NV",
-      addressCountry: "US",
+      "@type": "Place",
+      name: "Sun City Summerlin, Las Vegas, NV",
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: "36.2856",
-      longitude: "-115.0939",
+      latitude: "36.2108",
+      longitude: "-115.2950",
     },
     openingHoursSpecification: [
       {
@@ -139,19 +137,19 @@ export default function RootLayout({
         closes: "21:00",
       },
     ],
-    foundingDate: "2009-09-20",
     priceRange: "$$",
     paymentAccepted: "Cash, Check, Credit Card, Financing",
     currenciesAccepted: "USD",
     sameAs: [
-      "https://www.instagram.com/delwebbnorthranchhomes/",
-      "https://www.linkedin.com/company/del-webb-north-ranch-homes",
-      "https://www.facebook.com/DellWebbNorthRanch",
+      "https://www.facebook.com/drjanduffy",
+      "https://www.instagram.com/drjanduffy",
+      "https://www.linkedin.com/in/drjanduffy",
+      "https://www.youtube.com/@drjanduffy",
     ],
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: "5",
-      reviewCount: "50",
+      reviewCount: "127",
     },
     hasOfferCatalog: {
       "@type": "OfferCatalog",
@@ -187,17 +185,14 @@ export default function RootLayout({
         },
       ],
     },
-    additionalType: [
-      "https://schema.org/RealEstateAgent",
-      "https://schema.org/RealEstateAgency",
-      "https://schema.org/RealEstateConsultant",
-    ],
     knowsAbout: [
-      "Del Webb North Ranch",
+      "Sun City Summerlin",
       "55+ Active Adult Communities",
-      "North Las Vegas Real Estate",
+      "Las Vegas Real Estate",
+      "Summerlin Real Estate",
       "Senior Living",
       "Retirement Homes",
+      "Golf Course Communities",
     ],
     memberOf: {
       "@type": "Organization",
@@ -218,23 +213,32 @@ export default function RootLayout({
   const placeSchema = {
     "@context": "https://schema.org",
     "@type": "Place",
-    name: "Del Webb North Ranch",
-    description: "55+ Active Adult Gated Community in North Las Vegas",
+    "@id": "https://www.suncityvegas.com/#community",
+    name: "Sun City Summerlin",
+    description: "Del Webb's premier 55+ active adult community in Las Vegas, Nevada featuring 4 golf courses, 3 recreation centers, and 80+ clubs and activities.",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "2290 Beauty Vista Avenue",
-      addressLocality: "North Las Vegas",
+      streetAddress: "9107 Del Webb Blvd",
+      addressLocality: "Las Vegas",
       addressRegion: "NV",
-      postalCode: "89086",
+      postalCode: "89134",
       addressCountry: "US",
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: "36.2856",
-      longitude: "-115.0939",
+      latitude: "36.2108",
+      longitude: "-115.2950",
     },
-    url: "https://www.delwebbnorthranchhomes.com",
-    image: "https://www.delwebbnorthranchhomes.com/images/hero/hero-bg.jpg",
+    url: "https://www.suncityvegas.com",
+    image: "https://www.suncityvegas.com/images/hero/hero-bg.jpg",
+    amenityFeature: [
+      { "@type": "LocationFeatureSpecification", name: "Golf Courses", value: "4" },
+      { "@type": "LocationFeatureSpecification", name: "Recreation Centers", value: "3" },
+      { "@type": "LocationFeatureSpecification", name: "Clubs & Activities", value: "80+" },
+      { "@type": "LocationFeatureSpecification", name: "Swimming Pools", value: "Multiple" },
+      { "@type": "LocationFeatureSpecification", name: "Age Restriction", value: "55+" },
+      { "@type": "LocationFeatureSpecification", name: "Total Homes", value: "7,779" },
+    ],
   };
 
   return (
@@ -271,16 +275,16 @@ export default function RootLayout({
         <style dangerouslySetInnerHTML={{
           __html: `
             realscout-office-listings {
-              --rs-listing-divider-color: #0e64c8;
+              --rs-listing-divider-color: #8B5E3C;
               width: 100%;
             }
             realscout-home-value {
-              --rs-hvw-background-color: #ffffff;
-              --rs-hvw-title-color: #000000;
-              --rs-hvw-subtitle-color: rgba(28, 30, 38, 0.5);
+              --rs-hvw-background-color: #FDF8F3;
+              --rs-hvw-title-color: #2D2A26;
+              --rs-hvw-subtitle-color: rgba(45, 42, 38, 0.6);
               --rs-hvw-primary-button-text-color: #ffffff;
-              --rs-hvw-primary-button-color: rgb(35, 93, 137);
-              --rs-hvw-secondary-button-text-color: rgb(35, 93, 137);
+              --rs-hvw-primary-button-color: #8B5E3C;
+              --rs-hvw-secondary-button-text-color: #8B5E3C;
               --rs-hvw-secondary-button-color: #ffffff;
               --rs-hvw-widget-width: auto;
             }

@@ -1,5 +1,5 @@
 // lib/communityData.ts
-// Comprehensive community data for Del Webb North Ranch
+// Comprehensive community data for Sun City Summerlin
 
 export type CommunityInfo = {
   name: string;
@@ -14,22 +14,26 @@ export type CommunityInfo = {
   priceRange: string;
   hoaFee: string;
   hoaBilling: string;
-  sidLid: string;
   gated: boolean;
   security: string;
   constructionStart: number;
   constructionEnd: number;
-  clubhouseOpened: string;
-  clubhouseSize: string;
   propertyTaxRate: string;
   petPolicy: string;
   ageRequirement: string;
 };
 
-export type HomesitesByCollection = {
-  cottage: { count: number; sqftRange: string };
-  classic: { count: number; sqftRange: string };
-  retreat: { count: number; sqftRange: string };
+export type RecreationCenter = {
+  name: string;
+  size: string;
+  features: string[];
+};
+
+export type GolfCourse = {
+  name: string;
+  holes: number;
+  type: string;
+  designer?: string;
 };
 
 export type Distance = {
@@ -38,91 +42,194 @@ export type Distance = {
 };
 
 export const communityInfo: CommunityInfo = {
-  name: 'Del Webb North Ranch',
-  developer: 'Del Webb (Pulte Homes)',
-  type: '55+ Active Adult Gated Community',
-  address: '2290 Beauty Vista Avenue',
-  city: 'North Las Vegas',
+  name: 'Sun City Summerlin',
+  developer: 'Del Webb',
+  type: '55+ Active Adult Community',
+  address: '9107 Del Webb Blvd',
+  city: 'Las Vegas',
   state: 'NV',
-  zip: '89086',
-  totalAcres: 80,
-  totalHomes: 394,
-  priceRange: '$400,000 - $600,000',
-  hoaFee: '$215/month',
-  hoaBilling: 'Quarterly',
-  sidLid: 'None',
+  zip: '89134',
+  totalAcres: 2400,
+  totalHomes: 7779,
+  priceRange: '$300,000 - $800,000+',
+  hoaFee: '$165/month (approx)',
+  hoaBilling: 'Monthly',
   gated: true,
-  security: 'Virtual concierge and roving security',
-  constructionStart: 2020,
-  constructionEnd: 2024,
-  clubhouseOpened: 'October 16, 2021',
-  clubhouseSize: '10,000 sq ft',
-  propertyTaxRate: '~1% of assessed value',
-  petPolicy: 'All pets welcome, follows City of North Las Vegas rules',
+  security: 'Guard-gated entrances with 24/7 security',
+  constructionStart: 1989,
+  constructionEnd: 2002,
+  propertyTaxRate: '~0.75% of assessed value',
+  petPolicy: 'Pets welcome with community guidelines',
   ageRequirement: 'At least one resident must be 55+',
 };
 
-export const homesitesByCollection: HomesitesByCollection = {
-  cottage: { count: 132, sqftRange: '1,285-1,509' },
-  classic: { count: 132, sqftRange: '1,451-1,770' },
-  retreat: { count: 130, sqftRange: '1,716-2,015' },
-};
+export const recreationCenters: RecreationCenter[] = [
+  {
+    name: 'Mountain Shadows',
+    size: '45,000 sq ft',
+    features: [
+      'Fitness center',
+      'Indoor pool',
+      'Racquetball courts',
+      'Aerobics studio',
+      'Arts & crafts rooms',
+      'Woodworking shop',
+      'Meeting rooms',
+    ],
+  },
+  {
+    name: 'Desert Vista',
+    size: '48,000 sq ft',
+    features: [
+      'Fitness center',
+      'Indoor pool & spa',
+      'Tennis courts',
+      'Pickleball courts',
+      'Ballroom',
+      'Computer lab',
+      'Library',
+    ],
+  },
+  {
+    name: 'Pinnacle',
+    size: '34,000 sq ft',
+    features: [
+      'Fitness center',
+      'Pool & spa',
+      'Tennis courts',
+      'Bocce ball courts',
+      'Card rooms',
+      'Multi-purpose rooms',
+    ],
+  },
+];
+
+export const golfCourses: GolfCourse[] = [
+  {
+    name: 'Highland Falls',
+    holes: 18,
+    type: 'Championship',
+    designer: 'Billy Casper & Greg Nash',
+  },
+  {
+    name: 'Palm Valley',
+    holes: 18,
+    type: 'Championship',
+    designer: 'Billy Casper & Greg Nash',
+  },
+  {
+    name: 'Eagle Crest',
+    holes: 18,
+    type: 'Executive',
+  },
+  {
+    name: 'Stonebridge (at Sun City)',
+    holes: 27,
+    type: 'Championship',
+  },
+];
 
 export const distances: Record<string, Distance> = {
-  mcCarranAirport: {
-    miles: 17,
-    description: 'McCarran International Airport',
+  harryReidAirport: {
+    miles: 18,
+    description: 'Harry Reid International Airport',
   },
   lasVegasStrip: {
-    miles: 15,
+    miles: 12,
     description: 'Las Vegas Strip dining, shopping, entertainment',
   },
-  centennialLibrary: {
-    miles: 10,
-    description: 'Centennial Hills Library (LEED Gold certified)',
+  downtownSummerlin: {
+    miles: 3,
+    description: 'Downtown Summerlin (shopping, dining, entertainment)',
   },
-  craigRanchPark: {
-    miles: 5,
-    description: 'Craig Ranch Regional Park (170 acres)',
+  redRockCanyon: {
+    miles: 8,
+    description: 'Red Rock Canyon National Conservation Area',
   },
-  alianteGolf: {
-    miles: 5,
-    description: 'Aliante Golf Club (18-hole championship)',
-  },
-  floydLambPark: {
-    miles: 14,
-    description: 'Floyd Lamb Park (680 acres)',
+  summerlinHospital: {
+    miles: 4,
+    description: 'Summerlin Hospital Medical Center',
   },
   lakeMead: {
-    miles: 34,
-    description: 'Lake Mead',
+    miles: 30,
+    description: 'Lake Mead National Recreation Area',
   },
-  vaHospital: {
+  mountCharleston: {
+    miles: 25,
+    description: 'Mount Charleston (skiing, hiking)',
+  },
+  tivoli: {
     miles: 2,
-    description: 'VA Southern Nevada Hospital',
-  },
-  centennialHospital: {
-    miles: 12,
-    description: 'Centennial Hills Hospital',
+    description: 'Tivoli Village (upscale shopping)',
   },
 };
 
 export const amenities = [
-  'Resort-style pool',
-  'Heated lap pool',
-  'Spa',
-  'Fitness center',
-  'Fitness-on-demand room',
-  'Great room',
-  'Billiards room',
-  'Social rooms',
-  'Locker rooms with showers',
-  'Lighted pickleball courts',
+  // Recreation & Fitness
+  '4 Golf courses',
+  '3 Recreation centers',
+  'Multiple swimming pools',
+  'Indoor & outdoor spas',
+  'Tennis courts',
+  'Pickleball courts',
   'Bocce ball courts',
-  'Community event lawn',
-  'Outdoor fire pit',
-  'Walking trails',
-  'Dog park',
+  'Fitness centers',
+  'Walking & biking trails',
+  
+  // Social & Activities
+  '80+ clubs and organizations',
+  'Ballroom dancing',
+  'Arts & crafts studios',
+  'Woodworking shops',
+  'Computer labs',
+  'Libraries',
+  'Card rooms',
+  
+  // Dining & Entertainment
+  'On-site restaurants',
+  'Tavern at the Falls',
+  'Summit Restaurant',
+  'Special events & entertainment',
+  
+  // Services
+  'Guard-gated security',
+  'Community association',
+  'Landscape maintenance (common areas)',
+];
+
+export const clubs = [
+  'Art Club',
+  'Billiards Club',
+  'Book Club',
+  'Bridge Club',
+  'Ceramics Club',
+  'Chess Club',
+  'Computer Club',
+  'Dance Club',
+  'Euchre Club',
+  'Garden Club',
+  'Golf Clubs (Men\'s & Women\'s)',
+  'Hiking Club',
+  'Italian Club',
+  'Jewish Club',
+  'Line Dancing',
+  'Mah Jongg',
+  'Model Railroad Club',
+  'Photography Club',
+  'Pickleball Club',
+  'Quilting Club',
+  'RV Club',
+  'Softball League',
+  'Stained Glass Club',
+  'Swimming Club',
+  'Table Tennis Club',
+  'Tennis Club',
+  'Theater Group',
+  'Travel Club',
+  'Water Aerobics',
+  'Woodworking Club',
+  'Yoga Classes',
+  '...and many more!',
 ];
 
 // Helper functions
@@ -130,8 +237,12 @@ export function getCommunityInfo(): CommunityInfo {
   return communityInfo;
 }
 
-export function getHomesitesByCollection(): HomesitesByCollection {
-  return homesitesByCollection;
+export function getRecreationCenters(): RecreationCenter[] {
+  return recreationCenters;
+}
+
+export function getGolfCourses(): GolfCourse[] {
+  return golfCourses;
 }
 
 export function getDistances(): Record<string, Distance> {
@@ -140,4 +251,8 @@ export function getDistances(): Record<string, Distance> {
 
 export function getAmenities(): string[] {
   return amenities;
+}
+
+export function getClubs(): string[] {
+  return clubs;
 }
