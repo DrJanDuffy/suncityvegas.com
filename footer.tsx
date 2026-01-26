@@ -9,10 +9,10 @@ export default function Footer() {
           {/* Site Info */}
           <div>
             <h3 className="text-2xl font-bold mb-4 font-playfair">
-              Del Webb North Ranch
+              Sun City Summerlin
             </h3>
             <p className="text-gray-300 mb-4">
-              Your premier 55+ active adult community in North Las Vegas.
+              Las Vegas&apos; premier 55+ active adult community with 4 golf courses and 3 recreation centers.
             </p>
             {/* TODO: Add Equal Housing Opportunity logo */}
             <div className="mt-4 text-sm text-gray-400">
@@ -42,18 +42,18 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/floor-plans"
-                  className="text-gray-300 hover:text-white transition-colors"
-                >
-                  Floor Plans
-                </Link>
-              </li>
-              <li>
-                <Link
                   href="/amenities"
                   className="text-gray-300 hover:text-white transition-colors"
                 >
                   Amenities
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/lifestyle"
+                  className="text-gray-300 hover:text-white transition-colors"
+                >
+                  Lifestyle
                 </Link>
               </li>
               <li>
@@ -81,29 +81,29 @@ export default function Footer() {
             <ul className="space-y-3">
               <li>
                 <a
-                  href="tel:7025001064"
+                  href="tel:7022221964"
                   className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors"
                 >
                   <Phone className="w-4 h-4" />
-                  (702) 500-1064
+                  (702) 222-1964
                 </a>
               </li>
               <li>
                 <a
-                  href="mailto:sales@delwebbnorthranchhomes.com"
+                  href="mailto:jan@drjanduffy.com"
                   className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors"
                 >
                   <Mail className="w-4 h-4" />
-                  sales@delwebbnorthranchhomes.com
+                  jan@drjanduffy.com
                 </a>
               </li>
               <li>
                 <div className="flex items-start gap-2 text-gray-300">
                   <MapPin className="w-4 h-4 mt-1 flex-shrink-0" />
                   <span>
-                    2290 Beauty Vista Avenue
+                    9107 Del Webb Blvd
                     <br />
-                    North Las Vegas, NV 89086
+                    Las Vegas, NV 89134
                   </span>
                 </div>
               </li>
@@ -129,6 +129,14 @@ export default function Footer() {
                   Privacy Policy
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/terms"
+                  className="hover:text-white transition-colors"
+                >
+                  Terms of Service
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
@@ -136,7 +144,7 @@ export default function Footer() {
         {/* Copyright */}
         <div className="border-t border-gray-700 pt-8 mt-8 text-center text-sm text-gray-400">
           <p>
-            © {new Date().getFullYear()} Del Webb North Ranch. All rights
+            © {new Date().getFullYear()} Sun City Summerlin. All rights
             reserved.
           </p>
           <p className="mt-2">
