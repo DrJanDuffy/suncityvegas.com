@@ -3,11 +3,11 @@ import Navbar from "@/../components/navbar";
 import Footer from "@/../components/footer";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Del Webb North Ranch | North Las Vegas",
+  title: "Privacy Policy | Sun City Summerlin | Dr. Jan Duffy",
   description:
-    "Privacy policy for Del Webb North Ranch website. Learn how we collect, use, and protect your information when you contact Dr. Jan Duffy about 55+ community homes in North Las Vegas.",
+    "Privacy policy for Sun City Summerlin website. Learn how we collect, use, and protect your information when you contact Dr. Jan Duffy about 55+ community homes in Las Vegas.",
   alternates: {
-    canonical: "https://www.delwebbnorthranchhomes.com/privacy",
+    canonical: "https://www.suncityvegas.com/privacy",
   },
   robots: {
     index: false,
@@ -23,16 +23,16 @@ export default function PrivacyPage() {
         <section className="py-12 md:py-16 lg:py-20 bg-white">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <h1 className="text-3xl md:text-4xl font-bold text-primary mb-6 font-playfair">
+              <h1 className="text-3xl md:text-4xl font-bold text-[#8B5E3C] mb-6 font-playfair">
                 Privacy Policy
               </h1>
-              <div className="prose prose-lg max-w-none space-y-6 text-text-dark">
+              <div className="prose prose-lg max-w-none space-y-6 text-[#2D2A26]">
                 <p className="text-sm text-gray-500">
                   Last updated: {new Date().toLocaleDateString()}
                 </p>
 
                 <div>
-                  <h2 className="text-2xl font-bold text-primary mb-4 font-playfair">
+                  <h2 className="text-2xl font-bold text-[#8B5E3C] mb-4 font-playfair">
                     Information We Collect
                   </h2>
                   <p>
@@ -48,20 +48,20 @@ export default function PrivacyPage() {
                 </div>
 
                 <div>
-                  <h2 className="text-2xl font-bold text-primary mb-4 font-playfair">
+                  <h2 className="text-2xl font-bold text-[#8B5E3C] mb-4 font-playfair">
                     How We Use Your Information
                   </h2>
                   <p>We use the information you provide to:</p>
                   <ul className="list-disc pl-6 space-y-2">
                     <li>Respond to your inquiries and requests</li>
                     <li>Schedule property tours and consultations</li>
-                    <li>Send you information about Del Webb North Ranch</li>
+                    <li>Send you information about Sun City Summerlin</li>
                     <li>Improve our services and website</li>
                   </ul>
                 </div>
 
                 <div>
-                  <h2 className="text-2xl font-bold text-primary mb-4 font-playfair">
+                  <h2 className="text-2xl font-bold text-[#8B5E3C] mb-4 font-playfair">
                     Information Sharing
                   </h2>
                   <p>
@@ -81,7 +81,7 @@ export default function PrivacyPage() {
                 </div>
 
                 <div>
-                  <h2 className="text-2xl font-bold text-primary mb-4 font-playfair">
+                  <h2 className="text-2xl font-bold text-[#8B5E3C] mb-4 font-playfair">
                     Data Security
                   </h2>
                   <p>
@@ -92,7 +92,7 @@ export default function PrivacyPage() {
                 </div>
 
                 <div>
-                  <h2 className="text-2xl font-bold text-primary mb-4 font-playfair">
+                  <h2 className="text-2xl font-bold text-[#8B5E3C] mb-4 font-playfair">
                     Your Rights
                   </h2>
                   <p>You have the right to:</p>
@@ -105,7 +105,7 @@ export default function PrivacyPage() {
                 </div>
 
                 <div>
-                  <h2 className="text-2xl font-bold text-primary mb-4 font-playfair">
+                  <h2 className="text-2xl font-bold text-[#8B5E3C] mb-4 font-playfair">
                     Contact Us
                   </h2>
                   <p>
@@ -115,18 +115,18 @@ export default function PrivacyPage() {
                   <p>
                     <strong>Email:</strong>{" "}
                     <a
-                      href="mailto:sales@delwebbnorthranchhomes.com"
-                      className="text-primary hover:underline"
+                      href="mailto:jan@drjanduffy.com"
+                      className="text-[#8B5E3C] hover:underline"
                     >
-                      sales@delwebbnorthranchhomes.com
+                      jan@drjanduffy.com
                     </a>
                     <br />
                     <strong>Phone:</strong>{" "}
                     <a
-                      href="tel:7025001064"
-                      className="text-primary hover:underline"
+                      href="tel:7022221964"
+                      className="text-[#8B5E3C] hover:underline"
                     >
-                      (702) 500-1064
+                      (702) 222-1964
                     </a>
                   </p>
                 </div>
