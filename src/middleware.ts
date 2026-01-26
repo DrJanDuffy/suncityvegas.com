@@ -17,8 +17,8 @@ export function middleware(request: NextRequest) {
     return NextResponse.next();
   }
 
-  // Target domain: www.delwebbnorthranchhomes.com
-  const targetHost = "www.delwebbnorthranchhomes.com";
+  // Target domain: www.suncityvegas.com
+  const targetHost = "www.suncityvegas.com";
   const targetUrl = `https://${targetHost}${pathname}${search}`;
 
   // Normalize hostname (remove port if present)
