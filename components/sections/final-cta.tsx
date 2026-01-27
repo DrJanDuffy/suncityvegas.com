@@ -1,7 +1,7 @@
 "use client";
 
-import { Phone } from "lucide-react";
-import ContactForm from "../contact-form";
+import { Phone, Calendar } from "lucide-react";
+import CalendlyInline from "../CalendlyInline";
 import ScrollAnimation from "../scroll-animation";
 
 export default function FinalCTASection() {
@@ -24,29 +24,35 @@ export default function FinalCTASection() {
                 </p>
                 <div className="mb-6">
                   <a
-                    href="tel:+17027180043"
+                    href="tel:7022221964"
                     className="inline-flex items-center gap-2 text-lg md:text-xl font-semibold text-[#8B5E3C] hover:text-[#8B5E3C]/80 transition-colors"
                   >
                     <Phone className="w-5 h-5 md:w-6 md:h-6" />
-                    (702) 718-0043
+                    (702) 222-1964
                   </a>
                 </div>
                 <p className="text-sm md:text-base text-[#2D2A26]">
-                  Or fill out the form to get started.
+                  Or schedule a tour directly using the calendar.
                 </p>
               </div>
             </ScrollAnimation>
 
-            {/* Right Column - Contact Form */}
+            {/* Right Column - Calendly Scheduler */}
             <ScrollAnimation delay={100}>
               <div>
-                <h2 className="text-2xl md:text-3xl font-bold text-[#8B5E3C] mb-4 font-playfair">
-                  Send a Message
+                <h2 className="text-2xl md:text-3xl font-bold text-[#8B5E3C] mb-4 font-playfair flex items-center gap-3">
+                  <Calendar className="w-7 h-7" />
+                  Schedule a Tour
                 </h2>
                 <p className="text-[#2D2A26] mb-6">
-                  Fill out the form below and Dr. Jan Duffy will get back to you as soon as possible.
+                  Pick a time that works for you and Dr. Jan Duffy will confirm your private tour of Sun City Summerlin.
                 </p>
-                <ContactForm />
+                <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+                  <CalendlyInline 
+                    url="https://calendly.com/drjanduffy/showing" 
+                    height="650px"
+                  />
+                </div>
               </div>
             </ScrollAnimation>
           </div>
