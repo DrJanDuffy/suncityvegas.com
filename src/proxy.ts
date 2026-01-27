@@ -17,19 +17,27 @@ export function proxy(request: NextRequest) {
     return NextResponse.next();
   }
 
+  // Normalize hostname (remove port if present)
+  const normalizedHost = hostname.split(":")[0];
+
+  // Allow Vercel preview/production domains without redirect
+  if (
+    normalizedHost.includes("vercel.app") ||
+    normalizedHost.includes("localhost")
+  ) {
+    return NextResponse.next();
+  }
+
   // Target domain: www.suncityvegas.com
   const targetHost = "www.suncityvegas.com";
   const targetUrl = `https://${targetHost}${pathname}${search}`;
 
-  // Normalize hostname (remove port if present)
-  const normalizedHost = hostname.split(":")[0];
-
-  // Check if redirect is needed
+  // Check if redirect is needed (only for custom domains)
   const needsRedirect =
     normalizedHost !== targetHost || // Non-www or different host
     protocol !== "https"; // HTTP instead of HTTPS
 
-  if (needsRedirect && !hostname.includes("localhost")) {
+  if (needsRedirect) {
     return NextResponse.redirect(targetUrl, 301);
   }
 
