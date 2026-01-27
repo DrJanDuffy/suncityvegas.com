@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import Navbar from "@/../components/navbar";
-import Footer from "@/../components/footer";
-import Breadcrumbs from "@/../components/Breadcrumbs";
+import Navbar from "@components/navbar";
+import Footer from "@components/footer";
+import Breadcrumbs from "@components/Breadcrumbs";
 import { Phone } from "lucide-react";
-import { Button } from "@/../components/ui/button";
+import { Button } from "@components/ui/button";
 import Link from "next/link";
-import MortgageCalculator from "@/../components/MortgageCalculator";
-import RealScoutListings from "@/../components/RealScoutListings";
+import MortgageCalculator from "@components/MortgageCalculator";
+import RealScoutListings from "@components/RealScoutListings";
 import { getCommunityInfo } from "@/lib/communityData";
 
 export const metadata: Metadata = {

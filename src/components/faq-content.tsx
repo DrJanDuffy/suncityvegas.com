@@ -2,7 +2,7 @@
 // Client component for interactive FAQ accordion
 
 import { useState } from 'react';
-import ScrollAnimation from '@/../components/scroll-animation';
+import ScrollAnimation from '@components/scroll-animation';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { faqData } from '@/lib/faqData';

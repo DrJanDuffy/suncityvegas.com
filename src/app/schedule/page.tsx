@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
-import Navbar from '@/../components/navbar';
-import Footer from '@/../components/footer';
-import ScheduleTour from '@/../components/ScheduleTour';
+import Navbar from '@components/navbar';
+import Footer from '@components/footer';
+import ScheduleTour from '@components/ScheduleTour';
 import { Phone, Calendar, Clock, MapPin } from 'lucide-react';
 
 export const metadata: Metadata = {

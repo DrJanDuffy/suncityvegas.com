@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
-import CalendlyButton from "@/../components/CalendlyButton";
-import SchemaMarkup from "@/../components/SchemaMarkup";
+import CalendlyButton from "@components/CalendlyButton";
+import SchemaMarkup from "@components/SchemaMarkup";
 
 const inter = Inter({
   subsets: ["latin"],

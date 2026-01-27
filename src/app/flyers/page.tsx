@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import Navbar from "@/../components/navbar";
-import Footer from "@/../components/footer";
-import Breadcrumbs from "@/../components/Breadcrumbs";
+import Navbar from "@components/navbar";
+import Footer from "@components/footer";
+import Breadcrumbs from "@components/Breadcrumbs";
 import Link from "next/link";
 import { FileText, Download } from "lucide-react";
-import { Button } from "@/../components/ui/button";
+import { Button } from "@components/ui/button";
 import { getAllFlyers } from "@/lib/flyers";
 
 export const metadata: Metadata = {

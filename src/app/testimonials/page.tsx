@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
-import Navbar from '@/../components/navbar';
-import Footer from '@/../components/footer';
-import Breadcrumbs from '@/../components/Breadcrumbs';
-import ScrollAnimation from '@/../components/scroll-animation';
+import Navbar from '@components/navbar';
+import Footer from '@components/footer';
+import Breadcrumbs from '@components/Breadcrumbs';
+import ScrollAnimation from '@components/scroll-animation';
 import { getAllTestimonials } from '@/lib/old-site-data';
 import { Quote } from 'lucide-react';
 

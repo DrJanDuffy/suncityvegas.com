@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Script from "next/script";
-import Navbar from "@/../../components/navbar";
-import Footer from "@/../../components/footer";
-import Breadcrumbs from "@/../../components/Breadcrumbs";
-import { Button } from "@/../../components/ui/button";
+import Navbar from "@components/navbar";
+import Footer from "@components/footer";
+import Breadcrumbs from "@components/Breadcrumbs";
+import { Button } from "@components/ui/button";
 import { Phone, Calendar, ArrowRight, Check, DollarSign } from "lucide-react";
 import { getCommunityInfo } from "@/lib/communityData";
-import ScrollAnimation from "@/../../components/scroll-animation";
+import ScrollAnimation from "@components/scroll-animation";
 
 export const metadata: Metadata = {
   title: "Sun City Summerlin HOA Fees 2025: Complete Breakdown | HOA Sun City Del Webb",
@@ -182,7 +182,7 @@ export default function HOAFeesPage() {
         </section>
 
         {/* Article Content */}
-        <article className="py-12 md:py-16 bg-white">
+        <div className="py-12 md:py-16 bg-white">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               {/* Introduction */}
@@ -569,54 +569,52 @@ export default function HOAFeesPage() {
                 </section>
               </ScrollAnimation>
             </div>
-          </article>
-
-        {/* CTA Section */}
-        <section className="py-12 md:py-16 bg-[#8B5E3C] text-white">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <ScrollAnimation>
-                <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 font-playfair">
-                  Have Questions About HOA Fees?
-                </h2>
-                <p className="text-lg md:text-xl text-gray-100 mb-8 leading-relaxed">
-                  Schedule a tour with Dr. Jan Duffy to see the amenities included in your HOA fee and explore homes in Sun City Summerlin. Get all your questions answered.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                  <a
-                    href="tel:+17027180043"
-                    className="flex items-center justify-center gap-2 px-8 py-4 bg-[#D4AF37] text-[#2D2A26] rounded-md font-semibold hover:bg-[#D4AF37]/90 transition-colors min-h-[48px] touch-manipulation"
-                  >
-                    <Phone className="w-5 h-5" />
-                    Call/Text: (702) 718-0043
-                  </a>
-                  <Button
-                    asChild
-                    variant="outline"
-                    size="lg"
-                    className="border-white text-white hover:bg-white/10 min-h-[48px] px-6"
-                  >
-                    <Link href="/contact">Schedule Online</Link>
-                  </Button>
-                </div>
-              </ScrollAnimation>
-            </div>
           </div>
-        </section>
+        </div>
 
-        {/* Schema Markup */}
+        <section className="py-12 md:py-16 bg-[#8B5E3C] text-white" aria-label="CTA">
+            <div className="container mx-auto px-4">
+              <div className="max-w-4xl mx-auto text-center">
+                <ScrollAnimation>
+                  <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 font-playfair">
+                    Have Questions About HOA Fees?
+                  </h2>
+                  <p className="text-lg md:text-xl text-gray-100 mb-8 leading-relaxed">
+                    Schedule a tour with Dr. Jan Duffy to see the amenities included in your HOA fee and explore homes in Sun City Summerlin. Get all your questions answered.
+                  </p>
+                  <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <a
+                      href="tel:+17027180043"
+                      className="flex items-center justify-center gap-2 px-8 py-4 bg-[#D4AF37] text-[#2D2A26] rounded-md font-semibold hover:bg-[#D4AF37]/90 transition-colors min-h-[48px] touch-manipulation"
+                    >
+                      <Phone className="w-5 h-5" />
+                      Call/Text: (702) 718-0043
+                    </a>
+                    <Button
+                      asChild
+                      variant="outline"
+                      size="lg"
+                      className="border-white text-white hover:bg-white/10 min-h-[48px] px-6"
+                    >
+                      <Link href="/contact">Schedule Online</Link>
+                    </Button>
+                  </div>
+                </ScrollAnimation>
+              </div>
+            </div>
+        </section>
         <Script
           id="faq-schema"
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(faqSchema).replace(/</g, "\\u003c"),
+            __html: JSON.stringify(faqSchema).replaceAll("<", "\\u003c"),
           }}
         />
         <Script
           id="article-schema"
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(articleSchema).replace(/</g, "\\u003c"),
+            __html: JSON.stringify(articleSchema).replaceAll("<", "\\u003c"),
           }}
         />
       </main>

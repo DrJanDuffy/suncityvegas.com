@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Script from "next/script";
-import Navbar from "@/../../components/navbar";
-import Footer from "@/../../components/footer";
-import Breadcrumbs from "@/../../components/Breadcrumbs";
-import { Button } from "@/../../components/ui/button";
-import { Phone, MapPin, Clock, Users, ArrowRight, Golf } from "lucide-react";
+import Navbar from "@components/navbar";
+import Footer from "@components/footer";
+import Breadcrumbs from "@components/Breadcrumbs";
+import { Button } from "@components/ui/button";
+import { Phone, MapPin, Clock, Users, ArrowRight, CircleDot } from "lucide-react";
 import { getGolfCourses } from "@/lib/communityData";
-import ScrollAnimation from "@/../../components/scroll-animation";
+import ScrollAnimation from "@components/scroll-animation";
 
 export const metadata: Metadata = {
   title: "Sun City Summerlin Golf Courses | Palm Valley, Highland Falls, Eagle Crest",
@@ -65,7 +65,7 @@ export default function GolfPage() {
             <div className="max-w-4xl mx-auto text-center">
               <ScrollAnimation>
                 <div className="flex justify-center mb-6">
-                  <Golf className="w-16 h-16 text-[#D4AF37]" />
+                  <CircleDot className="w-16 h-16 text-[#D4AF37]" />
                 </div>
                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 font-playfair">
                   Sun City Summerlin Golf Courses

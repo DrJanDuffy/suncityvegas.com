@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import Navbar from "@/../components/navbar";
-import Footer from "@/../components/footer";
-import Breadcrumbs from "@/../components/Breadcrumbs";
+import Navbar from "@components/navbar";
+import Footer from "@components/footer";
+import Breadcrumbs from "@components/Breadcrumbs";
 import Link from "next/link";
 import { Home, TrendingUp, Calculator } from "lucide-react";
-import { Button } from "@/../components/ui/button";
+import { Button } from "@components/ui/button";
 
 export const metadata: Metadata = {
   title: "Free Home Value Estimate | Sun City Summerlin | Dr. Jan Duffy",

@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import Navbar from "@/../components/navbar";
-import Footer from "@/../components/footer";
-import Breadcrumbs from "@/../components/Breadcrumbs";
-import ScrollAnimation from "@/../components/scroll-animation";
+import Navbar from "@components/navbar";
+import Footer from "@components/footer";
+import Breadcrumbs from "@components/Breadcrumbs";
+import ScrollAnimation from "@components/scroll-animation";
 import { Calendar, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {

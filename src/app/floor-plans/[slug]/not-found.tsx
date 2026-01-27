@@ -1,7 +1,7 @@
 import Link from 'next/link';
-import { Button } from '@/../components/ui/button';
-import Navbar from '@/../components/navbar';
-import Footer from '@/../components/footer';
+import { Button } from '@components/ui/button';
+import Navbar from '@components/navbar';
+import Footer from '@components/footer';
 
 export default function NotFound() {
   return (

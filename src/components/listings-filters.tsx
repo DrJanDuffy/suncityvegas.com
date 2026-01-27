@@ -4,7 +4,7 @@
 import { useState, useMemo } from 'react';
 import type { Listing } from '@/types/listing';
 import { Search, Filter, X } from 'lucide-react';
-import { Button } from '@/../components/ui/button';
+import { Button } from '@components/ui/button';
 
 type ListingsFiltersProps = {
   listings: Listing[];

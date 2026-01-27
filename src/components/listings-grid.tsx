@@ -2,8 +2,8 @@ import type { Listing } from "@/types/listing";
 import Image from "next/image";
 import Link from "next/link";
 import { Bed, Bath, Square, MapPin } from "lucide-react";
-import { Button } from "@/../components/ui/button";
-import ScheduleTour from "@/../components/ScheduleTour";
+import { Button } from "@components/ui/button";
+import ScheduleTour from "@components/ScheduleTour";
 
 type ListingsGridProps = {
   listings: Listing[];

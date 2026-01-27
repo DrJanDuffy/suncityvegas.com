@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { ArrowRight, TrendingUp, Calendar } from "lucide-react";
-import ScrollAnimation from "./scroll-animation";
+import ScrollAnimation from "@components/scroll-animation";
 
 interface MarketInsight {
   title: string;

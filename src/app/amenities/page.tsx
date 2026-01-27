@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Navbar from "@/../components/navbar";
-import Footer from "@/../components/footer";
-import Breadcrumbs from "@/../components/Breadcrumbs";
-import { Button } from "@/../components/ui/button";
+import Navbar from "@components/navbar";
+import Footer from "@components/footer";
+import Breadcrumbs from "@components/Breadcrumbs";
+import { Button } from "@components/ui/button";
 import Link from "next/link";
-import ScrollAnimation from "@/../components/scroll-animation";
+import ScrollAnimation from "@components/scroll-animation";
 import { getAmenities, getRecreationCenters, getGolfCourses } from "@/lib/communityData";
-import RealScoutListings from "@/../components/RealScoutListings";
+import RealScoutListings from "@components/RealScoutListings";
 import {
   Activity,
   Users,

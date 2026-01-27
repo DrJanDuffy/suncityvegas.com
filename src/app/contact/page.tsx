@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import Navbar from "@/../components/navbar";
-import Footer from "@/../components/footer";
-import Breadcrumbs from "@/../components/Breadcrumbs";
-import ScrollAnimation from "@/../components/scroll-animation";
+import Navbar from "@components/navbar";
+import Footer from "@components/footer";
+import Breadcrumbs from "@components/Breadcrumbs";
+import ScrollAnimation from "@components/scroll-animation";
 import { Phone, Mail, MapPin, Youtube, ExternalLink, Car, Train, Footprints } from "lucide-react";
-import ScheduleTour from "@/../components/ScheduleTour";
-import CalendlyInline from "@/../components/CalendlyInline";
+import ScheduleTour from "@components/ScheduleTour";
+import CalendlyInline from "@components/CalendlyInline";
 
 export const metadata: Metadata = {
   title: "Contact & Schedule a Tour | Sun City Summerlin | Dr. Jan Duffy",

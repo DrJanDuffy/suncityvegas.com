@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Navbar from "@/../components/navbar";
-import Footer from "@/../components/footer";
-import Breadcrumbs from "@/../components/Breadcrumbs";
+import Navbar from "@components/navbar";
+import Footer from "@components/footer";
+import Breadcrumbs from "@components/Breadcrumbs";
 import Link from "next/link";
-import ScrollAnimation from "@/../components/scroll-animation";
-import ScheduleTour from "@/../components/ScheduleTour";
-import RealScoutListings from "@/../components/RealScoutListings";
+import ScrollAnimation from "@components/scroll-animation";
+import ScheduleTour from "@components/ScheduleTour";
+import RealScoutListings from "@components/RealScoutListings";
 import { getDistances, getClubs } from "@/lib/communityData";
 import {
   Users,

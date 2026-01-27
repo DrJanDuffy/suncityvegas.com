@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Navbar from "@/../../components/navbar";
-import Footer from "@/../../components/footer";
-import Breadcrumbs from "@/../../components/Breadcrumbs";
-import MarketInsights from "@/../../components/MarketInsights";
+import Navbar from "@components/navbar";
+import Footer from "@components/footer";
+import Breadcrumbs from "@components/Breadcrumbs";
+import MarketInsights from "@/components/MarketInsights";
 import { TrendingUp, Truck, Home, BookOpen } from "lucide-react";
-import ScrollAnimation from "@/../../components/scroll-animation";
+import ScrollAnimation from "@components/scroll-animation";
 
 export const metadata: Metadata = {
   title: "Real Estate Market Insights | Las Vegas Housing Market Trends 2026",

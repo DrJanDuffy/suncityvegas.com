@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
-import Navbar from '@/../components/navbar';
-import Footer from '@/../components/footer';
-import Breadcrumbs from '@/../components/Breadcrumbs';
-import FAQAccordion from '@/../components/FAQAccordion';
+import Navbar from '@components/navbar';
+import Footer from '@components/footer';
+import Breadcrumbs from '@components/Breadcrumbs';
+import FAQAccordion from '@components/FAQAccordion';
 import { getAllQuestions } from '@/lib/faqData';
 import Link from 'next/link';
 

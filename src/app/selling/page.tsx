@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import Navbar from "@/../components/navbar";
-import Footer from "@/../components/footer";
-import Breadcrumbs from "@/../components/Breadcrumbs";
+import Navbar from "@components/navbar";
+import Footer from "@components/footer";
+import Breadcrumbs from "@components/Breadcrumbs";
 import Link from "next/link";
-import ScrollAnimation from "@/../components/scroll-animation";
-import ScheduleTour from "@/../components/ScheduleTour";
-import { Button } from "@/../components/ui/button";
+import ScrollAnimation from "@components/scroll-animation";
+import ScheduleTour from "@components/ScheduleTour";
+import { Button } from "@components/ui/button";
 import { Phone, DollarSign, TrendingUp, Clock, Shield, FileText, CheckCircle2 } from "lucide-react";
 
 export const metadata: Metadata = {

@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import Navbar from "@/../../components/navbar";
-import Footer from "@/../../components/footer";
-import Breadcrumbs from "@/../../components/Breadcrumbs";
-import { Button } from "@/../../components/ui/button";
+import Navbar from "@components/navbar";
+import Footer from "@components/footer";
+import Breadcrumbs from "@components/Breadcrumbs";
+import { Button } from "@components/ui/button";
 import { Phone, ArrowRight, Check, Home, DollarSign, FileText, Shield, Users, TrendingUp, Truck, BookOpen } from "lucide-react";
-import ScrollAnimation from "@/../../components/scroll-animation";
+import ScrollAnimation from "@components/scroll-animation";
 
 export const metadata: Metadata = {
   title: "First-Time Homebuyer Guide: Sun City Summerlin 55+ Community",

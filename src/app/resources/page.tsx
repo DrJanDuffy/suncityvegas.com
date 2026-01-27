@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Navbar from "@/../../components/navbar";
-import Footer from "@/../../components/footer";
-import Breadcrumbs from "@/../../components/Breadcrumbs";
+import Navbar from "@components/navbar";
+import Footer from "@components/footer";
+import Breadcrumbs from "@components/Breadcrumbs";
 import { BookOpen, TrendingUp, Truck, Home, ArrowRight } from "lucide-react";
-import ScrollAnimation from "@/../../components/scroll-animation";
+import ScrollAnimation from "@components/scroll-animation";
 
 export const metadata: Metadata = {
   title: "Sun City Summerlin Resources | Guides, Market Insights & Moving Tips",

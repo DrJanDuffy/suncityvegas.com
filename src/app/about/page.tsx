@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Navbar from "@/../components/navbar";
-import Footer from "@/../components/footer";
-import Breadcrumbs from "@/../components/Breadcrumbs";
+import Navbar from "@components/navbar";
+import Footer from "@components/footer";
+import Breadcrumbs from "@components/Breadcrumbs";
 import Link from "next/link";
-import ScrollAnimation from "@/../components/scroll-animation";
+import ScrollAnimation from "@components/scroll-animation";
 import { Phone, Mail, MapPin, Award, Users, Home } from "lucide-react";
 import { getAllTestimonials } from "@/lib/old-site-data";
 import { Quote } from "lucide-react";
-import ScheduleTour from "@/../components/ScheduleTour";
-import RealScoutListings from "@/../components/RealScoutListings";
+import ScheduleTour from "@components/ScheduleTour";
+import RealScoutListings from "@components/RealScoutListings";
 
 export const metadata: Metadata = {
   title: "About Dr. Jan Duffy REALTOR® | Sun City Summerlin Specialist",

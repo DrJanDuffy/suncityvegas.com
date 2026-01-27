@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
-import Navbar from "@/../components/navbar";
-import Footer from "@/../components/footer";
-import Breadcrumbs from "@/../components/Breadcrumbs";
-import { Button } from "@/../components/ui/button";
+import Navbar from "@components/navbar";
+import Footer from "@components/footer";
+import Breadcrumbs from "@components/Breadcrumbs";
+import { Button } from "@components/ui/button";
 import Link from "next/link";
-import ScrollAnimation from "@/../components/scroll-animation";
+import ScrollAnimation from "@components/scroll-animation";
 import { Home, Maximize2, Calendar, Building } from "lucide-react";
-import MortgageCalculator from "@/../components/MortgageCalculator";
-import ScheduleTour from "@/../components/ScheduleTour";
-import RealScoutListings from "@/../components/RealScoutListings";
+import MortgageCalculator from "@components/MortgageCalculator";
+import ScheduleTour from "@components/ScheduleTour";
+import RealScoutListings from "@components/RealScoutListings";
 
 export const metadata: Metadata = {
   title: "Home Styles & Sizes | Sun City Summerlin | 1,000-3,500+ Sq Ft Resale Homes",
