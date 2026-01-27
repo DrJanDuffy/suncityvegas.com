@@ -12,7 +12,7 @@ import {
   Phone, 
   Calendar,
   CheckCircle2,
-  Golf,
+  CircleDot,
   Users,
   Home,
   DollarSign,
@@ -323,7 +323,7 @@ export default async function FlyerPage({
 
   // Community highlights data
   const communityHighlights = [
-    { icon: Golf, label: "4 Golf Courses", description: "Highland Falls, Palm Valley, Eagle Crest, Starbright Par 3" },
+    { icon: CircleDot, label: "4 Golf Courses", description: "Highland Falls, Palm Valley, Eagle Crest, Starbright Par 3" },
     { icon: Users, label: "80+ Social Clubs", description: "From pickleball to pottery, there's something for everyone" },
     { icon: Home, label: "7,779 Homes", description: "Single-family homes from 1,000-3,000+ sq ft" },
     { icon: DollarSign, label: "No State Income Tax", description: "Nevada tax benefits for retirees" },
