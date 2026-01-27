@@ -20,19 +20,34 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.suncityvegas.com"),
   title: {
-    default: "Sun City Summerlin Homes for Sale | Las Vegas 55+ Community | Dr. Jan Duffy",
+    default: "Sun City Summerlin 55+ Real Estate | Homes by Dr. Jan Duffy",
     template: "%s | Sun City Summerlin | Dr. Jan Duffy",
   },
   description:
-    "Find your perfect home in Sun City Summerlin, Las Vegas' premier 55+ active adult community. 4 golf courses, 3 rec centers, 80+ clubs. Call Dr. Jan Duffy: 702-222-1964",
+    "Find your dream 55+ retirement home in Sun City Summerlin, Las Vegas. With over 25 years of experience in active adult communities, Dr. Jan Duffy has helped countless retirees discover the perfect home. Sun City Summerlin offers world-class amenities—golf, fitness, pools, 80+ clubs. Call (702) 718-0043.",
   keywords: [
     "Sun City Summerlin",
-    "Sun City Vegas",
     "Sun City Summerlin homes for sale",
+    "Sun City Summerlin 55+ community homes for sale",
+    "Sun City Summerlin Las Vegas NV 89134 homes for sale",
+    "Sun City Summerlin home rentals",
+    "Del Webb",
+    "Del Webb Las Vegas",
+    "Del Webb Summerlin",
+    "Del Webb Las Vegas Summerlin",
+    "Del Webb in Summerlin",
+    "Del Webb Summerlin homes for sale",
+    "Del Webb senior living communities",
+    "Del Webb Sun City Summerlin rentals",
+    "HOA Sun City Del Webb",
+    "HOA for Sun City Del Webb",
+    "Sun City Summerlin NV 55+ for sale",
+    "Sun City Del Webb Las Vegas links magazine",
+    "Vegas Strong Del Webb Sun City Summerlin applications",
     "55+ community Las Vegas",
+    "55 and over communities in Las Vegas for sale",
     "active adult community",
     "senior living Las Vegas",
-    "Del Webb Las Vegas",
     "Dr. Jan Duffy",
     "REALTOR",
     "Las Vegas 55+ homes",
@@ -52,10 +67,10 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://www.suncityvegas.com",
-    siteName: "Sun City Summerlin Homes for Sale | Dr. Jan Duffy",
-    title: "Sun City Summerlin Homes for Sale | Las Vegas 55+ Community",
+    siteName: "Sun City Summerlin 55+ Real Estate | Homes by Dr. Jan Duffy",
+    title: "Sun City Summerlin 55+ Real Estate | Homes by Dr. Jan Duffy",
     description:
-      "Las Vegas' premier 55+ community with 4 golf courses, 3 rec centers, and 80+ clubs. Homes from $300K-$800K+. Call Dr. Jan Duffy: 702-222-1964",
+      "Find your dream 55+ retirement home in Sun City Summerlin, Las Vegas. With over 25 years of experience in active adult communities, Dr. Jan Duffy has helped countless retirees discover the perfect home. Call (702) 718-0043.",
     images: [
       {
         url: "/images/hero/hero-bg.jpg",
@@ -68,11 +83,11 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Sun City Summerlin Homes for Sale | Las Vegas 55+ Community",
+    title: "Sun City Summerlin 55+ Real Estate | Homes by Dr. Jan Duffy",
     description:
-      "Las Vegas' premier 55+ community with 4 golf courses, 3 rec centers, and 80+ clubs. Homes from $300K-$800K+.",
+      "Find your dream 55+ retirement home in Sun City Summerlin. Dr. Jan Duffy—over 25 years in active adult communities. Call (702) 718-0043.",
     images: ["/images/hero/hero-bg.jpg"],
-    creator: "@DrJanDuffy",
+    creator: "@drjanduffy",
   },
   robots: {
     index: true,
@@ -100,30 +115,40 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
 
-  // LocalBusiness Schema for Google Business Profile
+  // LocalBusiness Schema for Google Business Profile (matches GBP)
   const localBusinessSchema = {
     "@context": "https://schema.org",
     "@type": "RealEstateAgent",
     "@id": "https://www.suncityvegas.com/#agent",
-    name: "Dr. Jan Duffy - Sun City Summerlin Specialist",
-    alternateName: "Sun City Vegas Real Estate",
-    description: "Your Sun City Summerlin real estate expert! Helping buyers 55+ find their dream retirement home in Las Vegas' premier active adult community. 4 championship golf courses, 3 recreation centers, 80+ clubs & activities. Free community tours, market analysis, and expert negotiation support.",
+    name: "Sun City Summerlin 55+ Real Estate | Homes by Dr. Jan Duffy",
+    alternateName: ["Sun City Vegas Real Estate", "Homes by Dr. Jan Duffy"],
+    description: "Find your dream 55+ retirement home in Sun City Summerlin, Las Vegas. With over 25 years of experience in active adult communities, Dr. Duffy has helped countless retirees discover the perfect home to suit their lifestyle and needs. Sun City Summerlin offers a variety of beautiful options. This vibrant community is designed specifically for active adults, featuring world-class amenities such as golf courses, fitness centers, pools, walking trails, and social clubs. Dr. Duffy provides expert guidance and personalized service every step of the way, ensuring your transition into this exciting new chapter is seamless and stress-free. Start your journey toward a fulfilling and active retirement today!",
     image: "https://www.suncityvegas.com/images/about/dr-jan-duffy.jpg",
     url: "https://www.suncityvegas.com",
-    telephone: "+1-702-222-1964",
+    telephone: "+1-702-718-0043",
     email: "jan@drjanduffy.com",
+    foundingDate: "2013-09-20",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "9107 Del Webb Blvd",
+      streetAddress: "9406 Del Webb Blvd",
       addressLocality: "Las Vegas",
       addressRegion: "NV",
       postalCode: "89134",
       addressCountry: "US",
     },
-    areaServed: {
-      "@type": "Place",
-      name: "Sun City Summerlin, Las Vegas, NV",
-    },
+    areaServed: [
+      { "@type": "State", name: "Nevada", addressCountry: "US" },
+      { "@type": "City", name: "Las Vegas", addressRegion: "NV" },
+      { "@type": "City", name: "Henderson", addressRegion: "NV" },
+      { "@type": "AdministrativeArea", name: "Clark County", addressRegion: "NV" },
+      { "@type": "Place", name: "Sun City Summerlin", address: { "@type": "PostalAddress", addressLocality: "Las Vegas", addressRegion: "NV", postalCode: "89134" } },
+      { "@type": "Place", name: "Anthem", address: { "@type": "PostalAddress", addressLocality: "Henderson", addressRegion: "NV", postalCode: "89052" } },
+      { "@type": "Place", name: "Lake Las Vegas", address: { "@type": "PostalAddress", addressLocality: "Henderson", addressRegion: "NV", postalCode: "89011" } },
+      { "@type": "City", name: "North Las Vegas", addressRegion: "NV" },
+      { "@type": "Place", name: "Meadows", address: { "@type": "PostalAddress", addressLocality: "Las Vegas", addressRegion: "NV" } },
+      { "@type": "Place", name: "Providence", address: { "@type": "PostalAddress", addressLocality: "Las Vegas", addressRegion: "NV" } },
+      { "@type": "Place", name: "MacDonald Ranch", address: { "@type": "PostalAddress", addressLocality: "Henderson", addressRegion: "NV" } },
+    ],
     geo: {
       "@type": "GeoCoordinates",
       latitude: "36.2108",
@@ -137,14 +162,45 @@ export default function RootLayout({
         closes: "21:00",
       },
     ],
+    accessibilityFeature: ["WheelchairAccessibleEntrance", "WheelchairAccessibleSeating", "WheelchairAccessibleRestroom", "WheelchairAccessibleParking"],
+    knowsLanguage: ["English", "Spanish", "American Sign Language", "Arabic", "Cantonese", "Filipino"],
+    amenityFeature: [
+      { "@type": "LocationFeatureSpecification", name: "Free parking lot", value: true },
+      { "@type": "LocationFeatureSpecification", name: "Wheelchair accessible entrance", value: true },
+      { "@type": "LocationFeatureSpecification", name: "Wheelchair accessible seating", value: true },
+      { "@type": "LocationFeatureSpecification", name: "Wheelchair accessible restroom", value: true },
+      { "@type": "LocationFeatureSpecification", name: "Wheelchair accessible parking lot", value: true },
+      { "@type": "LocationFeatureSpecification", name: "Gender-neutral restroom", value: true },
+      { "@type": "LocationFeatureSpecification", name: "Online appointments", value: true },
+      { "@type": "LocationFeatureSpecification", name: "Onsite services available", value: true },
+      { "@type": "LocationFeatureSpecification", name: "Appointment not required", value: true },
+      { "@type": "LocationFeatureSpecification", name: "Veteran-owned business", value: true },
+      { "@type": "LocationFeatureSpecification", name: "Women-owned business", value: true },
+      { "@type": "LocationFeatureSpecification", name: "LGBTQ+ friendly", value: true },
+      { "@type": "LocationFeatureSpecification", name: "Transgender safespace", value: true },
+    ],
     priceRange: "$$",
     paymentAccepted: "Cash, Check, Credit Card, Financing",
     currenciesAccepted: "USD",
     sameAs: [
-      "https://www.facebook.com/drjanduffy",
-      "https://www.instagram.com/drjanduffy",
-      "https://www.linkedin.com/in/drjanduffy",
-      "https://www.youtube.com/@drjanduffy",
+      "https://lasvegas55plushomes.com/",
+      "https://www.facebook.com/DrJanDuffyRealtorCentennialHills/",
+      "https://www.linkedin.com/company/lvrmembers/",
+      "https://www.instagram.com/drjanduffy/",
+      "https://x.com/drjanduffy",
+      "https://www.tiktok.com/@dr.janduffy",
+      "https://www.youtube.com/@DrDuffy",
+      "https://www.pinterest.com/bhhsluxury/",
+    ],
+    specialOpeningHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        validFrom: "2026-02-16",
+        validThrough: "2026-02-16",
+        opens: "10:00",
+        closes: "18:00",
+        description: "Washington's Birthday",
+      },
     ],
     aggregateRating: {
       "@type": "AggregateRating",
@@ -218,7 +274,7 @@ export default function RootLayout({
     description: "Del Webb's premier 55+ active adult community in Las Vegas, Nevada featuring 4 golf courses, 3 recreation centers, and 80+ clubs and activities.",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "9107 Del Webb Blvd",
+      streetAddress: "9406 Del Webb Blvd",
       addressLocality: "Las Vegas",
       addressRegion: "NV",
       postalCode: "89134",
@@ -245,12 +301,18 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
       <head>
         <link rel="icon" href="/favicon.ico" />
-        {/* Google Analytics */}
+        {/* Preconnect to critical third-party origins (PageSpeed / LCP) */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://assets.calendly.com" />
+        <link rel="dns-prefetch" href="https://em.realscout.com" />
+        {/* Google Analytics - lazyOnload so it doesn't compete for bandwidth during LCP */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-NHQBT9NYXR"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
-        <Script id="google-analytics" strategy="afterInteractive">
+        <Script id="google-analytics" strategy="lazyOnload">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
@@ -258,8 +320,10 @@ export default function RootLayout({
             gtag('config', 'G-NHQBT9NYXR');
           `}
         </Script>
-        {/* Calendly Badge Widget CSS */}
-        <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
+        {/* Calendly Badge Widget CSS - loaded via script after idle so it doesn't block LCP */}
+        <Script id="calendly-css" strategy="lazyOnload">
+          {`(function(){var l=document.createElement('link');l.rel='stylesheet';l.href='https://assets.calendly.com/assets/external/widget.css';document.head.appendChild(l);})();`}
+        </Script>
         {/* Structured Data - Consolidated Schema Markup */}
         <SchemaMarkup />
         {/* Structured Data - LocalBusiness (Google Business Profile) */}

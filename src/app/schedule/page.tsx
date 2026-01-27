@@ -64,17 +64,17 @@ export default function SchedulePage() {
                   <h3 className="font-semibold text-[#8B5E3C] mb-2">Location</h3>
                   <p className="text-[#2D2A26]">Sun City Summerlin</p>
                   <p className="text-sm text-gray-600 mt-1">
-                    9107 Del Webb Blvd, Las Vegas
+                    9406 Del Webb Blvd, Las Vegas, NV 89134
                   </p>
                 </div>
                 <div className="text-center p-6 bg-[#FDF8F3] rounded-lg">
                   <Phone className="w-10 h-10 text-[#8B5E3C] mx-auto mb-3" />
                   <h3 className="font-semibold text-[#8B5E3C] mb-2">Questions?</h3>
                   <a
-                    href="tel:7022221964"
+                    href="tel:+17027180043"
                     className="text-[#D4AF37] hover:text-[#8B5E3C] transition-colors"
                   >
-                    (702) 222-1964
+                    (702) 718-0043
                   </a>
                 </div>
               </div>
@@ -113,11 +113,11 @@ export default function SchedulePage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
-                  href="tel:7022221964"
+                  href="tel:+17027180043"
                   className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#8B5E3C] text-white rounded-md font-semibold hover:bg-[#8B5E3C]/90 transition-colors"
                 >
                   <Phone className="w-5 h-5" />
-                  Call (702) 222-1964
+                  Call (702) 718-0043
                 </a>
                 <a
                   href="mailto:jan@drjanduffy.com"

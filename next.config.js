@@ -44,7 +44,7 @@ const nextConfig = {
               "style-src 'self' 'unsafe-inline' https://assets.calendly.com https://fonts.googleapis.com",
               "img-src 'self' data: https:",
               "font-src 'self' data: https://fonts.gstatic.com",
-              "frame-src 'self' https://em.realscout.com https://www.realscout.com https://calendly.com https://www.youtube.com https://youtube.com https://my.matterport.com",
+              "frame-src 'self' https://em.realscout.com https://www.realscout.com https://calendly.com https://www.youtube.com https://youtube.com https://my.matterport.com https://www.google.com https://maps.google.com https://storage.googleapis.com",
             ].join('; '),
           },
         ],

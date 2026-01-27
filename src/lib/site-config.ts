@@ -1,28 +1,33 @@
 export const siteConfig = {
-  // Domain & SEO
+  // Domain & SEO (GBP-aligned business name)
   domain: "suncityvegas.com",
-  siteName: "Sun City Vegas",
-  siteTitle: "Sun City Summerlin Homes for Sale | Las Vegas 55+ Community",
-  siteDescription: "Find your perfect home in Sun City Summerlin, Las Vegas' premier 55+ active adult community. Browse listings, explore amenities, and work with Dr. Jan Duffy, your Sun City specialist.",
+  siteName: "Sun City Summerlin 55+ Real Estate | Homes by Dr. Jan Duffy",
+  siteTitle: "Sun City Summerlin 55+ Real Estate | Homes by Dr. Jan Duffy",
+  siteDescription: "Find your dream 55+ retirement home in Sun City Summerlin, Las Vegas. With over 25 years of experience in active adult communities, Dr. Duffy has helped countless retirees discover the perfect home to suit their lifestyle and needs. Sun City Summerlin offers world-class amenities—golf, fitness, pools, 80+ clubs. Dr. Duffy provides expert guidance every step of the way.",
   
   // Location
   community: "Sun City Summerlin",
   city: "Las Vegas",
   state: "NV",
   zip: "89134",
-  address: "9107 Del Webb Blvd, Las Vegas, NV 89134",
-  
+  address: "9406 Del Webb Blvd, Las Vegas, NV 89134",
+
+  // Canonical NAP (use for display and tel: links)
+  phoneDisplay: "(702) 718-0043",
+  phoneHref: "tel:+17027180043",
+
   // Agent Info
   agent: {
     name: "Dr. Jan Duffy",
     title: "Sun City Summerlin Specialist",
     license: "S.0197614.LLC",
     phone: {
-      marketing: "702-222-1964",
-      professional: "702-500-1955"
+      marketing: "(702) 718-0043",
+      professional: "(702) 718-0043"
     },
     email: "jan@drjanduffy.com",
-    photo: "/images/about/dr-jan-duffy.jpg"
+    photo: "/images/about/dr-jan-duffy.jpg",
+    openingDate: "2013-09-20"
   },
   
   // Brokerage
@@ -30,6 +35,17 @@ export const siteConfig = {
     name: "Berkshire Hathaway HomeServices Nevada Properties",
     shortName: "BHHS Nevada Properties",
     logo: "/images/bhhs-logo.png"
+  },
+  
+  // Business Hours (matching GBP)
+  businessHours: {
+    sunday: { open: "06:00", close: "21:00" },
+    monday: { open: "06:00", close: "21:00" },
+    tuesday: { open: "06:00", close: "21:00" },
+    wednesday: { open: "06:00", close: "21:00" },
+    thursday: { open: "06:00", close: "21:00" },
+    friday: { open: "06:00", close: "21:00" },
+    saturday: { open: "06:00", close: "21:00" }
   },
   
   // Theme Colors (Desert/Mountain palette)
@@ -48,12 +64,15 @@ export const siteConfig = {
     communityId: "sun-city-summerlin"
   },
   
-  // Social Links
+  // Social Links (matching GBP)
   social: {
-    facebook: "https://facebook.com/drjanduffy",
-    instagram: "https://instagram.com/drjanduffy",
-    youtube: "https://youtube.com/@drjanduffy",
-    linkedin: "https://linkedin.com/in/drjanduffy"
+    facebook: "https://www.facebook.com/DrJanDuffyRealtorCentennialHills/",
+    instagram: "https://www.instagram.com/drjanduffy/",
+    youtube: "https://www.youtube.com/@DrDuffy",
+    linkedin: "https://www.linkedin.com/company/lvrmembers/",
+    pinterest: "https://www.pinterest.com/bhhsluxury/",
+    tiktok: "https://www.tiktok.com/@dr.janduffy",
+    twitter: "https://x.com/drjanduffy"
   },
 
   // Community Stats
@@ -62,7 +81,7 @@ export const siteConfig = {
     recCenters: 3,
     clubs: "80+",
     pools: "Multiple",
-    homes: "7,779",
+    homes: "7,781",
     ageRestriction: "55+"
   },
 

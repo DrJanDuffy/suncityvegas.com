@@ -8,18 +8,26 @@ import { getAllQuestions } from '@/lib/faqData';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Frequently Asked Questions | Sun City Summerlin | Dr. Jan Duffy',
+  title: 'FAQ | Sun City Summerlin | Del Webb Las Vegas | Dr. Jan Duffy',
   description:
-    'Find answers to frequently asked questions about Sun City Summerlin, Las Vegas\' premier 55+ community. Learn about HOA fees, amenities, age requirements, golf courses, and more.',
+    'FAQs about Sun City Summerlin and Del Webb Las Vegas Summerlin: HOA fees, Sun City Summerlin home rentals, 55+ requirements, amenities, and more.',
+  keywords: [
+    'Sun City Summerlin FAQ',
+    'Sun City Summerlin home rentals',
+    'Del Webb Sun City Summerlin rentals',
+    'HOA Sun City Del Webb',
+    'Sun City Del Webb Las Vegas links magazine',
+    'Vegas Strong Del Webb Sun City Summerlin applications',
+  ],
   alternates: {
     canonical: 'https://www.suncityvegas.com/faq',
   },
   openGraph: {
-    title: 'Frequently Asked Questions | Sun City Summerlin | Dr. Jan Duffy',
+    title: 'FAQ | Sun City Summerlin | Del Webb Las Vegas | Dr. Jan Duffy',
     description:
-      'Find answers to frequently asked questions about Sun City Summerlin, Las Vegas\' premier 55+ active adult community.',
+      'Answers about Sun City Summerlin, Del Webb Las Vegas Summerlin, HOA fees, rentals, and 55+ community life.',
     url: 'https://www.suncityvegas.com/faq',
-    siteName: 'Sun City Summerlin Homes for Sale | Dr. Jan Duffy',
+    siteName: 'Sun City Summerlin 55+ Real Estate | Homes by Dr. Jan Duffy',
     locale: 'en_US',
     type: 'website',
     images: [
@@ -176,10 +184,10 @@ export default function FAQPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="tel:7022221964"
+                href="tel:+17027180043"
                 className="inline-flex items-center justify-center px-8 py-4 bg-white text-[#8B5E3C] font-semibold rounded-lg hover:bg-gray-100 transition-colors min-h-[48px] touch-manipulation"
               >
-                Call (702) 222-1964
+                Call (702) 718-0043
               </a>
               <Link
                 href="/contact"

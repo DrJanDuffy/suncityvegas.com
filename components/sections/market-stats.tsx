@@ -75,7 +75,7 @@ export default function MarketStatsSection() {
           <div className="mt-8 text-center">
             <p className="text-sm text-[#2D2A26] opacity-75">
               Market data updated regularly. For the most current information,{" "}
-              <a href="tel:7022221964" className="text-[#8B5E3C] hover:text-[#5D7A5D] underline">
+              <a href="tel:+17027180043" className="text-[#8B5E3C] hover:text-[#5D7A5D] underline">
                 contact Dr. Jan Duffy
               </a>
               .

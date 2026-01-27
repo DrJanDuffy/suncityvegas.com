@@ -24,7 +24,7 @@ export async function getSunCitySummerlinListings(): Promise<Listing[]> {
   return [
     {
       id: "1",
-      address: "9107 Del Webb Blvd",
+      address: "9406 Del Webb Blvd",
       city: "Las Vegas",
       state: "NV",
       zipCode: "89134",

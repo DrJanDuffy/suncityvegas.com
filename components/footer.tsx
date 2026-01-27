@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Phone, Mail, MapPin, Youtube, Calendar, FileText, Instagram, Linkedin, Facebook } from "lucide-react";
+import { Phone, Mail, MapPin, Youtube, Calendar, Instagram, Linkedin, Facebook, ExternalLink } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -9,10 +9,10 @@ export default function Footer() {
           {/* Site Info */}
           <div>
             <h3 className="text-2xl font-bold mb-4 font-playfair text-[#D4AF37]">
-              Sun City Summerlin
+              Sun City Summerlin 55+ Real Estate
             </h3>
             <p className="text-gray-300 mb-4">
-              Las Vegas&apos; premier 55+ active adult community with 4 golf courses, 3 recreation centers, and 80+ clubs.
+              Homes by Dr. Jan Duffy. Las Vegas&apos; premier 55+ active adult community—4 golf courses, 3 recreation centers, 80+ clubs. Over 25 years helping retirees find the perfect home.
             </p>
             <div className="mt-4 text-sm text-gray-400">
               Equal Housing Opportunity
@@ -61,6 +61,14 @@ export default function Footer() {
                   className="text-gray-300 hover:text-[#D4AF37] transition-colors"
                 >
                   Community
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/community/neighborhood"
+                  className="text-gray-300 hover:text-[#D4AF37] transition-colors"
+                >
+                  Explore Neighborhood
                 </Link>
               </li>
               <li>
@@ -114,17 +122,28 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Contact Info */}
+          {/* Contact Info (GBP-aligned: phone, SMS, email, address) */}
           <div>
             <h4 className="text-lg font-semibold mb-4 text-[#C4A574]">Contact Dr. Jan Duffy</h4>
             <ul className="space-y-3">
               <li>
                 <a
-                  href="tel:7022221964"
+                  href="tel:+17027180043"
                   className="flex items-center gap-2 text-gray-300 hover:text-[#D4AF37] transition-colors"
+                  aria-label="Call (702) 718-0043"
                 >
                   <Phone className="w-4 h-4" />
-                  (702) 222-1964
+                  (702) 718-0043
+                </a>
+              </li>
+              <li>
+                <a
+                  href="sms:+17027180043"
+                  className="flex items-center gap-2 text-gray-300 hover:text-[#D4AF37] transition-colors"
+                  aria-label="Text (702) 718-0043"
+                >
+                  <Phone className="w-4 h-4" />
+                  Text / Chat
                 </a>
               </li>
               <li>
@@ -140,7 +159,7 @@ export default function Footer() {
                 <div className="flex items-start gap-2 text-gray-300">
                   <MapPin className="w-4 h-4 mt-1 flex-shrink-0" />
                   <span>
-                    9107 Del Webb Blvd
+                    9406 Del Webb Blvd
                     <br />
                     Las Vegas, NV 89134
                   </span>
@@ -153,6 +172,38 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-4 text-[#C4A574]">Resources</h4>
             <ul className="space-y-2">
+              <li>
+                <Link
+                  href="/resources"
+                  className="text-gray-300 hover:text-[#D4AF37] transition-colors"
+                >
+                  All Resources
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/resources/market-insights"
+                  className="text-gray-300 hover:text-[#D4AF37] transition-colors"
+                >
+                  Market Insights
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/resources/moving-guide"
+                  className="text-gray-300 hover:text-[#D4AF37] transition-colors"
+                >
+                  Moving Guide
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/resources/first-time-buyers"
+                  className="text-gray-300 hover:text-[#D4AF37] transition-colors"
+                >
+                  First-Time Buyers
+                </Link>
+              </li>
               <li>
                 <a
                   href="https://calendly.com/drjanduffy"
@@ -174,17 +225,6 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <a
-                  href="https://youtube.com/@drjanduffy"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-gray-300 hover:text-[#D4AF37] transition-colors"
-                >
-                  <Youtube className="w-4 h-4" />
-                  YouTube Channel
-                </a>
-              </li>
-              <li>
                 <Link
                   href="/testimonials"
                   className="text-gray-300 hover:text-[#D4AF37] transition-colors"
@@ -192,19 +232,31 @@ export default function Footer() {
                   Testimonials
                 </Link>
               </li>
+              <li>
+                <a
+                  href="https://www.youtube.com/@DrDuffy"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-gray-300 hover:text-[#D4AF37] transition-colors"
+                >
+                  <Youtube className="w-4 h-4" />
+                  YouTube
+                </a>
+              </li>
             </ul>
           </div>
 
-          {/* Social Media */}
+          {/* Social Media (GBP-aligned) */}
           <div>
             <h4 className="text-lg font-semibold mb-4 text-[#C4A574]">Follow Us</h4>
             <ul className="space-y-2">
               <li>
                 <a
-                  href="https://www.facebook.com/drjanduffy"
+                  href="https://www.facebook.com/DrJanDuffyRealtorCentennialHills/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-gray-300 hover:text-[#D4AF37] transition-colors"
+                  aria-label="Facebook"
                 >
                   <Facebook className="w-4 h-4" />
                   Facebook
@@ -212,10 +264,11 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="https://www.instagram.com/drjanduffy"
+                  href="https://www.instagram.com/drjanduffy/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-gray-300 hover:text-[#D4AF37] transition-colors"
+                  aria-label="Instagram"
                 >
                   <Instagram className="w-4 h-4" />
                   Instagram
@@ -223,10 +276,23 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="https://www.linkedin.com/in/drjanduffy"
+                  href="https://www.youtube.com/@DrDuffy"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-gray-300 hover:text-[#D4AF37] transition-colors"
+                  aria-label="YouTube"
+                >
+                  <Youtube className="w-4 h-4" />
+                  YouTube
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/company/lvrmembers/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-gray-300 hover:text-[#D4AF37] transition-colors"
+                  aria-label="LinkedIn"
                 >
                   <Linkedin className="w-4 h-4" />
                   LinkedIn
@@ -234,13 +300,38 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="https://youtube.com/@drjanduffy"
+                  href="https://www.pinterest.com/bhhsluxury/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-gray-300 hover:text-[#D4AF37] transition-colors"
+                  aria-label="Pinterest"
                 >
-                  <Youtube className="w-4 h-4" />
-                  YouTube
+                  <ExternalLink className="w-4 h-4" />
+                  Pinterest
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.tiktok.com/@dr.janduffy"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-gray-300 hover:text-[#D4AF37] transition-colors"
+                  aria-label="TikTok"
+                >
+                  <ExternalLink className="w-4 h-4" />
+                  TikTok
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://x.com/drjanduffy"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-gray-300 hover:text-[#D4AF37] transition-colors"
+                  aria-label="X (Twitter)"
+                >
+                  <ExternalLink className="w-4 h-4" />
+                  X
                 </a>
               </li>
             </ul>
@@ -296,13 +387,13 @@ export default function Footer() {
         {/* Copyright */}
         <div className="border-t border-gray-700 pt-8 mt-8 text-center text-sm text-gray-400">
           <p>
-            © 2026 Sun City Summerlin | Homes by Dr. Jan Duffy. All rights reserved.
+            © 2026 Sun City Summerlin 55+ Real Estate | Homes by Dr. Jan Duffy. All rights reserved.
           </p>
           <p className="mt-2">
             Berkshire Hathaway HomeServices Nevada Properties | License S.0197614.LLC
           </p>
           <p className="mt-2">
-            <a href="tel:7022221964" className="text-[#D4AF37] hover:underline">(702) 222-1964</a>
+            <a href="tel:+17027180043" className="text-[#D4AF37] hover:underline" aria-label="Call (702) 718-0043">(702) 718-0043</a>
           </p>
         </div>
       </div>

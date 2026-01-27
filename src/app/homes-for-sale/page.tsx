@@ -10,18 +10,25 @@ import RealScoutListings from "@/../components/RealScoutListings";
 import { getCommunityInfo } from "@/lib/communityData";
 
 export const metadata: Metadata = {
-  title: "Homes for Sale | Sun City Summerlin | Las Vegas 55+ Community",
+  title: "Sun City Summerlin Las Vegas NV 89134 Current Homes for Sale | Del Webb Summerlin",
   description:
-    "Browse current homes for sale in Sun City Summerlin, Las Vegas' premier 55+ active adult community. Homes from $300K-$800K+. Call Dr. Jan Duffy: (702) 222-1964",
+    "Current homes for sale in Sun City Summerlin, Las Vegas, NV 89134. Del Webb Summerlin 55+ community—browse listings updated daily. 55 and over communities in Las Vegas for sale. Call (702) 718-0043",
+  keywords: [
+    "Sun City Summerlin Las Vegas NV 89134 current homes for sale",
+    "Del Webb Summerlin homes for sale",
+    "Sun City Summerlin 55+ community homes for sale",
+    "55 and over communities in Las Vegas for sale",
+    "Del Webb Las Vegas Summerlin",
+  ],
   alternates: {
     canonical: "https://www.suncityvegas.com/homes-for-sale",
   },
   openGraph: {
-    title: "Homes for Sale | Sun City Summerlin | Las Vegas 55+ Community",
+    title: "Sun City Summerlin Las Vegas NV 89134 Current Homes for Sale | Del Webb Summerlin",
     description:
-      "Browse current homes for sale in Sun City Summerlin, Las Vegas' premier 55+ active adult community. Homes from $300K-$800K+.",
+      "Browse current homes for sale in Sun City Summerlin, Las Vegas NV 89134. Del Webb Summerlin 55+ community. Listings updated daily.",
     url: "https://www.suncityvegas.com/homes-for-sale",
-    siteName: "Sun City Summerlin Homes for Sale | Dr. Jan Duffy",
+    siteName: "Sun City Summerlin 55+ Real Estate | Homes by Dr. Jan Duffy",
     locale: "en_US",
     type: "website",
     images: [
@@ -29,14 +36,14 @@ export const metadata: Metadata = {
         url: "https://www.suncityvegas.com/images/amenities/resort-pool.jpeg",
         width: 1200,
         height: 630,
-        alt: "Sun City Summerlin homes for sale",
+        alt: "Sun City Summerlin Del Webb homes for sale",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Homes for Sale | Sun City Summerlin | Las Vegas 55+ Community",
-    description: "Browse current homes for sale in Sun City Summerlin 55+ community. Homes from $300K-$800K+.",
+    title: "Sun City Summerlin Las Vegas NV 89134 Homes for Sale | Del Webb Summerlin",
+    description: "Current homes for sale in Sun City Summerlin 55+ community, Las Vegas NV 89134. Del Webb Summerlin.",
     images: ["https://www.suncityvegas.com/images/amenities/resort-pool.jpeg"],
   },
 };
@@ -59,10 +66,10 @@ export default async function HomesForSalePage() {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 font-playfair">
-                Homes for Sale in Sun City Summerlin | Las Vegas 55+ Community
+                Sun City Summerlin Las Vegas NV 89134 Current Homes for Sale
               </h1>
               <p className="text-lg md:text-xl text-gray-100 leading-relaxed mb-6">
-                Browse current listings updated daily from the MLS. Explore the <Link href="/amenities" className="text-[#D4AF37] hover:text-white underline">resort-style amenities</Link> including 4 golf courses and 3 recreation centers.
+                Browse current homes for sale in Sun City Summerlin, the Del Webb 55+ community in Las Vegas, NV 89134. Listings updated daily. Explore <Link href="/amenities" className="text-[#D4AF37] hover:text-white underline">resort-style amenities</Link>—4 golf courses, 3 recreation centers, 80+ clubs.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <Button
@@ -74,11 +81,11 @@ export default async function HomesForSalePage() {
                   <Link href="#listings">View Listings</Link>
                 </Button>
                 <a
-                  href="tel:7022221964"
+                  href="tel:+17027180043"
                   className="flex items-center gap-2 text-lg font-semibold hover:text-[#D4AF37] transition-colors"
                 >
                   <Phone className="w-5 h-5" />
-                  (702) 222-1964
+                  (702) 718-0043
                 </a>
               </div>
             </div>
@@ -193,11 +200,11 @@ export default async function HomesForSalePage() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                   <a
-                    href="tel:7022221964"
+                    href="tel:+17027180043"
                     className="flex items-center justify-center gap-2 px-6 py-4 bg-[#8B5E3C] text-white rounded-md font-semibold hover:bg-[#8B5E3C]/90 transition-colors min-h-[48px] touch-manipulation"
                   >
                     <Phone className="w-5 h-5" />
-                    Call (702) 222-1964
+                    Call (702) 718-0043
                   </a>
                   <Button asChild variant="accent" size="lg" className="bg-[#D4AF37] hover:bg-[#D4AF37]/90 text-[#2D2A26] min-h-[48px] px-6">
                     <Link href="/contact">Schedule a Tour</Link>

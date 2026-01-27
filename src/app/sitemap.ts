@@ -3,15 +3,20 @@ import { MetadataRoute } from "next";
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://www.suncityvegas.com";
 
-  // Blog post slugs - keep in sync with blog/[slug]/page.tsx
+  // Blog post slugs - keep in sync with blog routes
   const blogPosts = [
-    "welcome-to-sun-city-summerlin",
-    "golf-courses-at-sun-city-summerlin",
-    "nevada-tax-benefits-for-retirees",
-    "80-clubs-and-activities",
-    "recreation-centers-guide",
-    "why-sun-city-summerlin",
+    "pros-and-cons-sun-city-summerlin",
+    "best-sun-city-summerlin-neighborhoods",
+    "california-to-sun-city-summerlin",
+    "is-sun-city-summerlin-safe",
+    "sun-city-summerlin-floor-plans",
+    "sun-city-summerlin-hoa-fees",
+    "sun-city-summerlin-vs-sun-city-anthem",
   ];
+
+  const amenitySlugs = ["mountain-shadows", "sun-shadows", "desert-vista", "pinnacle", "golf"];
+  const lifestyleSlugs = ["clubs", "events", "restaurants"];
+  const resourceSlugs = ["market-insights", "moving-guide", "first-time-buyers"];
 
   const staticPages: MetadataRoute.Sitemap = [
     // Homepage - Priority 1.0, Daily
@@ -64,6 +69,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/resources`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.75,
     },
     {
       url: `${baseUrl}/selling`,
@@ -135,7 +146,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
-  // Add blog post pages dynamically
   const blogPages: MetadataRoute.Sitemap = blogPosts.map((slug) => ({
     url: `${baseUrl}/blog/${slug}`,
     lastModified: new Date(),
@@ -143,5 +153,41 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...staticPages, ...blogPages];
+  const amenityPages: MetadataRoute.Sitemap = amenitySlugs.map((slug) => ({
+    url: `${baseUrl}/amenities/${slug}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly" as const,
+    priority: 0.65,
+  }));
+
+  const lifestylePages: MetadataRoute.Sitemap = lifestyleSlugs.map((slug) => ({
+    url: `${baseUrl}/lifestyle/${slug}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly" as const,
+    priority: 0.65,
+  }));
+
+  const communityPages: MetadataRoute.Sitemap = [
+    {
+      url: `${baseUrl}/community/history`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.65,
+    },
+    {
+      url: `${baseUrl}/community/neighborhood`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    },
+  ];
+
+  const resourcePages: MetadataRoute.Sitemap = resourceSlugs.map((slug) => ({
+    url: `${baseUrl}/resources/${slug}`,
+    lastModified: new Date(),
+    changeFrequency: "weekly" as const,
+    priority: 0.65,
+  }));
+
+  return [...staticPages, ...blogPages, ...amenityPages, ...lifestylePages, ...communityPages, ...resourcePages];
 }

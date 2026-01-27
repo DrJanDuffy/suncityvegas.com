@@ -73,7 +73,7 @@ export const oldSiteData = {
     name: "Sun City Summerlin",
     builder: "Del Webb (Original)",
     type: "55+ Active Adult Gated Community",
-    address: "9107 Del Webb Blvd",
+    address: "9406 Del Webb Blvd",
     city: "Las Vegas",
     state: "NV",
     zip: "89134",

@@ -42,6 +42,69 @@ export const metadata: Metadata = {
 // Sample blog posts - replace with actual content from CMS or API
 const blogPosts = [
   {
+    slug: "pros-and-cons-sun-city-summerlin",
+    title: "Pros and Cons of Living in Sun City Summerlin (2025 Expert Guide)",
+    excerpt:
+      "An honest look at Sun City Summerlin pros and cons from Dr. Jan Duffy, a 30-year Las Vegas real estate expert. What you need to know before buying a home in this 55+ community.",
+    date: "2025-01-26",
+    image: "/images/blog/pros-cons-hero.jpg",
+    category: "Expert Guide",
+  },
+  {
+    slug: "sun-city-summerlin-hoa-fees",
+    title: "Sun City Summerlin HOA Fees 2025: Complete Breakdown",
+    excerpt:
+      "Complete guide to Sun City Summerlin HOA fees. Learn what's included in the ~$165/month fee, what costs extra, and how it compares to other 55+ communities in Las Vegas.",
+    date: "2025-01-26",
+    image: "/images/blog/hoa-fees-hero.jpg",
+    category: "Financial Guide",
+  },
+  {
+    slug: "sun-city-summerlin-vs-sun-city-anthem",
+    title: "Sun City Summerlin vs Sun City Anthem: Which is Better? (2025)",
+    excerpt:
+      "Compare Sun City Summerlin and Sun City Anthem, two of Las Vegas' premier 55+ communities. Learn the differences in location, amenities, home prices, HOA fees, and lifestyle.",
+    date: "2025-01-26",
+    image: "/images/blog/comparison-hero.jpg",
+    category: "Community Comparison",
+  },
+  {
+    slug: "sun-city-summerlin-floor-plans",
+    title: "Sun City Summerlin Floor Plans: Complete Guide (2025)",
+    excerpt:
+      "Explore Sun City Summerlin floor plans from 1,200 to 3,500+ sq ft. Learn about single-story designs, popular models, and find the perfect home layout for your 55+ lifestyle.",
+    date: "2025-01-26",
+    image: "/images/blog/floor-plans-hero.jpg",
+    category: "Home Guide",
+  },
+  {
+    slug: "california-to-sun-city-summerlin",
+    title: "Moving from California to Sun City Summerlin: Complete Relocation Guide (2025)",
+    excerpt:
+      "Thinking of relocating from California to Sun City Summerlin? Learn about taxes, cost of living, climate, and why thousands of Californians choose Las Vegas for retirement.",
+    date: "2025-01-26",
+    image: "/images/blog/california-relocation-hero.jpg",
+    category: "Relocation Guide",
+  },
+  {
+    slug: "is-sun-city-summerlin-safe",
+    title: "Is Sun City Summerlin Safe? Complete Safety Guide (2025)",
+    excerpt:
+      "Is Sun City Summerlin safe? Learn about crime rates, security measures, guard-gated access, and why this 55+ community is one of Las Vegas' safest neighborhoods.",
+    date: "2025-01-26",
+    image: "/images/blog/safety-hero.jpg",
+    category: "Safety Guide",
+  },
+  {
+    slug: "best-sun-city-summerlin-neighborhoods",
+    title: "Best Neighborhoods in Sun City Summerlin: Complete Guide (2025)",
+    excerpt:
+      "Discover the best neighborhoods in Sun City Summerlin. Learn about different areas, home styles, price ranges, and find the perfect neighborhood for your 55+ lifestyle.",
+    date: "2025-01-26",
+    image: "/images/blog/neighborhoods-hero.jpg",
+    category: "Neighborhood Guide",
+  },
+  {
     slug: "welcome-to-sun-city-summerlin",
     title: "Welcome to Sun City Summerlin",
     excerpt:

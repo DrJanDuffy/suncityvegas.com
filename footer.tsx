@@ -81,11 +81,11 @@ export default function Footer() {
             <ul className="space-y-3">
               <li>
                 <a
-                  href="tel:7022221964"
+                  href="tel:+17027180043"
                   className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors"
                 >
                   <Phone className="w-4 h-4" />
-                  (702) 222-1964
+                  (702) 718-0043
                 </a>
               </li>
               <li>
@@ -101,7 +101,7 @@ export default function Footer() {
                 <div className="flex items-start gap-2 text-gray-300">
                   <MapPin className="w-4 h-4 mt-1 flex-shrink-0" />
                   <span>
-                    9107 Del Webb Blvd
+                    9406 Del Webb Blvd
                     <br />
                     Las Vegas, NV 89134
                   </span>

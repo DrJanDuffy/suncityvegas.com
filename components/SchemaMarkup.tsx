@@ -3,30 +3,34 @@ import Script from 'next/script';
 export default function SchemaMarkup() {
   const baseUrl = 'https://www.suncityvegas.com';
 
-  // Organization Schema
+  // Organization Schema (matches GBP business name)
   const organizationSchema = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     '@id': `${baseUrl}/#organization`,
-    name: 'Sun City Summerlin Homes for Sale | Dr. Jan Duffy',
-    alternateName: 'Sun City Vegas Real Estate',
+    name: 'Sun City Summerlin 55+ Real Estate | Homes by Dr. Jan Duffy',
+    alternateName: ['Sun City Vegas Real Estate', 'Homes by Dr. Jan Duffy'],
     url: baseUrl,
     logo: `${baseUrl}/images/logo/logo.svg`,
-    telephone: '+1-702-222-1964',
+    telephone: '+1-702-718-0043',
     email: 'jan@drjanduffy.com',
+    foundingDate: '2013-09-20',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: '9107 Del Webb Blvd',
+      streetAddress: '9406 Del Webb Blvd',
       addressLocality: 'Las Vegas',
       addressRegion: 'NV',
       postalCode: '89134',
       addressCountry: 'US',
     },
     sameAs: [
-      'https://www.youtube.com/@drjanduffy',
-      'https://www.instagram.com/drjanduffy',
-      'https://www.linkedin.com/in/drjanduffy',
-      'https://www.facebook.com/drjanduffy',
+      'https://www.facebook.com/DrJanDuffyRealtorCentennialHills/',
+      'https://www.instagram.com/drjanduffy/',
+      'https://www.linkedin.com/company/lvrmembers/',
+      'https://www.youtube.com/@DrDuffy',
+      'https://www.pinterest.com/bhhsluxury/',
+      'https://www.tiktok.com/@dr.janduffy',
+      'https://x.com/drjanduffy',
     ],
     parentOrganization: {
       '@type': 'Organization',
@@ -38,7 +42,7 @@ export default function SchemaMarkup() {
   const websiteSchema = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    name: 'Sun City Summerlin Homes for Sale | Dr. Jan Duffy',
+    name: 'Sun City Summerlin 55+ Real Estate | Homes by Dr. Jan Duffy',
     url: baseUrl,
     potentialAction: {
       '@type': 'SearchAction',
@@ -50,7 +54,7 @@ export default function SchemaMarkup() {
     },
     publisher: {
       '@type': 'Organization',
-      name: 'Sun City Summerlin Homes for Sale | Dr. Jan Duffy',
+      name: 'Sun City Summerlin 55+ Real Estate | Homes by Dr. Jan Duffy',
       logo: {
         '@type': 'ImageObject',
         url: `${baseUrl}/images/logo/logo.svg`,
@@ -58,18 +62,18 @@ export default function SchemaMarkup() {
     },
   };
 
-  // RealEstateAgent Schema
+  // RealEstateAgent Schema (GBP-aligned)
   const realEstateAgentSchema = {
     '@context': 'https://schema.org',
     '@type': 'RealEstateAgent',
-    name: 'Dr. Jan Duffy',
+    name: 'Sun City Summerlin 55+ Real Estate | Homes by Dr. Jan Duffy',
     url: baseUrl,
     image: `${baseUrl}/images/about/dr-jan-duffy.jpg`,
-    telephone: '+1-702-222-1964',
+    telephone: '+1-702-718-0043',
     email: 'jan@drjanduffy.com',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: '9107 Del Webb Blvd',
+      streetAddress: '9406 Del Webb Blvd',
       addressLocality: 'Las Vegas',
       addressRegion: 'NV',
       postalCode: '89134',
@@ -99,7 +103,7 @@ export default function SchemaMarkup() {
     priceRange: '$300,000-$800,000+',
     worksFor: {
       '@type': 'Organization',
-      name: 'Sun City Summerlin Homes for Sale | Dr. Jan Duffy',
+      name: 'Sun City Summerlin 55+ Real Estate | Homes by Dr. Jan Duffy',
     },
     memberOf: {
       '@type': 'Organization',

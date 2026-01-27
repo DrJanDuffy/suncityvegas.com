@@ -74,7 +74,7 @@ npm start
 ## 📧 Contact
 
 **Dr. Jan Duffy, REALTOR®**
-- **Phone:** (702) 222-1964
+- **Phone:** (702) 718-0043
 - **Email:** jan@drjanduffy.com
 - **License:** S.0197614.LLC
 - **Brokerage:** Berkshire Hathaway HomeServices Nevada Properties

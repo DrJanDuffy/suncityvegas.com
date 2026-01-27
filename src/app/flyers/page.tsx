@@ -119,10 +119,10 @@ export default function FlyersPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
-                  href="tel:7022221964"
+                  href="tel:+17027180043"
                   className="inline-flex items-center justify-center px-8 py-4 bg-[#8B5E3C] text-white font-semibold rounded-lg hover:bg-[#8B5E3C]/90 transition-colors min-h-[48px] touch-manipulation"
                 >
-                  Call (702) 222-1964
+                  Call (702) 718-0043
                 </a>
                 <Link
                   href="/contact"

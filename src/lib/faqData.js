@@ -121,6 +121,28 @@ export const faqData = [
     ],
   },
   {
+    category: "Rentals & Leasing",
+    questions: [
+      {
+        question: "Are there Sun City Summerlin home rentals or Del Webb Sun City Summerlin rentals?",
+        answer: "Sun City Summerlin is primarily an owner-occupied 55+ community; rentals exist but inventory is limited. If you're looking for Sun City Summerlin home rentals or a short-term lease before buying, contact Dr. Jan Duffy at (702) 718-0043—she can help you find available lease listings or discuss buying as an alternative.",
+      },
+    ],
+  },
+  {
+    category: "Community Resources",
+    questions: [
+      {
+        question: "Where can I find Sun City Del Webb Las Vegas links or a links magazine?",
+        answer: "Community newsletters, event links, and resident resources for Sun City Summerlin (the Del Webb community in Las Vegas) are typically available through the HOA and recreation centers. For current links, magazines, or homeowner resources, contact the Sun City Summerlin HOA or ask Dr. Jan Duffy at (702) 718-0043—she can point you to the right contacts.",
+      },
+      {
+        question: "What are Vegas Strong Del Webb Sun City Summerlin applications?",
+        answer: "Vegas Strong and other Sun City Summerlin community programs or applications are often run by the HOA, recreation centers, or local organizations. For information on Vegas Strong Del Webb Sun City Summerlin applications or similar community initiatives, contact the Sun City Summerlin HOA or Dr. Jan Duffy at (702) 718-0043 for current details and contacts.",
+      },
+    ],
+  },
+  {
     category: "Buying Process",
     questions: [
       {

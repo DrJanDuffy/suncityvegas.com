@@ -61,6 +61,16 @@ const sitePages = [
     ],
   },
   {
+    category: "Resources",
+    icon: FileText,
+    pages: [
+      { href: "/resources", label: "Resources", description: "Guides, market insights, and tips" },
+      { href: "/resources/market-insights", label: "Market Insights", description: "Latest housing trends and forecasts" },
+      { href: "/resources/moving-guide", label: "Moving Guide", description: "Relocation timeline and tips" },
+      { href: "/resources/first-time-buyers", label: "First-Time Buyers", description: "Homebuying guide for 55+ community" },
+    ],
+  },
+  {
     category: "Legal & Policies",
     icon: Shield,
     pages: [

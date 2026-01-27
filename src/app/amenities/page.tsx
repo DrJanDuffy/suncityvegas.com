@@ -13,6 +13,9 @@ import {
   Users,
   Sparkles,
   CheckCircle2,
+  ArrowRight,
+  MapPin,
+  ExternalLink,
 } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -82,16 +85,19 @@ const amenities = [
         name: "Mountain Shadows",
         description: "45,000 sq ft with fitness center, indoor pool, racquetball, arts & crafts",
         image: "/images/amenities/clubhouse.jpeg",
+        link: "/amenities/mountain-shadows",
       },
       {
         name: "Desert Vista",
         description: "48,000 sq ft with fitness center, pool & spa, tennis, pickleball, ballroom",
         image: "/images/amenities/clubhouse.jpeg",
+        link: "/amenities/desert-vista",
       },
       {
         name: "Pinnacle",
         description: "34,000 sq ft with fitness center, pool, tennis, bocce ball, card rooms",
         image: "/images/amenities/clubhouse.jpeg",
+        link: "/amenities/pinnacle",
       },
     ],
   },
@@ -126,36 +132,103 @@ const amenities = [
 const blurDataURL =
   "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWEREiMxUf/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q==";
 
+// Amenity map: Google Maps Embed API (search mode). Set NEXT_PUBLIC_GOOGLE_MAPS_EMBED_API_KEY to show the map.
+const AMENITY_MAP_SEARCH = "restaurants parks golf schools near 9406 Del Webb Blvd Las Vegas NV 89134";
+const AMENITY_MAP_SEARCH_URL = `https://www.google.com/maps/search/${encodeURIComponent(AMENITY_MAP_SEARCH)}`;
+
+function AmenityMapEmbed() {
+  const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_EMBED_API_KEY;
+  const embedUrl =
+    apiKey &&
+    `https://www.google.com/maps/embed/v1/search?key=${apiKey}&q=${encodeURIComponent(AMENITY_MAP_SEARCH)}`;
+
+  if (embedUrl) {
+    return (
+      <div className="rounded-lg overflow-hidden shadow-lg border border-[#E8E4E0] h-[400px] md:h-[500px]">
+        <iframe
+          src={embedUrl}
+          width="100%"
+          height="100%"
+          className="border-0 w-full h-full block"
+          loading="lazy"
+          title="Nearby amenities map — restaurants, parks, golf, schools near Sun City Summerlin"
+          allowFullScreen
+        />
+      </div>
+    );
+  }
+
+  return (
+    <div className="rounded-lg border-2 border-dashed border-[#8B5E3C]/30 bg-[#FDF8F3] p-8 md:p-12 text-center">
+      <p className="text-[#2D2A26] mb-4">
+        View nearby restaurants, parks, golf, and schools on Google Maps.
+      </p>
+      <a
+        href={AMENITY_MAP_SEARCH_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex items-center gap-2 bg-[#8B5E3C] hover:bg-[#8B5E3C]/90 text-white font-semibold px-6 py-3 rounded-lg transition-colors"
+      >
+        Open amenity map on Google Maps
+        <ExternalLink className="w-4 h-4" aria-hidden />
+      </a>
+      <p className="mt-4 text-sm text-[#2D2A26]/70">
+        To show the map on this page, set{" "}
+        <code className="bg-white/80 px-1 rounded">NEXT_PUBLIC_GOOGLE_MAPS_EMBED_API_KEY</code> in your
+        environment. Maps Embed API is free with unlimited usage.
+      </p>
+    </div>
+  );
+}
+
 function AmenityCard({
   amenity,
   index,
 }: {
-  amenity: (typeof amenities)[0]["items"][0];
+  amenity: (typeof amenities)[0]["items"][0] & { link?: string };
   index: number;
 }) {
+  const CardContent = (
+    <div className="bg-white rounded-lg shadow-two hover:shadow-three transition-shadow overflow-hidden">
+      <div className="relative h-48 bg-[#FDF8F3]">
+        <Image
+          src={amenity.image}
+          alt={amenity.name}
+          fill
+          className="object-cover"
+          placeholder="blur"
+          blurDataURL={blurDataURL}
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        />
+      </div>
+      <div className="p-6">
+        <h3 className="text-xl font-bold text-[#8B5E3C] mb-2 font-playfair">
+          {amenity.name}
+        </h3>
+        <p className="text-[#2D2A26] leading-relaxed">
+          {amenity.description}
+        </p>
+        {amenity.link && (
+          <Link
+            href={amenity.link}
+            className="inline-flex items-center gap-2 text-[#8B5E3C] font-semibold hover:text-[#5D7A5D] transition-colors mt-4"
+          >
+            Learn More <ArrowRight className="w-4 h-4" />
+          </Link>
+        )}
+      </div>
+    </div>
+  );
+
   return (
     <ScrollAnimation delay={index * 50}>
-      <div className="bg-white rounded-lg shadow-two hover:shadow-three transition-shadow overflow-hidden">
-        <div className="relative h-48 bg-[#FDF8F3]">
-          <Image
-            src={amenity.image}
-            alt={amenity.name}
-            fill
-            className="object-cover"
-            placeholder="blur"
-            blurDataURL={blurDataURL}
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          />
-        </div>
-        <div className="p-6">
-          <h3 className="text-xl font-bold text-[#8B5E3C] mb-2 font-playfair">
-            {amenity.name}
-          </h3>
-          <p className="text-[#2D2A26] leading-relaxed">
-            {amenity.description}
-          </p>
-        </div>
-      </div>
+      {amenity.link ? (
+        <Link href={amenity.link} className="block h-full">
+          {CardContent}
+        </Link>
+      ) : (
+        CardContent
+      )}
     </ScrollAnimation>
   );
 }
@@ -211,6 +284,26 @@ export default function AmenitiesPage() {
                 <p className="text-3xl md:text-4xl font-bold text-[#8B5E3C]">125K+</p>
                 <p className="text-[#2D2A26]">Sq Ft Rec Space</p>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Amenity Map — Google Maps Platform: nearby restaurants, parks, golf, etc. */}
+        <section className="py-12 md:py-16 bg-white" id="amenity-map">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <div className="flex items-center justify-center gap-4 mb-4">
+                <div className="flex items-center justify-center w-14 h-14 bg-[#8B5E3C]/10 rounded-full">
+                  <MapPin className="w-7 h-7 text-[#8B5E3C]" aria-hidden />
+                </div>
+                <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#8B5E3C] font-playfair">
+                  Nearby Amenities Map
+                </h2>
+              </div>
+              <p className="text-[#2D2A26] text-center mb-8 max-w-2xl mx-auto">
+                Explore restaurants, parks, golf, schools, and more near Sun City Summerlin. Use the map to see what&apos;s around the community.
+              </p>
+              <AmenityMapEmbed />
             </div>
           </div>
         </section>

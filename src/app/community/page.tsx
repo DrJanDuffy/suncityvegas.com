@@ -68,7 +68,7 @@ export default function CommunityPage() {
                   Discover Sun City Summerlin
                 </h1>
                 <p className="text-lg md:text-xl text-[#2D2A26] mb-8 leading-relaxed">
-                  Las Vegas' premier 55+ active adult community. Built by Del Webb from 1989-2002, featuring 7,779 single-family homes, 4 championship golf courses, and world-class amenities.
+                  One of the nation's premiere active adult communities. Organized by Del Webb Corporation in 1989, featuring 7,781 single-family homes, 4 golf courses, 4 fitness centers, an Olympic-sized pool, and extensive recreation facilities.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button asChild size="lg" className="bg-[#8B5E3C] hover:bg-[#8B5E3C]/90 min-h-[44px]">
@@ -76,6 +76,9 @@ export default function CommunityPage() {
                   </Button>
                   <Button asChild variant="outline" size="lg" className="border-[#8B5E3C] text-[#8B5E3C] hover:bg-[#8B5E3C]/10 min-h-[44px]">
                     <Link href="/amenities">Explore Amenities</Link>
+                  </Button>
+                  <Button asChild variant="outline" size="lg" className="border-[#8B5E3C] text-[#8B5E3C] hover:bg-[#8B5E3C]/10 min-h-[44px]">
+                    <Link href="/community/neighborhood">Explore Neighborhood</Link>
                   </Button>
                 </div>
               </ScrollAnimation>
@@ -108,13 +111,13 @@ export default function CommunityPage() {
                     </h2>
                     <div className="prose prose-lg max-w-none space-y-4 text-[#2D2A26]">
                       <p>
-                        Sun City Summerlin was developed by Del Webb, the pioneer of active adult communities, from 1989 to 2002. This was Del Webb's first community in Las Vegas and set the standard for 55+ living in the region.
+                        Sun City Summerlin was developed by Del Webb Corporation in 1989, making it one of the nation's premiere active adult communities. Organized in the City of Las Vegas, this well-established 55+ resort community offers magnificent views of the surrounding mountains and the Las Vegas Strip.
                       </p>
                       <p>
-                        The community spans over 2,400 acres in the prestigious Summerlin master-planned community, with stunning views of Red Rock Canyon National Conservation Area. All 7,779 homes are single-story, designed specifically for active adults who want maintenance-free living without sacrificing space or style.
+                        The community spans over 2,400 acres in the prestigious Summerlin master-planned community on the western edge of Las Vegas. Located mere minutes from the glamorous action of downtown Las Vegas and the fabled Strip, Sun City Summerlin boasts tree-lined streets, great shopping, top-notch restaurants, and award-winning resorts, casinos, and spas.
                       </p>
                       <p>
-                        Today, Sun City Summerlin remains one of the most sought-after 55+ communities in Las Vegas, known for its mature landscaping, established amenities, and vibrant social scene.
+                        All homes are single-story, designed specifically for active adults who want maintenance-free living without sacrificing space or style. Today, Sun City Summerlin remains one of the most sought-after 55+ communities in Las Vegas, known for its mature landscaping, extensive recreation facilities, and vibrant social scene.
                       </p>
                     </div>
                   </div>
@@ -137,7 +140,7 @@ export default function CommunityPage() {
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 lg:gap-8">
                 <ScrollAnimation delay={0}>
                   <div className="text-center">
-                    <div className="text-3xl md:text-4xl font-bold text-[#8B5E3C] mb-2">7,779</div>
+                    <div className="text-3xl md:text-4xl font-bold text-[#8B5E3C] mb-2">7,781</div>
                     <div className="text-[#2D2A26]">Homes</div>
                   </div>
                 </ScrollAnimation>
@@ -182,10 +185,10 @@ export default function CommunityPage() {
             <div className="max-w-6xl mx-auto">
               <ScrollAnimation>
                 <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#8B5E3C] mb-4 text-center font-playfair">
-                  Four Championship Golf Courses
+                  Golf Summerlin: Three Championship Courses
                 </h2>
                 <p className="text-lg text-[#2D2A26] text-center mb-12 max-w-2xl mx-auto">
-                  Sun City Summerlin offers four distinct golf experiences, from championship layouts to executive courses.
+                  Golf Summerlin features three player-friendly, yet challenging courses designed by Hall-of-Famer Billy Casper and master course-planner Greg Nash. Each course offers its own designated driving range and practice green, providing a broad variety of golf experiences for players of all skill levels.
                 </p>
               </ScrollAnimation>
 
@@ -219,7 +222,7 @@ export default function CommunityPage() {
                   Three Recreation Centers
                 </h2>
                 <p className="text-lg text-[#2D2A26] text-center mb-12 max-w-2xl mx-auto">
-                  Over 125,000 square feet of recreation facilities across three centers, each offering unique amenities and activities.
+                  Sun City Summerlin features more amenities than any other active adult community in Las Vegas. Among the extensive recreation facilities are 4 fitness centers, an Olympic-sized pool, and three recreation centers, each offering unique amenities and activities.
                 </p>
               </ScrollAnimation>
 
@@ -275,10 +278,14 @@ export default function CommunityPage() {
                         <div className="flex items-start gap-4">
                           <MapPin className="w-6 h-6 text-[#8B5E3C] flex-shrink-0 mt-1" />
                           <div>
-                            <p className="font-semibold text-[#8B5E3C] mb-2">Community Address</p>
+                            <p className="font-semibold text-[#8B5E3C] mb-2">Community Location</p>
                             <p className="text-[#2D2A26]">
-                              9107 Del Webb Blvd<br />
+                              Sun City Summerlin<br />
+                              9406 Del Webb Blvd<br />
                               Las Vegas, NV 89134
+                            </p>
+                            <p className="text-sm text-[#2D2A26] opacity-75 mt-2">
+                              HOA Phone: (702) 966-1400
                             </p>
                           </div>
                         </div>
