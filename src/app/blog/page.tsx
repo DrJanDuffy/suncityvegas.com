@@ -39,6 +39,9 @@ export const metadata: Metadata = {
   },
 };
 
+// Use existing hero image until blog-specific images are in public/images/blog/
+const BLOG_CARD_IMAGE = "/images/hero/hero-bg.jpg";
+
 // Sample blog posts - replace with actual content from CMS or API
 const blogPosts = [
   {
@@ -189,9 +192,6 @@ const blogPosts = [
 
 const blurDataURL =
   "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWEREiMxUf/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q==";
-
-// Use existing hero image until blog-specific images are in public/images/blog/
-const BLOG_CARD_IMAGE = "/images/hero/hero-bg.jpg";
 
 function BlogCard({
   post,
