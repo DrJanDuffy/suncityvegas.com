@@ -54,7 +54,7 @@ const articleSchema = {
   publisher: {
     "@type": "Organization",
     name: "Sun City Summerlin Homes for Sale | Dr. Jan Duffy",
-    logo: { "@type": "ImageObject", url: "https://www.suncityvegas.com/images/logo/logo.svg" },
+    logo: { "@type": "ImageObject", url: "https://www.suncityvegas.com/images/logo/logo.jpg" },
   },
   mainEntityOfPage: {
     "@type": "WebPage",

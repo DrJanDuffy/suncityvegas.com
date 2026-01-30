@@ -126,7 +126,7 @@ function generateSchemaMarkup(flyer: NonNullable<ReturnType<typeof getFlyerBySlu
         name: "Dr. Jan Duffy, REALTOR®",
         logo: {
           "@type": "ImageObject",
-          url: "https://www.suncityvegas.com/images/logo/logo.svg",
+          url: "https://www.suncityvegas.com/images/logo/logo.jpg",
         },
       },
       datePublished: flyer.lastUpdated || "2026-01-15",

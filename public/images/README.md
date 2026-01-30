@@ -41,8 +41,8 @@ Place image files in the folders below so the site can load them. Paths are rela
 - **1684714983259.jpeg**, **1738799751114.jpeg**, **14280680_web1_copy_CH-05-1-1-1.webp** – Floor plan photos (src/lib/floor-plans.ts)
 
 ### hero/
-- **hero-bg.jpg** – Homepage/layout OG and hero
-- **community-sign.jpg** – Community page, floor plans, flyers
+- **hero-bg.jpg** – Homepage/layout OG and hero (was SunCitySummerlinOutside.jpg)
+- **community-sign.jpg** – Community page, floor plans, flyers (optional; add if needed)
 
 ### lifestyle/
 - **restaurants-hero.jpg**, **events-hero.jpg**, **clubs-hero.jpg** – Lifestyle pages
@@ -57,7 +57,7 @@ Place image files in the folders below so the site can load them. Paths are rela
 - **first-time-buyers-hero.jpg**, **moving-guide-hero.jpg**, **market-insights-hero.jpg** – Resource pages
 
 ### testimonials/
-- **auth-01.png**, **auth-02.png**, **auth-03.png** – Testimonial avatars (src/components/Testimonials)
+- **auth-01.jpg**, **auth-02.jpg**, **auth-03.jpg** – Testimonial avatars (src/components/Testimonials)
 
 ### video/
 - **image.png** – Video section
