@@ -26,7 +26,7 @@ export const siteConfig = {
       professional: "(702) 718-0042"
     },
     email: "jan@drjanduffy.com",
-    photo: "/images/about/dr-jan-duffy.jpg",
+    photo: "/images/agent/dr-jan-duffy.jpg",
     openingDate: "2013-09-20"
   },
   

@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: 'https://www.suncityvegas.com/images/about/dr-jan-duffy.jpg',
+        url: 'https://www.suncityvegas.com/images/agent/dr-jan-duffy.jpg',
         width: 1200,
         height: 630,
         alt: 'Dr. Jan Duffy, REALTOR®',
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Client Testimonials | Sun City Summerlin | Dr. Jan Duffy',
     description: 'Client reviews about Sun City Summerlin homes.',
-    images: ['https://www.suncityvegas.com/images/about/dr-jan-duffy.jpg'],
+    images: ['https://www.suncityvegas.com/images/agent/dr-jan-duffy.jpg'],
   },
 };
 

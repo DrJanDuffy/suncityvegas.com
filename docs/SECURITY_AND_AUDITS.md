@@ -31,6 +31,11 @@ Summary of security headers, CSP, and audit fixes for Sun City Vegas (Lighthouse
 - **Issue:** RealScout triggered “payment is not allowed in this document.”
 - **Fix:** `Permissions-Policy: payment=(), camera=(), microphone=(), geolocation=()` so these features are explicitly denied. If RealScout needs `payment` for a feature, allow it only for the required origins.
 
+### 6. Deprecated API: H1UserAgentFontSizeInSection
+
+- **Issue:** Chrome deprecation warning for special font-size rules for `<h1>` inside `<section>`, `<article>`, `<aside>`, `<nav>` (legacy UA behavior).
+- **Fix:** In `src/app/globals.css`, added explicit `font-size` and `margin-block` for `h1` and `section h1, article h1, aside h1, nav h1` so we no longer rely on the deprecated UA rules. Uses `clamp(1.75rem, 5vw, 2.5rem)` for responsive sizing.
+
 ---
 
 ## Remaining / Out of Our Control
@@ -38,7 +43,7 @@ Summary of security headers, CSP, and audit fixes for Sun City Vegas (Lighthouse
 | Audit | Notes |
 |-------|------|
 | **Third-party cookies (Calendly)** | `__cf_bm`, `_cfuvid` on calendly.com. Set by Calendly/Cloudflare; we cannot remove them. Prepare for third-party cookie restrictions by using Calendly’s recommended embed/API patterns and testing without third-party cookies. |
-| **Next/Image 400 Bad Request** | `/_next/image?url=%2Fimages%2Fabout%2Fdr-jan-duffy.jpg&w=750&q=75` (and similar) returns 400. Ensure `public/images/about/dr-jan-duffy.jpg` exists in the deployed build. If the file is present and 400 persists, check Vercel image optimization config or use `unoptimized` for that image as a fallback. |
+| **Next/Image 400 Bad Request** | **Fixed:** About and Contact pages use `unoptimized` for `/images/agent/dr-jan-duffy.jpg` so the image optimization API is not used (avoids 400 when the file is missing or optimizer fails). Add `public/images/agent/dr-jan-duffy.jpg` to the repo for the photo to display; without it the img will 404. Other 400s from `/_next/image` for local paths: add those files under `public/` or use `unoptimized` for that Image. |
 | **CSP – nonces/hashes, no unsafe-inline** | Lighthouse suggests script nonces or hashes and avoiding `'unsafe-inline'`. Adopting this requires a larger CSP rollout (e.g. nonce-based script/style) and can break third-party widgets; plan as a follow-up. |
 | **Trusted Types** | CSP `require-trusted-types-for` reduces DOM XSS but requires code changes and can break third-party scripts; plan as a follow-up. |
 

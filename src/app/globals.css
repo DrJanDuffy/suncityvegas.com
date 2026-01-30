@@ -71,6 +71,15 @@
     font-family: var(--font-playfair), ui-serif, Georgia, serif;
     @apply font-semibold;
   }
+  /* Explicit font-size for h1 so we don't rely on deprecated UA rules (H1UserAgentFontSizeInSection) */
+  h1 {
+    font-size: clamp(1.75rem, 5vw, 2.5rem);
+    margin-block: 0.67em;
+  }
+  section h1, article h1, aside h1, nav h1 {
+    font-size: clamp(1.75rem, 5vw, 2.5rem);
+    margin-block: 0.67em;
+  }
 }
 
 /* Custom color utilities */

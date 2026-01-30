@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://www.suncityvegas.com/images/about/dr-jan-duffy.jpg",
+        url: "https://www.suncityvegas.com/images/agent/dr-jan-duffy.jpg",
         width: 1200,
         height: 630,
         alt: "Dr. Jan Duffy, REALTOR®",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Contact & Schedule a Tour | Sun City Summerlin | Dr. Jan Duffy",
     description: "Schedule a tour of Sun City Summerlin 55+ community in Las Vegas.",
-    images: ["https://www.suncityvegas.com/images/about/dr-jan-duffy.jpg"],
+    images: ["https://www.suncityvegas.com/images/agent/dr-jan-duffy.jpg"],
   },
 };
 
@@ -231,13 +231,14 @@ export default function ContactPage() {
                     {/* Image */}
                     <div className="relative aspect-square rounded-lg overflow-hidden shadow-three bg-[#FDF8F3] mb-6">
                       <Image
-                        src="/images/about/dr-jan-duffy.jpg"
+                        src="/images/agent/dr-jan-duffy.jpg"
                         alt="Dr. Jan Duffy, REALTOR® specializing in Sun City Summerlin"
                         fill
                         className="object-cover"
                         placeholder="blur"
                         blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWEREiMxUf/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
                         sizes="(max-width: 768px) 100vw, 50vw"
+                        unoptimized
                       />
                     </div>
                     <h2 className="text-2xl md:text-3xl font-bold text-[#8B5E3C] mb-6 font-playfair">

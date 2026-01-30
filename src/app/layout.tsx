@@ -127,7 +127,7 @@ export default function RootLayout({
     name: "Sun City Summerlin 55+ Real Estate | Homes by Dr. Jan Duffy",
     alternateName: ["Sun City Vegas Real Estate", "Homes by Dr. Jan Duffy"],
     description: "Find your dream 55+ retirement home in Sun City Summerlin, Las Vegas. With over 25 years of experience in active adult communities, Dr. Duffy has helped countless retirees discover the perfect home to suit their lifestyle and needs. Sun City Summerlin offers a variety of beautiful options. This vibrant community is designed specifically for active adults, featuring world-class amenities such as golf courses, fitness centers, pools, walking trails, and social clubs. Dr. Duffy provides expert guidance and personalized service every step of the way, ensuring your transition into this exciting new chapter is seamless and stress-free. Start your journey toward a fulfilling and active retirement today!",
-    image: "https://www.suncityvegas.com/images/about/dr-jan-duffy.jpg",
+    image: "https://www.suncityvegas.com/images/agent/dr-jan-duffy.jpg",
     url: "https://www.suncityvegas.com/",
     telephone: "+1-702-718-0042",
     email: "jan@drjanduffy.com",

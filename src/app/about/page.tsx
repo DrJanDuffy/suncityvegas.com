@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://www.suncityvegas.com/images/about/dr-jan-duffy.jpg",
+        url: "https://www.suncityvegas.com/images/agent/dr-jan-duffy.jpg",
         width: 1200,
         height: 630,
         alt: "Dr. Jan Duffy, REALTOR®",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "About Dr. Jan Duffy REALTOR® | Sun City Summerlin Specialist",
     description: "Your trusted REALTOR® specializing in Sun City Summerlin 55+ community.",
-    images: ["https://www.suncityvegas.com/images/about/dr-jan-duffy.jpg"],
+    images: ["https://www.suncityvegas.com/images/agent/dr-jan-duffy.jpg"],
   },
 };
 
@@ -104,13 +104,14 @@ export default function AboutPage() {
                 <ScrollAnimation>
                   <div className="relative aspect-square max-w-md mx-auto lg:mx-0">
                     <Image
-                      src="/images/about/dr-jan-duffy.jpg"
+                      src="/images/agent/dr-jan-duffy.jpg"
                       alt="Dr. Jan Duffy, REALTOR® specializing in Sun City Summerlin"
                       fill
                       className="object-cover rounded-lg shadow-three"
                       placeholder="blur"
                       blurDataURL={blurDataURL}
                       sizes="(max-width: 768px) 100vw, 50vw"
+                      unoptimized
                     />
                   </div>
                 </ScrollAnimation>
