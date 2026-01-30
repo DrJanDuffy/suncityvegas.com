@@ -148,7 +148,7 @@ function generateSchemaMarkup(flyer: NonNullable<ReturnType<typeof getFlyerBySlu
       description: "Sun City Summerlin specialist helping buyers find homes in Las Vegas' premier 55+ active adult community.",
       url: "https://www.suncityvegas.com",
       telephone: "+1-702-718-0042",
-      email: "jan@drjanduffy.com",
+      email: "DrDuffySells@SunCityVegas.com",
       address: {
         "@type": "PostalAddress",
         streetAddress: "9406 Del Webb Blvd",

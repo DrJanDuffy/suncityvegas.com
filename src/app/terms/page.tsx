@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Navbar from "@components/navbar";
 import Footer from "@components/footer";
+import Breadcrumbs from "@components/Breadcrumbs";
 import Link from "next/link";
 import { FileText, Calendar } from "lucide-react";
 
@@ -30,10 +31,32 @@ export const metadata: Metadata = {
   },
 };
 
+const termsWebPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://www.suncityvegas.com/terms",
+  name: "Terms of Service | Sun City Summerlin | Website Usage Terms",
+  description:
+    "Terms of service for Sun City Summerlin website. Read our terms and conditions for using this real estate website and contacting Dr. Jan Duffy.",
+  url: "https://www.suncityvegas.com/terms",
+};
+
 export default function TermsPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(termsWebPageSchema).replace(/</g, "\\u003c"),
+        }}
+      />
       <Navbar />
+      <Breadcrumbs
+        items={[
+          { label: "Sun City Summerlin", href: "/" },
+          { label: "Terms of Service", href: "/terms" },
+        ]}
+      />
       <main className="pt-16 md:pt-20 min-h-screen bg-white">
         {/* Hero Section */}
         <section className="bg-[#FDF8F3] py-12 md:py-16 lg:py-20">
@@ -217,10 +240,10 @@ export default function TermsPage() {
                   <p className="text-[#2D2A26]">
                     Email:{" "}
                     <a
-                      href="mailto:jan@drjanduffy.com"
+                      href="mailto:DrDuffySells@SunCityVegas.com"
                       className="text-[#8B5E3C] hover:text-[#5D7A5D]"
                     >
-                      jan@drjanduffy.com
+                      DrDuffySells@SunCityVegas.com
                     </a>
                   </p>
                 </div>

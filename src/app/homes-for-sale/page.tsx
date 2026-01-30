@@ -48,11 +48,27 @@ export const metadata: Metadata = {
   },
 };
 
+const homesForSaleWebPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://www.suncityvegas.com/homes-for-sale",
+  name: "Sun City Summerlin Las Vegas NV 89134 Current Homes for Sale | Del Webb Summerlin",
+  description:
+    "Current homes for sale in Sun City Summerlin, Las Vegas, NV 89134. Del Webb Summerlin 55+ community—browse listings updated daily.",
+  url: "https://www.suncityvegas.com/homes-for-sale",
+};
+
 export default async function HomesForSalePage() {
   const communityInfo = getCommunityInfo();
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(homesForSaleWebPageSchema).replace(/</g, "\\u003c"),
+        }}
+      />
       <Navbar />
       <Breadcrumbs
         items={[

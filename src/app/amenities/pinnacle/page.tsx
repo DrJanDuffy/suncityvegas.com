@@ -43,9 +43,25 @@ export const metadata: Metadata = {
 const blurDataURL =
   "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWEREiMxUf/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q==";
 
+const pinnacleWebPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://www.suncityvegas.com/amenities/pinnacle",
+  name: "Pinnacle Community Center | Sun City Summerlin Amenities",
+  description:
+    "Explore Pinnacle Community Center in Sun City Summerlin. Features 34,000 sq ft fitness center, pool & spa, tennis courts, bocce ball courts, card rooms, and versatile multi-purpose spaces.",
+  url: "https://www.suncityvegas.com/amenities/pinnacle",
+};
+
 export default function PinnaclePage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(pinnacleWebPageSchema).replace(/</g, "\\u003c"),
+        }}
+      />
       <Navbar />
       <Breadcrumbs
         items={[

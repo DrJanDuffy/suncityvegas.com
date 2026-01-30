@@ -233,6 +233,16 @@ function AmenityCard({
   );
 }
 
+const amenitiesWebPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://www.suncityvegas.com/amenities",
+  name: "Amenities | Sun City Summerlin | 4 Golf Courses & 3 Rec Centers",
+  description:
+    "Discover world-class amenities at Sun City Summerlin: 4 championship golf courses, 3 recreation centers, 80+ clubs, pools, tennis, pickleball. Las Vegas' premier 55+ community.",
+  url: "https://www.suncityvegas.com/amenities",
+};
+
 export default function AmenitiesPage() {
   const communityAmenities = getAmenities();
   const recCenters = getRecreationCenters();
@@ -240,6 +250,12 @@ export default function AmenitiesPage() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(amenitiesWebPageSchema).replace(/</g, "\\u003c"),
+        }}
+      />
       <Navbar />
       <Breadcrumbs
         items={[

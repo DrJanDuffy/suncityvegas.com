@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Navbar from '@components/navbar';
 import Footer from '@components/footer';
+import Breadcrumbs from '@components/Breadcrumbs';
 import ScheduleTour from '@components/ScheduleTour';
 import { Phone, Calendar, Clock, MapPin } from 'lucide-react';
 
@@ -27,10 +28,32 @@ export const metadata: Metadata = {
   },
 };
 
+const scheduleWebPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': 'https://www.suncityvegas.com/schedule',
+  name: 'Schedule a Tour | Sun City Summerlin | Dr. Jan Duffy',
+  description:
+    'Schedule a private tour of Sun City Summerlin with Dr. Jan Duffy. Walk the community, explore the 4 golf courses and 3 rec centers, and see available homes.',
+  url: 'https://www.suncityvegas.com/schedule',
+};
+
 export default function SchedulePage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(scheduleWebPageSchema).replace(/</g, '\\u003c'),
+        }}
+      />
       <Navbar />
+      <Breadcrumbs
+        items={[
+          { label: 'Sun City Summerlin', href: '/' },
+          { label: 'Schedule a Tour', href: '/schedule' },
+        ]}
+      />
       <main className="pt-16 md:pt-20">
         {/* Hero Section */}
         <section className="bg-[#8B5E3C] text-white py-12 md:py-16 lg:py-20">
@@ -120,7 +143,7 @@ export default function SchedulePage() {
                   Call (702) 718-0042
                 </a>
                 <a
-                  href="mailto:jan@drjanduffy.com"
+                  href="mailto:DrDuffySells@SunCityVegas.com"
                   className="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-[#8B5E3C] text-[#8B5E3C] rounded-md font-semibold hover:bg-[#8B5E3C] hover:text-white transition-colors"
                 >
                   Send Email

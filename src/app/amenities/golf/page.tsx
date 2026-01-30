@@ -45,11 +45,27 @@ export const metadata: Metadata = {
 const blurDataURL =
   "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWEREiMxUf/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q==";
 
+const golfWebPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://www.suncityvegas.com/amenities/golf",
+  name: "Sun City Summerlin Golf Courses | Palm Valley, Highland Falls, Eagle Crest",
+  description:
+    "Explore three championship golf courses at Sun City Summerlin designed by Billy Casper & Greg Nash. Palm Valley and Highland Falls are 18-hole championship courses, while Eagle Crest is an executive course.",
+  url: "https://www.suncityvegas.com/amenities/golf",
+};
+
 export default function GolfPage() {
   const golfCourses = getGolfCourses();
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(golfWebPageSchema).replace(/</g, "\\u003c"),
+        }}
+      />
       <Navbar />
       <Breadcrumbs
         items={[

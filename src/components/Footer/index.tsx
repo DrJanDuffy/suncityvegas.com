@@ -219,7 +219,7 @@ const Footer = () => {
               <a
                 href="http://uideck.com"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noopener noreferrer nofollow"
                 className="hover:text-primary"
               >
                 UIdeck
@@ -228,7 +228,7 @@ const Footer = () => {
               <a
                 href="https://nextjstemplates.com"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noopener noreferrer nofollow"
                 className="hover:text-primary"
               >
                 Next.js Templates

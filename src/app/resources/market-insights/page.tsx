@@ -4,6 +4,7 @@ import Navbar from "@components/navbar";
 import Footer from "@components/footer";
 import Breadcrumbs from "@components/Breadcrumbs";
 import MarketInsights from "@/components/MarketInsights";
+import { getMarketInsightsFeed } from "@/lib/market-insights-feed";
 import { TrendingUp, Truck, Home, BookOpen } from "lucide-react";
 import ScrollAnimation from "@components/scroll-animation";
 
@@ -39,9 +40,40 @@ export const metadata: Metadata = {
   },
 };
 
-export default function MarketInsightsPage() {
+export default async function MarketInsightsPage() {
+  let itemListSchema: object | null = null;
+  try {
+    const items = await getMarketInsightsFeed(9);
+    if (items.length > 0) {
+      itemListSchema = {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        name: "Latest Market Insights",
+        description:
+          "Real estate market insights from Simplifying the Market—mortgage rates, home prices, downsizing, and expert forecasts for Sun City Summerlin and Las Vegas.",
+        numberOfItems: items.length,
+        itemListElement: items.map((item, i) => ({
+          "@type": "ListItem",
+          position: i + 1,
+          name: item.title,
+          url: item.link,
+        })),
+      };
+    }
+  } catch {
+    // Schema optional; page still renders
+  }
+
   return (
     <>
+      {itemListSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(itemListSchema).replace(/</g, "\\u003c"),
+          }}
+        />
+      )}
       <Navbar />
       <Breadcrumbs
         items={[
@@ -74,7 +106,7 @@ export default function MarketInsightsPage() {
         </section>
 
         {/* Market Insights Component */}
-        <MarketInsights limit={6} />
+        <MarketInsights limit={9} />
 
         {/* Additional Context Section */}
         <section className="py-12 md:py-16 bg-[#FDF8F3]">

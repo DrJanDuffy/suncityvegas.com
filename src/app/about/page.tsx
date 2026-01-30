@@ -67,11 +67,27 @@ const specialties = [
   },
 ];
 
+const aboutWebPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://www.suncityvegas.com/about",
+  name: "About Dr. Jan Duffy REALTOR® | Sun City Summerlin Specialist",
+  description:
+    "Meet Dr. Jan Duffy, REALTOR® specializing in Sun City Summerlin, Las Vegas' premier 55+ community. Licensed agent with Berkshire Hathaway HomeServices.",
+  url: "https://www.suncityvegas.com/about",
+};
+
 export default function AboutPage() {
   const testimonials = getAllTestimonials().slice(0, 3);
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(aboutWebPageSchema).replace(/</g, "\\u003c"),
+        }}
+      />
       <Navbar />
       <Breadcrumbs
         items={[
@@ -230,10 +246,10 @@ export default function AboutPage() {
                   <Mail className="w-8 h-8 text-[#8B5E3C] mx-auto mb-4" />
                   <h3 className="font-semibold text-[#8B5E3C] mb-2">Email</h3>
                   <a
-                    href="mailto:jan@drjanduffy.com"
+                    href="mailto:DrDuffySells@SunCityVegas.com"
                     className="text-[#2D2A26] hover:text-[#8B5E3C] transition-colors break-all"
                   >
-                    jan@drjanduffy.com
+                    DrDuffySells@SunCityVegas.com
                   </a>
                 </div>
                 <div className="bg-white p-6 rounded-lg shadow-two text-center">

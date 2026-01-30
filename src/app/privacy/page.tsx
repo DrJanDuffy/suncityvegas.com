@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Navbar from "@components/navbar";
 import Footer from "@components/footer";
+import Breadcrumbs from "@components/Breadcrumbs";
 
 export const metadata: Metadata = {
   title: "Privacy Policy | Sun City Summerlin | Dr. Jan Duffy",
@@ -15,10 +16,32 @@ export const metadata: Metadata = {
   },
 };
 
+const privacyWebPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://www.suncityvegas.com/privacy",
+  name: "Privacy Policy | Sun City Summerlin | Dr. Jan Duffy",
+  description:
+    "Privacy policy for Sun City Summerlin website. Learn how we collect, use, and protect your information when you contact Dr. Jan Duffy about 55+ community homes in Las Vegas.",
+  url: "https://www.suncityvegas.com/privacy",
+};
+
 export default function PrivacyPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(privacyWebPageSchema).replace(/</g, "\\u003c"),
+        }}
+      />
       <Navbar />
+      <Breadcrumbs
+        items={[
+          { label: "Sun City Summerlin", href: "/" },
+          { label: "Privacy Policy", href: "/privacy" },
+        ]}
+      />
       <main className="pt-16 md:pt-20">
         <section className="py-12 md:py-16 lg:py-20 bg-white">
           <div className="container mx-auto px-4">
@@ -115,10 +138,10 @@ export default function PrivacyPage() {
                   <p>
                     <strong>Email:</strong>{" "}
                     <a
-                      href="mailto:jan@drjanduffy.com"
+                      href="mailto:DrDuffySells@SunCityVegas.com"
                       className="text-[#8B5E3C] hover:underline"
                     >
-                      jan@drjanduffy.com
+                      DrDuffySells@SunCityVegas.com
                     </a>
                     <br />
                     <strong>Phone:</strong>{" "}

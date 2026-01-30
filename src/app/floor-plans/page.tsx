@@ -81,9 +81,25 @@ const homeStyles = [
   },
 ];
 
+const floorPlansWebPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://www.suncityvegas.com/floor-plans",
+  name: "Home Styles & Sizes | Sun City Summerlin | 1,000-3,500+ Sq Ft Resale Homes",
+  description:
+    "Explore the variety of home styles at Sun City Summerlin, Las Vegas' premier 55+ community. Single-story homes from 1,000 to 3,500+ sq ft.",
+  url: "https://www.suncityvegas.com/floor-plans",
+};
+
 export default function HomeStylesPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(floorPlansWebPageSchema).replace(/</g, "\\u003c"),
+        }}
+      />
       <Navbar />
       <Breadcrumbs
         items={[

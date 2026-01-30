@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { siteConfig } from "@/lib/site-config";
 
 export async function POST(request: NextRequest) {
   try {
@@ -29,9 +30,9 @@ export async function POST(request: NextRequest) {
       timestamp: new Date().toISOString(),
     });
 
-    // TODO: Send email notification
+    // TODO: Send email notification (recipient from site config)
     // await sendEmail({
-    //   to: "jan@drjanduffy.com",
+    //   to: siteConfig.agent.email,
     //   subject: `New Contact Form Submission from ${name}`,
     //   html: `
     //     <h2>New Contact Form Submission</h2>

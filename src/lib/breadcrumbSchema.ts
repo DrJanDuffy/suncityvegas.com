@@ -83,4 +83,16 @@ export const breadcrumbPaths = {
     { name: "Home", url: "https://www.suncityvegas.com" },
     { name: "Selling", url: "https://www.suncityvegas.com/selling" },
   ],
+  terms: [
+    { name: "Home", url: "https://www.suncityvegas.com" },
+    { name: "Terms of Service", url: "https://www.suncityvegas.com/terms" },
+  ],
+  sitemap: [
+    { name: "Home", url: "https://www.suncityvegas.com" },
+    { name: "Sitemap", url: "https://www.suncityvegas.com/sitemap-page" },
+  ],
+  floorPlans: [
+    { name: "Home", url: "https://www.suncityvegas.com" },
+    { name: "Home Styles", url: "https://www.suncityvegas.com/floor-plans" },
+  ],
 };

@@ -90,11 +90,11 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="mailto:jan@drjanduffy.com"
+                  href="mailto:DrDuffySells@SunCityVegas.com"
                   className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors"
                 >
                   <Mail className="w-4 h-4" />
-                  jan@drjanduffy.com
+                  DrDuffySells@SunCityVegas.com
                 </a>
               </li>
               <li>

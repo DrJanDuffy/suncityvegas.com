@@ -25,7 +25,7 @@ export const siteConfig = {
       marketing: "(702) 718-0042",
       professional: "(702) 718-0042"
     },
-    email: "jan@drjanduffy.com",
+    email: "DrDuffySells@SunCityVegas.com",
     photo: "/images/agent/dr-jan-duffy.jpg",
     openingDate: "2013-09-20"
   },

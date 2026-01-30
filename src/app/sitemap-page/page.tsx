@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Navbar from "@components/navbar";
 import Footer from "@components/footer";
+import Breadcrumbs from "@components/Breadcrumbs";
 import Link from "next/link";
 import { FileText, Home, Phone, HelpCircle, Shield, Users } from "lucide-react";
 
@@ -81,10 +82,32 @@ const sitePages = [
   },
 ];
 
+const sitemapWebPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://www.suncityvegas.com/sitemap-page",
+  name: "Sitemap | Sun City Summerlin | Site Navigation | Las Vegas",
+  description:
+    "Complete sitemap of Sun City Summerlin website. Find all pages including homes for sale, amenities, lifestyle, and more.",
+  url: "https://www.suncityvegas.com/sitemap-page",
+};
+
 export default function SitemapPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(sitemapWebPageSchema).replace(/</g, "\\u003c"),
+        }}
+      />
       <Navbar />
+      <Breadcrumbs
+        items={[
+          { label: "Sun City Summerlin", href: "/" },
+          { label: "Sitemap", href: "/sitemap-page" },
+        ]}
+      />
       <main className="pt-16 md:pt-20 min-h-screen bg-white">
         {/* Hero Section */}
         <section className="bg-[#FDF8F3] py-12 md:py-16 lg:py-20">

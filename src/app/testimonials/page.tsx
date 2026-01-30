@@ -38,11 +38,27 @@ export const metadata: Metadata = {
   },
 };
 
+const testimonialsWebPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://www.suncityvegas.com/testimonials",
+  name: "Client Testimonials | Sun City Summerlin | Dr. Jan Duffy",
+  description:
+    "Read what our clients say about working with Dr. Jan Duffy to find their dream home in Sun City Summerlin, Las Vegas' premier 55+ community.",
+  url: "https://www.suncityvegas.com/testimonials",
+};
+
 export default function TestimonialsPage() {
   const testimonials = getAllTestimonials();
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(testimonialsWebPageSchema).replace(/</g, "\\u003c"),
+        }}
+      />
       <Navbar />
       <Breadcrumbs
         items={[

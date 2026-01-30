@@ -175,9 +175,25 @@ function DirectionsSection() {
   );
 }
 
+const contactWebPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://www.suncityvegas.com/contact",
+  name: "Contact & Schedule a Tour | Sun City Summerlin | Dr. Jan Duffy",
+  description:
+    "Contact Dr. Jan Duffy to schedule a tour of Sun City Summerlin, Las Vegas' premier 55+ community. Call (702) 718-0042 or book online.",
+  url: "https://www.suncityvegas.com/contact",
+};
+
 export default function ContactPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(contactWebPageSchema).replace(/</g, "\\u003c"),
+        }}
+      />
       <Navbar />
       <Breadcrumbs
         items={[
@@ -276,10 +292,10 @@ export default function ContactPage() {
                             Email
                           </h3>
                           <a
-                            href="mailto:jan@drjanduffy.com"
+                            href="mailto:DrDuffySells@SunCityVegas.com"
                             className="text-[#2D2A26] hover:text-[#8B5E3C] transition-colors break-all"
                           >
-                            jan@drjanduffy.com
+                            DrDuffySells@SunCityVegas.com
                           </a>
                           <p className="text-sm text-gray-500 mt-1">
                             Typically responds within 24 hours

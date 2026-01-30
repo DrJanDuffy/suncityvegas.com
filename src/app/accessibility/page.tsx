@@ -39,9 +39,25 @@ export const metadata: Metadata = {
   },
 };
 
+const accessibilityWebPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://www.suncityvegas.com/accessibility",
+  name: "Accessibility Statement | Sun City Summerlin | WCAG 2.1 AA Compliant",
+  description:
+    "Accessibility statement for Sun City Summerlin real estate website. WCAG 2.1 AA compliance, keyboard navigation, screen reader support, and how to report issues.",
+  url: "https://www.suncityvegas.com/accessibility",
+};
+
 export default function AccessibilityPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(accessibilityWebPageSchema).replace(/</g, "\\u003c"),
+        }}
+      />
       <Navbar />
       <Breadcrumbs
         items={[
@@ -186,10 +202,10 @@ export default function AccessibilityPage() {
                     <div>
                       <h3 className="font-semibold text-[#8B5E3C] mb-2">Email Us</h3>
                       <a
-                        href="mailto:jan@drjanduffy.com?subject=Accessibility%20Issue"
+                        href="mailto:DrDuffySells@SunCityVegas.com?subject=Accessibility%20Issue"
                         className="text-[#8B5E3C] hover:text-[#5D7A5D] transition-colors"
                       >
-                        jan@drjanduffy.com
+                        DrDuffySells@SunCityVegas.com
                       </a>
                     </div>
                   </div>

@@ -48,9 +48,25 @@ const resources = [
   },
 ];
 
+const resourcesWebPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://www.suncityvegas.com/resources",
+  name: "Sun City Summerlin Resources | Guides, Market Insights & Moving Tips",
+  description:
+    "Free resources for Sun City Summerlin buyers and sellers: market insights, moving guide, first-time homebuyer tips, and expert advice from Dr. Jan Duffy.",
+  url: "https://www.suncityvegas.com/resources",
+};
+
 export default function ResourcesPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(resourcesWebPageSchema).replace(/</g, "\\u003c"),
+        }}
+      />
       <Navbar />
       <Breadcrumbs
         items={[

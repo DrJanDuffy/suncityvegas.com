@@ -62,8 +62,20 @@ export default function MarketInsights({ limit = 3 }: { limit?: number }) {
                 Latest Market Insights
               </h2>
             </div>
-            <p className="text-lg text-[#2D2A26] mb-8 leading-relaxed">
-              Stay informed with the latest real estate market trends, mortgage rate updates, and expert forecasts to help you make informed decisions.
+            <p className="text-lg text-[#2D2A26] mb-4 leading-relaxed">
+              National trends that matter for 55+ buyers and sellers in Sun City Summerlin—mortgage rates, downsizing, and expert forecasts to help you decide when to buy or sell.
+            </p>
+            <p className="text-sm text-[#2D2A26]/80">
+              Market news from{" "}
+              <a
+                href="https://www.simplifyingthemarket.com/?a=956758-ef2edda2f940e018328655620ea05f18"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                className="text-[#8B5E3C] hover:underline"
+              >
+                Simplifying the Market
+              </a>
+              .
             </p>
           </ScrollAnimation>
 
@@ -101,7 +113,7 @@ export default function MarketInsights({ limit = 3 }: { limit?: number }) {
                   <a
                     href={insight.link}
                     target="_blank"
-                    rel="noopener noreferrer"
+                    rel="noopener noreferrer nofollow"
                     className="inline-flex items-center gap-2 text-[#8B5E3C] font-semibold hover:text-[#5D7A5D] transition-colors mt-auto group"
                     aria-label={`Read more: ${insight.title}`}
                   >

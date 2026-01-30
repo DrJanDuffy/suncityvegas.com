@@ -4,6 +4,7 @@ import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import CalendlyButton from "@components/CalendlyButton";
 import SchemaMarkup from "@components/SchemaMarkup";
+import { siteConfig } from "@/lib/site-config";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -119,25 +120,27 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
 
-  // LocalBusiness Schema for Google Business Profile (matches GBP)
+  const baseUrl = `https://www.${siteConfig.domain}`;
+
+  // LocalBusiness Schema for Google Business Profile (matches GBP) – NAP from siteConfig
   const localBusinessSchema = {
     "@context": "https://schema.org",
     "@type": "RealEstateAgent",
-    "@id": "https://www.suncityvegas.com/#agent",
-    name: "Sun City Summerlin 55+ Real Estate | Homes by Dr. Jan Duffy",
+    "@id": `${baseUrl}/#agent`,
+    name: siteConfig.siteName,
     alternateName: ["Sun City Vegas Real Estate", "Homes by Dr. Jan Duffy"],
     description: "Find your dream 55+ retirement home in Sun City Summerlin, Las Vegas. With over 25 years of experience in active adult communities, Dr. Duffy has helped countless retirees discover the perfect home to suit their lifestyle and needs. Sun City Summerlin offers a variety of beautiful options. This vibrant community is designed specifically for active adults, featuring world-class amenities such as golf courses, fitness centers, pools, walking trails, and social clubs. Dr. Duffy provides expert guidance and personalized service every step of the way, ensuring your transition into this exciting new chapter is seamless and stress-free. Start your journey toward a fulfilling and active retirement today!",
-    image: "https://www.suncityvegas.com/images/agent/dr-jan-duffy.jpg",
-    url: "https://www.suncityvegas.com/",
+    image: `${baseUrl}${siteConfig.agent.photo}`,
+    url: `${baseUrl}/`,
     telephone: "+1-702-718-0042",
-    email: "jan@drjanduffy.com",
-    foundingDate: "2013-09-20",
+    email: siteConfig.agent.email,
+    foundingDate: siteConfig.agent.openingDate,
     address: {
       "@type": "PostalAddress",
       streetAddress: "9406 Del Webb Blvd",
-      addressLocality: "Las Vegas",
-      addressRegion: "NV",
-      postalCode: "89134",
+      addressLocality: siteConfig.city,
+      addressRegion: siteConfig.state,
+      postalCode: siteConfig.zip,
       addressCountry: "US",
     },
     areaServed: [
@@ -187,14 +190,13 @@ export default function RootLayout({
     paymentAccepted: "Cash, Check, Credit Card, Financing",
     currenciesAccepted: "USD",
     sameAs: [
-      "https://lasvegas55plushomes.com/",
-      "https://www.facebook.com/DrJanDuffyRealtorCentennialHills/",
-      "https://www.linkedin.com/company/lvrmembers/",
-      "https://www.instagram.com/drjanduffy/",
-      "https://x.com/drjanduffy",
-      "https://www.tiktok.com/@dr.janduffy",
-      "https://www.youtube.com/@DrDuffy",
-      "https://www.pinterest.com/bhhsluxury/",
+      siteConfig.social.facebook,
+      siteConfig.social.instagram,
+      siteConfig.social.linkedin,
+      siteConfig.social.youtube,
+      siteConfig.social.pinterest,
+      siteConfig.social.tiktok,
+      siteConfig.social.twitter,
     ],
     specialOpeningHoursSpecification: [
       {

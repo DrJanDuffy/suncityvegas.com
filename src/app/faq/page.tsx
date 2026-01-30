@@ -62,9 +62,25 @@ const faqSchema = {
   })),
 };
 
+const faqWebPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://www.suncityvegas.com/faq",
+  name: "FAQ | Sun City Summerlin | Del Webb Las Vegas | Dr. Jan Duffy",
+  description:
+    "FAQs about Sun City Summerlin and Del Webb Las Vegas Summerlin: HOA fees, home rentals, 55+ requirements, amenities, and more.",
+  url: "https://www.suncityvegas.com/faq",
+};
+
 export default function FAQPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(faqWebPageSchema).replace(/</g, "\\u003c"),
+        }}
+      />
       <Navbar />
       <Breadcrumbs
         items={[
@@ -75,7 +91,9 @@ export default function FAQPage() {
       <main className="min-h-screen bg-white pt-16 md:pt-20">
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+          dangerouslySetInnerHTML={{
+          __html: JSON.stringify(faqSchema).replace(/</g, "\\u003c"),
+        }}
         />
         {/* Hero Section */}
         <section className="relative bg-[#FDF8F3] py-16 md:py-24 overflow-hidden">

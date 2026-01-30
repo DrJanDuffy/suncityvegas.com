@@ -44,12 +44,28 @@ export const metadata: Metadata = {
 const blurDataURL =
   "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWEREiMxUf/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q==";
 
+const communityWebPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://www.suncityvegas.com/community",
+  name: "Sun City Summerlin Community Guide | Las Vegas 55+ Active Adult Community",
+  description:
+    "Complete guide to Sun City Summerlin, Las Vegas' premier 55+ community. History, amenities, golf courses, recreation centers, clubs, HOA info.",
+  url: "https://www.suncityvegas.com/community",
+};
+
 export default function CommunityPage() {
   const golfCourses = getGolfCourses();
   const recCenters = getRecreationCenters();
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(communityWebPageSchema).replace(/</g, "\\u003c"),
+        }}
+      />
       <Navbar />
       <main className="pt-16 md:pt-20 min-h-screen bg-white">
         <Breadcrumbs

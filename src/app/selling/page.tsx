@@ -81,9 +81,25 @@ const sellingSteps = [
   },
 ];
 
+const sellingWebPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://www.suncityvegas.com/selling",
+  name: "Sell Your Sun City Summerlin Home | Expert Real Estate Services | Dr. Jan Duffy",
+  description:
+    "Sell your Sun City Summerlin home with confidence. Expert pricing, marketing, and negotiation from Dr. Jan Duffy, your local Sun City specialist.",
+  url: "https://www.suncityvegas.com/selling",
+};
+
 export default function SellingPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(sellingWebPageSchema).replace(/</g, "\\u003c"),
+        }}
+      />
       <Navbar />
       <main className="pt-16 md:pt-20 min-h-screen bg-white">
         <Breadcrumbs

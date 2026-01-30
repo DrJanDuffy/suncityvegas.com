@@ -38,12 +38,28 @@ export const metadata: Metadata = {
   },
 };
 
+const homeValueWebPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://www.suncityvegas.com/home-value",
+  name: "Free Home Value Estimate | Sun City Summerlin | Dr. Jan Duffy",
+  description:
+    "Get a free, instant home value estimate for your property. Dr. Jan Duffy provides accurate home valuations for Sun City Summerlin and Las Vegas area homes.",
+  url: "https://www.suncityvegas.com/home-value",
+};
+
 export default function HomeValuePage() {
   // RealScout Home Value Widget HTML
   const widgetHtml = `<realscout-home-value agent-encoded-id="QWdlbnQtMjI1MDUw" include-name include-phone></realscout-home-value>`;
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(homeValueWebPageSchema).replace(/</g, "\\u003c"),
+        }}
+      />
       <Navbar />
       <Breadcrumbs
         items={[
