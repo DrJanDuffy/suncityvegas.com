@@ -12,6 +12,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "sun-city-summerlin-floor-plans",
     "sun-city-summerlin-hoa-fees",
     "sun-city-summerlin-vs-sun-city-anthem",
+    "sun-city-summerlin-vs-other-55-communities",
+    "what-55-buyers-spend-sun-city-summerlin",
+    "selling-home-sun-city-summerlin",
   ];
 
   const amenitySlugs = ["mountain-shadows", "sun-shadows", "desert-vista", "pinnacle", "golf"];

@@ -41,12 +41,18 @@ const nextConfig = {
               "default-src 'self'",
               "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://em.realscout.com https://www.realscout.com https://assets.calendly.com https://www.googletagmanager.com",
               "connect-src 'self' https://em.realscout.com https://www.realscout.com https://assets.calendly.com https://calendly.com https://www.google-analytics.com https://www.googletagmanager.com",
-              "style-src 'self' 'unsafe-inline' https://assets.calendly.com https://fonts.googleapis.com",
+              "style-src 'self' 'unsafe-inline' https://assets.calendly.com",
               "img-src 'self' data: https:",
-              "font-src 'self' data: https://fonts.gstatic.com",
+              "font-src 'self' data:",
               "frame-src 'self' https://em.realscout.com https://www.realscout.com https://calendly.com https://www.youtube.com https://youtube.com https://my.matterport.com https://www.google.com https://maps.google.com https://storage.googleapis.com",
             ].join('; '),
           },
+        ],
+      },
+      {
+        source: '/_next/static/:path*',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
         ],
       },
     ];

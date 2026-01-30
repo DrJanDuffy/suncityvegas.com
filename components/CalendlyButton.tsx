@@ -1,13 +1,14 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Calendar, X } from 'lucide-react';
-import Script from 'next/script';
 
 type CalendlyButtonProps = {
   url?: string;
   text?: string;
 };
+
+const CALENDLY_SCRIPT = 'https://assets.calendly.com/assets/external/widget.js';
 
 export default function CalendlyButton({
   url = 'https://calendly.com/drjanduffy/appointment',
@@ -15,39 +16,46 @@ export default function CalendlyButton({
 }: CalendlyButtonProps) {
   const [isVisible, setIsVisible] = useState(false);
   const [isDismissed, setIsDismissed] = useState(false);
-  const [scriptLoaded, setScriptLoaded] = useState(false);
 
   useEffect(() => {
-    // Check if button was dismissed in this session
     const dismissed = localStorage.getItem('calendly-button-dismissed');
     if (dismissed === 'true') {
       setIsDismissed(true);
       return;
     }
-
-    // Show button after 2 seconds
-    const timer = setTimeout(() => {
-      setIsVisible(true);
-    }, 2000);
-
+    const timer = setTimeout(() => setIsVisible(true), 2000);
     return () => clearTimeout(timer);
   }, []);
 
   const handleDismiss = () => {
     setIsDismissed(true);
     setIsVisible(false);
-    // Store dismissal preference in localStorage
     localStorage.setItem('calendly-button-dismissed', 'true');
   };
 
-  const handleClick = () => {
-    if (typeof window !== 'undefined' && window.Calendly) {
-      window.Calendly.initPopupWidget({ url });
-    } else {
-      // Fallback: open in new tab if script hasn't loaded yet
-      window.open(url, '_blank', 'noopener,noreferrer');
+  const handleClick = useCallback(() => {
+    if (typeof window === 'undefined') return;
+    const win = window as unknown as { Calendly?: { initPopupWidget: (o: { url: string }) => void } };
+    if (win.Calendly) {
+      win.Calendly.initPopupWidget({ url });
+      return;
     }
-  };
+    const existing = document.querySelector(`script[src="${CALENDLY_SCRIPT}"]`);
+    if (existing) {
+      const check = () => {
+        if (win.Calendly) win.Calendly.initPopupWidget({ url });
+        else window.open(url, '_blank', 'noopener,noreferrer');
+      };
+      if (win.Calendly) check();
+      else existing.addEventListener('load', check);
+      return;
+    }
+    const script = document.createElement('script');
+    script.src = CALENDLY_SCRIPT;
+    script.async = true;
+    script.onload = () => win.Calendly?.initPopupWidget({ url });
+    document.body.appendChild(script);
+  }, [url]);
 
   if (isDismissed) {
     return null;
@@ -55,13 +63,7 @@ export default function CalendlyButton({
 
   return (
     <>
-      {/* Calendly Widget Script */}
-      <Script
-        src="https://assets.calendly.com/assets/external/widget.js"
-        strategy="afterInteractive"
-        onLoad={() => setScriptLoaded(true)}
-      />
-      
+      {/* Calendly script loaded on first click only (reduces TBT / 3rd-party impact) */}
       {/* Floating Button */}
       <div
         className={`fixed bottom-4 right-4 z-50 transition-all duration-500 ease-out ${

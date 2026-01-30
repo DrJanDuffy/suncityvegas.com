@@ -43,12 +43,12 @@ export const metadata: Metadata = {
 const blogPosts = [
   {
     slug: "pros-and-cons-sun-city-summerlin",
-    title: "Pros and Cons of Living in Sun City Summerlin (2025 Expert Guide)",
+    title: "Pros and Cons of Living in Sun City Summerlin (2026)",
     excerpt:
       "An honest look at Sun City Summerlin pros and cons from Dr. Jan Duffy, a 30-year Las Vegas real estate expert. What you need to know before buying a home in this 55+ community.",
-    date: "2025-01-26",
+    date: "2026-01-27",
     image: "/images/blog/pros-cons-hero.jpg",
-    category: "Expert Guide",
+    category: "Pillar Guide",
   },
   {
     slug: "sun-city-summerlin-hoa-fees",
@@ -67,6 +67,33 @@ const blogPosts = [
     date: "2025-01-26",
     image: "/images/blog/comparison-hero.jpg",
     category: "Community Comparison",
+  },
+  {
+    slug: "sun-city-summerlin-vs-other-55-communities",
+    title: "Sun City Summerlin vs Other Las Vegas 55+ Communities (2026)",
+    excerpt:
+      "Compare Sun City Summerlin to Aliante, Siena, and other Las Vegas 55+ communities. Location, amenities, HOA fees, and lifestyle from Dr. Jan Duffy.",
+    date: "2026-01-27",
+    image: "/images/blog/comparison-hero.jpg",
+    category: "Pillar Guide",
+  },
+  {
+    slug: "what-55-buyers-spend-sun-city-summerlin",
+    title: "What 55+ Buyers Actually Spend Each Month in Sun City Summerlin (2026)",
+    excerpt:
+      "Real monthly costs for 55+ buyers: HOA fees, utilities, property taxes, and more. Budget accurately with Dr. Jan Duffy.",
+    date: "2026-01-27",
+    image: "/images/blog/hoa-fees-hero.jpg",
+    category: "Pillar Guide",
+  },
+  {
+    slug: "selling-home-sun-city-summerlin",
+    title: "Selling a Home in Sun City Summerlin: Timing, Pricing, and Updates (2026)",
+    excerpt:
+      "When to sell, how to price, and which updates actually pay off. Expert selling advice from Dr. Jan Duffy.",
+    date: "2026-01-27",
+    image: "/images/blog/blog-01.jpg",
+    category: "Pillar Guide",
   },
   {
     slug: "sun-city-summerlin-floor-plans",

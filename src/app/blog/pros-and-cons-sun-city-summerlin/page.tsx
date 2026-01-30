@@ -5,28 +5,32 @@ import Script from "next/script";
 import Navbar from "@components/navbar";
 import Footer from "@components/footer";
 import Breadcrumbs from "@components/Breadcrumbs";
+import YouTubeEmbed from "@components/YouTubeEmbed";
 import { Button } from "@components/ui/button";
 import { Phone, Check, X, Calendar, ArrowRight } from "lucide-react";
 import { getCommunityInfo } from "@/lib/communityData";
 import ScrollAnimation from "@components/scroll-animation";
 
+/** Replace with your YouTube video ID (from youtube.com/watch?v=VIDEO_ID) */
+const YOUTUBE_VIDEO_ID = "";
+
 export const metadata: Metadata = {
-  title: "Pros and Cons of Living in Sun City Summerlin (2025 Expert Guide)",
+  title: "Pros and Cons of Living in Sun City Summerlin (2026)",
   description:
     "An honest look at Sun City Summerlin pros and cons from Dr. Jan Duffy, a 30-year Las Vegas real estate expert. What you need to know before buying a home in this 55+ community.",
   alternates: {
     canonical: "https://www.suncityvegas.com/blog/pros-and-cons-sun-city-summerlin",
   },
   openGraph: {
-    title: "Pros and Cons of Living in Sun City Summerlin (2025 Expert Guide)",
+    title: "Pros and Cons of Living in Sun City Summerlin (2026)",
     description:
       "An honest assessment of Sun City Summerlin from a 30-year Las Vegas real estate expert. Learn what residents love—and what to consider—before buying.",
     url: "https://www.suncityvegas.com/blog/pros-and-cons-sun-city-summerlin",
     siteName: "Sun City Summerlin Homes for Sale | Dr. Jan Duffy",
     locale: "en_US",
     type: "article",
-    publishedTime: "2025-01-26T00:00:00Z",
-    modifiedTime: "2025-01-26T00:00:00Z",
+    publishedTime: "2026-01-27T00:00:00Z",
+    modifiedTime: "2026-01-27T00:00:00Z",
     authors: ["Dr. Jan Duffy"],
     images: [
       {
@@ -39,7 +43,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Pros and Cons of Living in Sun City Summerlin (2025 Expert Guide)",
+    title: "Pros and Cons of Living in Sun City Summerlin (2026)",
     description: "An honest assessment from a 30-year Las Vegas real estate expert.",
     images: ["https://www.suncityvegas.com/images/blog/pros-cons-hero.jpg"],
   },
@@ -108,11 +112,11 @@ const faqSchema = {
 const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline: "Pros and Cons of Living in Sun City Summerlin (2025 Expert Guide)",
+  headline: "Pros and Cons of Living in Sun City Summerlin (2026)",
   description:
     "An honest look at Sun City Summerlin pros and cons from Dr. Jan Duffy, a 30-year Las Vegas real estate expert.",
-  datePublished: "2025-01-26T00:00:00Z",
-  dateModified: "2025-01-26T00:00:00Z",
+  datePublished: "2026-01-27T00:00:00Z",
+  dateModified: "2026-01-27T00:00:00Z",
   author: {
     "@type": "Person",
     name: "Dr. Jan Duffy",
@@ -155,12 +159,12 @@ export default function ProsConsPage() {
                 Expert Guide
               </div>
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 font-playfair">
-                Pros and Cons of Living in Sun City Summerlin: An Expert's Honest Take
+                Pros and Cons of Living in Sun City Summerlin (2026)
               </h1>
               <div className="flex flex-wrap items-center gap-4 text-gray-100">
                 <div className="flex items-center gap-2">
                   <Calendar className="w-5 h-5" />
-                  <time dateTime="2025-01-26">January 26, 2025</time>
+                  <time dateTime="2026-01-27">January 27, 2026</time>
                 </div>
                 <span>•</span>
                 <span>By Dr. Jan Duffy</span>
@@ -186,6 +190,38 @@ export default function ProsConsPage() {
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
                   priority
                 />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Video + Summary + CTA links (pillar template) */}
+        <section className="py-8 bg-white border-b border-gray-100">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              {YOUTUBE_VIDEO_ID && (
+                <div className="mb-8">
+                  <YouTubeEmbed
+                    videoId={YOUTUBE_VIDEO_ID}
+                    title="Pros and Cons of Living in Sun City Summerlin (2026)"
+                  />
+                </div>
+              )}
+              <div className="prose prose-lg max-w-none text-[#2D2A26]">
+                <p className="text-lg leading-relaxed mb-4">
+                  In this guide we cover what makes Sun City Summerlin special—and what to consider before you buy. You&apos;ll see the pros (world-class amenities, three golf courses, Nevada tax advantages, strong community) and the cons (older homes, wind, age restrictions, desert heat) so you can decide if it&apos;s the right fit for your 55+ lifestyle.
+                </p>
+                <p className="mb-6">
+                  For the full picture, see the{" "}
+                  <Link href="/flyers/sun-city-summerlin-guide" className="text-[#8B5E3C] font-semibold hover:text-[#5D7A5D] underline">
+                    Sun City Summerlin Complete Community Guide
+                  </Link>
+                  , or{" "}
+                  <Link href="/schedule" className="text-[#8B5E3C] font-semibold hover:text-[#5D7A5D] underline">
+                    book a 55+ strategy call
+                  </Link>
+                  {" "}with Dr. Jan Duffy to discuss your situation and tour the community.
+                </p>
               </div>
             </div>
           </div>
@@ -726,6 +762,48 @@ export default function ProsConsPage() {
                       </h3>
                       <p className="text-[#2D2A26] mb-4">
                         Complete guide to every floor plan available in Sun City Summerlin.
+                      </p>
+                      <span className="text-[#8B5E3C] font-semibold flex items-center gap-2">
+                        Read More <ArrowRight className="w-4 h-4" />
+                      </span>
+                    </Link>
+                    <Link
+                      href="/blog/sun-city-summerlin-vs-other-55-communities"
+                      className="bg-[#FDF8F3] rounded-lg p-6 hover:shadow-lg transition-shadow border border-[#8B5E3C]/20"
+                    >
+                      <h3 className="text-xl font-bold text-[#8B5E3C] mb-2 font-playfair">
+                        Sun City Summerlin vs Other 55+ Communities (2026)
+                      </h3>
+                      <p className="text-[#2D2A26] mb-4">
+                        Compare Sun City Summerlin to Aliante, Siena, and other Las Vegas 55+ communities.
+                      </p>
+                      <span className="text-[#8B5E3C] font-semibold flex items-center gap-2">
+                        Read More <ArrowRight className="w-4 h-4" />
+                      </span>
+                    </Link>
+                    <Link
+                      href="/blog/what-55-buyers-spend-sun-city-summerlin"
+                      className="bg-[#FDF8F3] rounded-lg p-6 hover:shadow-lg transition-shadow border border-[#8B5E3C]/20"
+                    >
+                      <h3 className="text-xl font-bold text-[#8B5E3C] mb-2 font-playfair">
+                        What 55+ Buyers Spend Each Month (2026)
+                      </h3>
+                      <p className="text-[#2D2A26] mb-4">
+                        HOA, utilities, taxes—real monthly costs for 55+ buyers in Sun City Summerlin.
+                      </p>
+                      <span className="text-[#8B5E3C] font-semibold flex items-center gap-2">
+                        Read More <ArrowRight className="w-4 h-4" />
+                      </span>
+                    </Link>
+                    <Link
+                      href="/blog/selling-home-sun-city-summerlin"
+                      className="bg-[#FDF8F3] rounded-lg p-6 hover:shadow-lg transition-shadow border border-[#8B5E3C]/20"
+                    >
+                      <h3 className="text-xl font-bold text-[#8B5E3C] mb-2 font-playfair">
+                        Selling a Home in Sun City Summerlin (2026)
+                      </h3>
+                      <p className="text-[#2D2A26] mb-4">
+                        Timing, pricing, and updates that actually pay off when you sell.
                       </p>
                       <span className="text-[#8B5E3C] font-semibold flex items-center gap-2">
                         Read More <ArrowRight className="w-4 h-4" />

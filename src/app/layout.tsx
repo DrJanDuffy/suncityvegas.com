@@ -305,9 +305,7 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
       <head>
         <link rel="icon" href="/favicon.ico" />
-        {/* Preconnect to critical third-party origins (PageSpeed / LCP) */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+        {/* Preconnect/dns-prefetch only for third parties we load (fonts via next/font, no Google Fonts network) */}
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://assets.calendly.com" />
         <link rel="dns-prefetch" href="https://em.realscout.com" />
@@ -324,10 +322,7 @@ export default function RootLayout({
             gtag('config', 'G-NHQBT9NYXR');
           `}
         </Script>
-        {/* Calendly Badge Widget CSS - loaded via script after idle so it doesn't block LCP */}
-        <Script id="calendly-css" strategy="lazyOnload">
-          {`(function(){var l=document.createElement('link');l.rel='stylesheet';l.href='https://assets.calendly.com/assets/external/widget.css';document.head.appendChild(l);})();`}
-        </Script>
+        {/* Calendly CSS/script load on first user click (see CalendlyButton) - no head requests */}
         {/* Structured Data - Consolidated Schema Markup */}
         <SchemaMarkup />
         {/* Structured Data - LocalBusiness (Google Business Profile) */}
@@ -346,10 +341,10 @@ export default function RootLayout({
         />
       </head>
       <body className={`${inter.className} antialiased`}>
-        {/* RealScout Web Components Script - Load once globally for all pages */}
+        {/* RealScout Web Components - lazyOnload to improve LCP/TBT (listings hydrate after first paint) */}
         <Script
           src="https://em.realscout.com/widgets/realscout-web-components.umd.js"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
           type="module"
         />
         {/* RealScout Widget Styles - Global styles for all widgets */}
