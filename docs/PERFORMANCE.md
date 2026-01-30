@@ -4,6 +4,20 @@ Summary of performance optimizations applied and remaining audit items for Sun C
 
 ---
 
+## Results (before → after)
+
+| Metric | Before | After |
+|--------|--------|--------|
+| **First Contentful Paint** | 3.7 s | **1.1 s** |
+| **Largest Contentful Paint** | 4.9 s | **2.3 s** |
+| **Total Blocking Time** | 4,340 ms | **850 ms** |
+| **Speed Index** | 7.7 s | **3.9 s** |
+| **Cumulative Layout Shift** | 0.011 | 0.011 (unchanged) |
+| **Render blocking (est. savings)** | ~1,110 ms | ~130 ms (main CSS only) |
+| **Critical path latency** | 7,352 ms | **741 ms** |
+
+---
+
 ## Optimizations Applied
 
 ### 1. Render-blocking requests (~1,110 ms saved)
@@ -46,16 +60,21 @@ Summary of performance optimizations applied and remaining audit items for Sun C
 
 ---
 
-## Remaining Audit Items (out of our control or larger refactors)
+## Remaining Audit Items
 
 | Audit | Notes |
 |-------|------|
-| **Use efficient cache (third-party)** | Calendly, RealScout, CloudFront listing images set their own cache headers; we cannot change them. |
-| **Legacy JavaScript (e.g. Array.at, flat)** | From Next.js/build and bundler targets; would require build/config changes to adjust. |
-| **Improve image delivery (RealScout/CloudFront)** | Listing images come from RealScout’s CDN; we cannot resize or re-encode. Ask RealScout for responsive/WebP support. |
+| **Render blocking (~130 ms)** | Main Next.js CSS chunk (`_next/static/.../...css`). Reducing it would require critical CSS extraction or experimental Next.js options. |
+| **Use efficient cache (third-party)** | Calendly, RealScout, CloudFront set their own cache headers; we cannot change them. First-party `_next/static` is already long-cached. |
+| **Legacy JavaScript (~14 KiB)** | From Next.js/build and bundler targets; would require build/config changes. |
+| **Improve image delivery (~97 KiB)** | Our images: use Next.js `Image` with sizes; RealScout listing images are from their CDN (ask RealScout for responsive/WebP). |
+| **Reduce JavaScript execution (2.7 s) / main-thread work (4.1 s)** | More code splitting, defer non-critical components, reduce third-party JS. |
+| **Reduce unused JavaScript (~1,229 KiB)** | Dynamic imports for below-fold sections (some already in place); consider route-based or component-level code splitting. |
+| **Reduce unused CSS (~472 KiB)** | Tailwind purge is automatic; remaining is often framework/chunk CSS; per-route CSS is a larger refactor. |
+| **Avoid long main-thread tasks (13 long tasks)** | Break up work (e.g. requestIdleCallback), defer non-critical scripts. |
+| **Avoid non-composited animations (2)** | Prefer `transform` and `opacity`; check scroll/visibility animations in components. |
 | **DOM size** | Would require reducing components or splitting the page (larger refactor). |
-| **Forced reflow** | Likely from third-party or layout; use Chrome DevTools Performance trace to isolate. |
-| **Preconnect candidates** | Lighthouse may suggest preconnect; we use dns-prefetch for GTM, Calendly, RealScout. Adding more preconnect can increase connection overhead; only add if you measure a benefit. |
+| **Preconnect** | Lighthouse reports “No additional origins are good candidates”; current dns-prefetch for GTM, Calendly, RealScout is sufficient. |
 
 ---
 
