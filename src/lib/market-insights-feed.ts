@@ -12,6 +12,8 @@ export interface MarketInsightItem {
   description: string;
   pubDate: string;
   category: string[];
+  /** First image URL from description (e.g. https://files.keepingcurrentmatters.com/...) */
+  image?: string;
 }
 
 function parseRSSFeed(xmlText: string): MarketInsightItem[] {
@@ -40,8 +42,14 @@ function parseRSSFeed(xmlText: string): MarketInsightItem[] {
 
     if (titleMatch && linkMatch) {
       let description = "";
+      let image: string | undefined;
       if (descMatch) {
-        const textOnly = descMatch[1]
+        const rawDesc = descMatch[1];
+        const imgMatch = rawDesc.match(/<img[^>]+src=["']([^"']+)["']/i);
+        if (imgMatch?.[1]) {
+          image = imgMatch[1].trim();
+        }
+        const textOnly = rawDesc
           .replace(/<img[^>]*>/gi, "")
           .replace(/<[^>]*>/g, " ")
           .replace(/&nbsp;/g, " ")
@@ -59,6 +67,7 @@ function parseRSSFeed(xmlText: string): MarketInsightItem[] {
         description: description || "Read the latest real estate market insights.",
         pubDate: (pubDateMatch?.[1] || new Date().toISOString()).trim(),
         category: categories,
+        ...(image && { image }),
       });
     }
   }

@@ -1,0 +1,64 @@
+---
+description: When integrating external feeds or APIs that include images, always extract image URLs and display them; ensure CSP/img-src allows the image domain.
+globs: "**/*feed*.ts,**/*feed*.tsx,**/market-insights*,**/api/**/market*"
+alwaysApply: false
+---
+
+# External Feeds & APIs: Preserve and Display Images
+
+When adding or editing code that fetches external content (RSS feeds, APIs, third-party widgets) that **includes image URLs**, do not strip or ignore them. Extract, pass through, and render images so they appear on the site.
+
+## Checklist
+
+1. **Data layer (parser / API)**
+   - Extract the first (or primary) image URL from the external content (e.g. `<description>` CDATA, `<content:encoded>`, or API `image`/`thumbnail` field).
+   - Add an optional `image?: string` (or equivalent) to the parsed/typed item.
+   - Do **not** remove `<img>` tags without first capturing the `src` URL if you intend to show images in the UI.
+
+2. **UI (component)**
+   - Include `image?: string` in the component’s props/interface.
+   - When `image` is present, render it (e.g. above or beside the title) with:
+     - `loading="lazy"`
+     - Descriptive `alt` (e.g. article title or explicit description)
+     - Optional link to the source URL
+
+3. **Security / config**
+   - **CSP:** If images are from another domain, ensure `Content-Security-Policy` `img-src` allows it (e.g. `https:` or the specific host, e.g. `https://files.keepingcurrentmatters.com`).
+   - **Next.js:** If using `next/image` for external URLs, add the host to `images.remotePatterns` in `next.config.js`. Otherwise use a plain `<img>` for third-party images.
+
+## Example (RSS feed parser)
+
+```ts
+// ✅ Extract image before stripping HTML
+const imgMatch = rawDesc.match(/<img[^>]+src=["']([^"']+)["']/i);
+const image = imgMatch?.[1]?.trim();
+// Then strip <img> for text-only description...
+items.push({
+  title,
+  link,
+  description: textOnly,
+  image,  // pass through
+});
+```
+
+## Example (component)
+
+```tsx
+{item.image && (
+  <a href={item.link} target="_blank" rel="noopener noreferrer nofollow">
+    <img
+      src={item.image}
+      alt={item.title}
+      width={400}
+      height={225}
+      loading="lazy"
+      className="w-full h-full object-cover"
+    />
+  </a>
+)}
+```
+
+## Reference
+
+- Feed images (e.g. Simplifying the Market) often live on a different host (e.g. `files.keepingcurrentmatters.com`) than the feed URL; extract `src` from the first `<img>` in description/content.
+- CSP in this project: `next.config.js` → `headers` → `Content-Security-Policy`; `img-src` already includes `https:` for third-party images.

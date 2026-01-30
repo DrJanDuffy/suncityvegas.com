@@ -11,6 +11,7 @@ interface MarketInsight {
   description: string;
   pubDate: string;
   category: string[];
+  image?: string;
 }
 
 export default function MarketInsights({ limit = 3 }: { limit?: number }) {
@@ -84,6 +85,24 @@ export default function MarketInsights({ limit = 3 }: { limit?: number }) {
               <ScrollAnimation key={insight.link} delay={index * 100}>
                 <article className="bg-[#FDF8F3] rounded-lg p-6 hover:shadow-lg transition-shadow border border-[#8B5E3C]/20 h-full flex flex-col">
                   <div className="flex-1">
+                    {insight.image && (
+                      <a
+                        href={insight.link}
+                        target="_blank"
+                        rel="noopener noreferrer nofollow"
+                        className="block mb-4 rounded-lg overflow-hidden bg-[#8B5E3C]/10 aspect-video"
+                        aria-hidden
+                      >
+                        <img
+                          src={insight.image}
+                          alt={insight.title}
+                          width={400}
+                          height={225}
+                          loading="lazy"
+                          className="w-full h-full object-cover"
+                        />
+                      </a>
+                    )}
                     {insight.category && insight.category.length > 0 && (
                       <div className="mb-3">
                         <span className="inline-block bg-[#8B5E3C] text-white text-xs font-semibold px-3 py-1 rounded-full">

@@ -205,7 +205,7 @@ export default function FAQAccordion({
                       >
                         <button
                           onClick={() => toggleItem(categoryIndex, questionIndex)}
-                          className="w-full px-6 py-4 flex items-center justify-between text-left hover:bg-stone-50 transition-colors"
+                          className="w-full min-h-[44px] px-6 py-4 flex items-center justify-between text-left hover:bg-stone-50 transition-colors"
                           aria-expanded={isOpen ? 'true' : 'false'}
                         >
                           <span className="font-semibold text-text-dark pr-4 flex-1">

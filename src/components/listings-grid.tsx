@@ -61,7 +61,7 @@ function ListingCard({ listing }: { listing: Listing }) {
           </div>
         )}
         {listing.status === "pending" && (
-          <div className="absolute top-4 right-4 bg-accent text-white px-3 py-1 rounded-md text-sm font-semibold">
+          <div className="absolute top-4 right-4 bg-[#8B5E3C] text-white px-3 py-1 rounded-md text-sm font-semibold">
             Pending
           </div>
         )}

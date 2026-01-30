@@ -139,7 +139,7 @@ export default function Navbar() {
                   <button
                     onClick={() => toggleDropdown(menu.label)}
                     className={cn(
-                      "flex items-center gap-1 text-sm xl:text-base font-medium transition-colors relative",
+                      "min-h-[44px] min-w-[44px] flex items-center gap-1 text-sm xl:text-base font-medium transition-colors relative py-2",
                       isActiveMenu
                         ? "text-[#8B5E3C]"
                         : "text-[#2D2A26] hover:text-[#8B5E3C]"
