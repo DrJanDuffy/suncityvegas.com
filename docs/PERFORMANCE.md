@@ -44,7 +44,10 @@ Summary of performance optimizations applied and remaining audit items for Sun C
   - Script in `layout.tsx` changed from `strategy="afterInteractive"` to **`strategy="lazyOnload"`**.
   - Listings hydrate after first paint; hero/LCP is prioritized.
 
-**Impact:** Less blocking work during initial load; listings may appear slightly later.
+- **Homepage Calendly inline**
+  - `FinalCTASection` no longer loads the Calendly embed on initial paint. Calendly (and Stripe) load only when the section enters the viewport (Intersection Observer, 200px rootMargin) or when the user clicks “Show calendar.” The section is also dynamically imported on the homepage so Calendly code is not in the initial JS bundle.
+
+**Impact:** Less blocking work during initial load; Calendly/Stripe (~1.7MB) no longer run until user scrolls to CTA or clicks.
 
 ### 3. Cache lifetimes
 

@@ -9,7 +9,6 @@ import TestimonialSection from "@components/sections/testimonial";
 import AmenitiesPreviewSection from "@components/sections/amenities-preview";
 import HomeCollectionsSection from "@components/sections/home-collections";
 import AboutAgentSection from "@components/sections/about-agent";
-import FinalCTASection from "@components/sections/final-cta";
 import Footer from "@components/footer";
 import RealScoutListings from "@components/RealScoutListings";
 import ExploreCommunitySection from "@components/sections/explore-community";
@@ -24,6 +23,7 @@ const Testimonials = dynamic(() => import("@components/Testimonials"), { ssr: tr
 const MortgageCalculator = dynamic(() => import("@components/MortgageCalculator"), { ssr: true });
 const QuickFAQ = dynamic(() => import("@components/QuickFAQ"), { ssr: true });
 const FlyersSection = dynamic(() => import("@components/sections/flyers-section"), { ssr: true });
+const FinalCTASection = dynamic(() => import("@components/sections/final-cta"), { ssr: true });
 
 // Homepage metadata - optimized for SEO and target keywords (Del Webb, 55+ community homes for sale)
 export const metadata: Metadata = {
