@@ -12,7 +12,7 @@ export default function SchemaMarkup() {
     alternateName: ['Sun City Vegas Real Estate', 'Homes by Dr. Jan Duffy'],
     url: baseUrl,
     logo: `${baseUrl}/images/logo/logo.svg`,
-    telephone: '+1-702-718-0043',
+    telephone: '+1-702-718-0042',
     email: 'jan@drjanduffy.com',
     foundingDate: '2013-09-20',
     address: {
@@ -69,7 +69,7 @@ export default function SchemaMarkup() {
     name: 'Sun City Summerlin 55+ Real Estate | Homes by Dr. Jan Duffy',
     url: baseUrl,
     image: `${baseUrl}/images/about/dr-jan-duffy.jpg`,
-    telephone: '+1-702-718-0043',
+    telephone: '+1-702-718-0042',
     email: 'jan@drjanduffy.com',
     address: {
       '@type': 'PostalAddress',

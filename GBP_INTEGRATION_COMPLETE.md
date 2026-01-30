@@ -6,8 +6,7 @@
 ## ✅ Completed Updates
 
 ### 1. Phone Number Updates
-- **Old:** `702-222-1964` / `702-500-1955`
-- **New:** `702-718-0043` (matching GBP)
+- **Current NAP:** `(702) 718-0042` (office number; ensure this matches GBP)
 - **Updated:** 62 instances across 25 files
 - **Status:** ✅ All references updated
 

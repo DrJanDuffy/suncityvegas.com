@@ -12,9 +12,9 @@ export const siteConfig = {
   zip: "89134",
   address: "9406 Del Webb Blvd, Las Vegas, NV 89134",
 
-  // Canonical NAP (use for display and tel: links)
-  phoneDisplay: "(702) 718-0043",
-  phoneHref: "tel:+17027180043",
+  // Canonical NAP (use for display and tel: links) – matches GBP
+  phoneDisplay: "(702) 718-0042",
+  phoneHref: "tel:7027180042",
 
   // Agent Info
   agent: {
@@ -22,8 +22,8 @@ export const siteConfig = {
     title: "Sun City Summerlin Specialist",
     license: "S.0197614.LLC",
     phone: {
-      marketing: "(702) 718-0043",
-      professional: "(702) 718-0043"
+      marketing: "(702) 718-0042",
+      professional: "(702) 718-0042"
     },
     email: "jan@drjanduffy.com",
     photo: "/images/about/dr-jan-duffy.jpg",

@@ -12,7 +12,7 @@
 - ✅ **No missing files** - All referenced components exist
 
 ### GBP Integration
-- ✅ **Phone numbers:** 62 instances updated to `702-718-0043`
+- ✅ **Phone numbers:** Site-wide NAP uses `(702) 718-0042`
 - ✅ **Business address:** `9406 Del Webb Boulevard` (all business pages)
 - ✅ **Community address:** `9107 Del Webb Blvd` (community page only)
 - ✅ **Business name:** Matches GBP exactly
@@ -43,7 +43,7 @@ These are documented and don't prevent deployment:
 ### 1. Commit Changes
 ```bash
 git add .
-git commit -m "Complete GBP integration: Update phone (702-718-0043), address (9406 Del Webb Blvd), business info, and content from suncitysummerlin.com"
+git commit -m "Complete GBP integration: Update phone (702-718-0042), address (9406 Del Webb Blvd), business info, and content from suncitysummerlin.com"
 git push origin main
 ```
 
@@ -105,13 +105,13 @@ git push origin main
 
 ### Check Phone Numbers
 ```bash
-grep -r "702-718-0043" src/ components/ | wc -l
+grep -r "702-718-0042" src/ components/ | wc -l
 # Should show: 62 instances
 ```
 
 ### Check for Old Phone Numbers
 ```bash
-grep -r "702-222-1964\|702-500-1955" src/ components/
+grep -r "702-718-0042" src/ components/  # verify NAP
 # Should show: No matches
 ```
 

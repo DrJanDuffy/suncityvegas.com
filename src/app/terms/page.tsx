@@ -212,7 +212,7 @@ export default function TermsPage() {
                   <p className="text-[#2D2A26] mb-2">9406 Del Webb Blvd</p>
                   <p className="text-[#2D2A26] mb-2">Las Vegas, NV 89134</p>
                   <p className="text-[#2D2A26] mb-2">
-                    Phone: <a href="tel:+17027180043" className="text-[#8B5E3C] hover:text-[#5D7A5D]">(702) 718-0043</a>
+                    Phone: <a href="tel:7027180042" className="text-[#8B5E3C] hover:text-[#5D7A5D]">(702) 718-0042</a>
                   </p>
                   <p className="text-[#2D2A26]">
                     Email:{" "}

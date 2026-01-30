@@ -194,10 +194,10 @@ export default function HomeValuePage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
-                  href="tel:+17027180043"
+                  href="tel:7027180042"
                   className="inline-flex items-center justify-center gap-2 px-8 py-3 bg-white text-[#8B5E3C] font-semibold rounded-lg hover:bg-gray-100 transition-colors"
                 >
-                  Call (702) 718-0043
+                  Call (702) 718-0042
                 </a>
                 <Button
                   asChild

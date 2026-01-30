@@ -119,6 +119,22 @@ export default function Footer() {
                   Contact
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/schedule"
+                  className="text-gray-300 hover:text-[#D4AF37] transition-colors"
+                >
+                  Schedule a Tour
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/testimonials"
+                  className="text-gray-300 hover:text-[#D4AF37] transition-colors"
+                >
+                  Testimonials
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -128,19 +144,19 @@ export default function Footer() {
             <ul className="space-y-3">
               <li>
                 <a
-                  href="tel:+17027180043"
+                  href="tel:7027180042"
                   className="flex items-center gap-2 text-gray-300 hover:text-[#D4AF37] transition-colors"
-                  aria-label="Call (702) 718-0043"
+                  aria-label="Call (702) 718-0042"
                 >
                   <Phone className="w-4 h-4" />
-                  (702) 718-0043
+                  (702) 718-0042
                 </a>
               </li>
               <li>
                 <a
-                  href="sms:+17027180043"
+                  href="sms:7027180042"
                   className="flex items-center gap-2 text-gray-300 hover:text-[#D4AF37] transition-colors"
-                  aria-label="Text (702) 718-0043"
+                  aria-label="Text (702) 718-0042"
                 >
                   <Phone className="w-4 h-4" />
                   Text / Chat
@@ -393,7 +409,7 @@ export default function Footer() {
             Berkshire Hathaway HomeServices Nevada Properties | License S.0197614.LLC
           </p>
           <p className="mt-2">
-            <a href="tel:+17027180043" className="text-[#D4AF37] hover:underline" aria-label="Call (702) 718-0043">(702) 718-0043</a>
+            <a href="tel:7027180042" className="text-[#D4AF37] hover:underline" aria-label="Call (702) 718-0042">(702) 718-0042</a>
           </p>
         </div>
       </div>

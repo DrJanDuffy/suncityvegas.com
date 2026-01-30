@@ -19,9 +19,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const resourceSlugs = ["market-insights", "moving-guide", "first-time-buyers"];
 
   const staticPages: MetadataRoute.Sitemap = [
-    // Homepage - Priority 1.0, Daily
+    // Homepage - use trailing slash to match canonical (fixes "Duplicate, Google chose different canonical than user")
     {
-      url: baseUrl,
+      url: `${baseUrl}/`,
       lastModified: new Date(),
       changeFrequency: "daily",
       priority: 1.0,

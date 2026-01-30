@@ -306,11 +306,11 @@ export default function HistoryPage() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                   <a
-                    href="tel:+17027180043"
+                    href="tel:7027180042"
                     className="flex items-center justify-center gap-2 px-8 py-4 bg-[#D4AF37] text-[#2D2A26] rounded-md font-semibold hover:bg-[#D4AF37]/90 transition-colors min-h-[48px] touch-manipulation"
                   >
                     <Phone className="w-5 h-5" />
-                    Call/Text: (702) 718-0043
+                    Call/Text: (702) 718-0042
                   </a>
                   <Button
                     asChild

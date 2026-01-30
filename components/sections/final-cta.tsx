@@ -24,11 +24,11 @@ export default function FinalCTASection() {
                 </p>
                 <div className="mb-6">
                   <a
-                    href="tel:7022221964"
+                    href="tel:7027180042"
                     className="inline-flex items-center gap-2 text-lg md:text-xl font-semibold text-[#8B5E3C] hover:text-[#8B5E3C]/80 transition-colors"
                   >
                     <Phone className="w-5 h-5 md:w-6 md:h-6" />
-                    (702) 222-1964
+                    (702) 718-0042
                   </a>
                 </div>
                 <p className="text-sm md:text-base text-[#2D2A26]">

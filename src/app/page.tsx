@@ -29,7 +29,7 @@ const FlyersSection = dynamic(() => import("@components/sections/flyers-section"
 export const metadata: Metadata = {
   title: "Sun City Summerlin 55+ Community Homes for Sale | Del Webb Las Vegas Summerlin | Dr. Jan Duffy",
   description:
-    "Sun City Summerlin 55+ community homes for sale in Las Vegas, NV 89134. Del Webb built this active adult community—4 golf courses, 3 rec centers, 80+ clubs. Browse current listings. Call (702) 718-0043",
+    "Sun City Summerlin 55+ community homes for sale in Las Vegas, NV 89134. Del Webb built this active adult community—4 golf courses, 3 rec centers, 80+ clubs. Browse current listings. Call (702) 718-0042",
   keywords: [
     "Sun City Summerlin homes for sale",
     "Sun City Summerlin 55+ community homes for sale",
@@ -39,13 +39,13 @@ export const metadata: Metadata = {
     "Sun City Summerlin Las Vegas NV 89134",
   ],
   alternates: {
-    canonical: "https://www.suncityvegas.com",
+    canonical: "https://www.suncityvegas.com/",
   },
   openGraph: {
     title: "Sun City Summerlin Homes for Sale | Las Vegas 55+ Community | Dr. Jan Duffy",
     description:
-      "Find your dream home in Sun City Summerlin, Las Vegas' premier 55+ community. 4 golf courses, 3 rec centers, 80+ clubs. Homes $300K-$800K+. Call (702) 718-0043.",
-    url: "https://www.suncityvegas.com",
+      "Find your dream home in Sun City Summerlin, Las Vegas' premier 55+ community. 4 golf courses, 3 rec centers, 80+ clubs. Homes $300K-$800K+. Call (702) 718-0042.",
+    url: "https://www.suncityvegas.com/",
     siteName: "Sun City Summerlin 55+ Real Estate | Homes by Dr. Jan Duffy",
     images: [
       {
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Sun City Summerlin Homes for Sale | Las Vegas 55+ Community | Dr. Jan Duffy",
     description:
-      "Find your dream home in Sun City Summerlin, Las Vegas' premier 55+ community. 4 golf courses, 3 rec centers, 80+ clubs. Homes $300K-$800K+. Call (702) 718-0043.",
+      "Find your dream home in Sun City Summerlin, Las Vegas' premier 55+ community. 4 golf courses, 3 rec centers, 80+ clubs. Homes $300K-$800K+. Call (702) 718-0042.",
     images: ["/images/amenities/resort-pool.jpeg"],
   },
 };

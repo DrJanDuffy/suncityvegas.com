@@ -11,7 +11,7 @@ import { Phone, DollarSign, TrendingUp, Clock, Shield, FileText, CheckCircle2 } 
 export const metadata: Metadata = {
   title: "Sell Your Sun City Summerlin Home | Expert Real Estate Services | Dr. Jan Duffy",
   description:
-    "Sell your Sun City Summerlin home with confidence. Expert pricing, marketing, and negotiation from Dr. Jan Duffy, your local Sun City specialist. Free home valuation. Call (702) 718-0043",
+    "Sell your Sun City Summerlin home with confidence. Expert pricing, marketing, and negotiation from Dr. Jan Duffy, your local Sun City specialist. Free home valuation. Call (702) 718-0042",
   alternates: {
     canonical: "https://www.suncityvegas.com/selling",
   },
@@ -109,9 +109,9 @@ export default function SellingPage() {
                     <Link href="/home-value">Get Free Valuation</Link>
                   </Button>
                   <Button asChild variant="outline" size="lg" className="border-[#8B5E3C] text-[#8B5E3C] hover:bg-[#8B5E3C]/10 min-h-[44px]">
-                    <a href="tel:+17027180043">
+                    <a href="tel:7027180042">
                       <Phone className="w-5 h-5 mr-2" />
-                      Call (702) 718-0043
+                      Call (702) 718-0042
                     </a>
                   </Button>
                 </div>
@@ -252,9 +252,9 @@ export default function SellingPage() {
                     <Link href="/home-value">Get Free Valuation</Link>
                   </Button>
                   <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-white/10 min-h-[44px]">
-                    <a href="tel:+17027180043">
+                    <a href="tel:7027180042">
                       <Phone className="w-5 h-5 mr-2" />
-                      Call (702) 718-0043
+                      Call (702) 718-0042
                     </a>
                   </Button>
                 </div>

@@ -113,7 +113,7 @@ export default function FeaturedListingSection() {
                     size="lg"
                     className="border-[#8B5E3C] text-[#8B5E3C] hover:bg-[#8B5E3C]/10 min-h-[44px]"
                   >
-                    <a href="tel:+17027180043">
+                    <a href="tel:7027180042">
                       <Phone className="w-5 h-5 mr-2" />
                       Call Now
                     </a>

@@ -184,12 +184,12 @@ export default function Navbar() {
           {/* Desktop CTA & Phone */}
           <div className="hidden lg:flex items-center gap-3 xl:gap-4">
             <a
-              href="tel:+17027180043"
+              href="tel:7027180042"
               className="flex items-center gap-2 text-sm xl:text-base text-[#2D2A26] hover:text-[#8B5E3C] transition-colors"
-              aria-label="Call (702) 718-0043"
+              aria-label="Call (702) 718-0042"
             >
               <Phone className="w-4 h-4" />
-              <span className="font-medium">(702) 718-0043</span>
+              <span className="font-medium">(702) 718-0042</span>
             </a>
             <Button
               asChild
@@ -238,11 +238,11 @@ export default function Navbar() {
               ))}
               <div className="mt-2 pt-2 border-t border-[#C4A574]/20">
                 <a
-                  href="tel:+17027180043"
+                  href="tel:7027180042"
                   className="flex items-center gap-2 text-[#2D2A26] hover:text-[#8B5E3C] transition-colors px-4 py-3 rounded-md min-h-[48px] touch-manipulation"
                 >
                   <Phone className="w-4 h-4" />
-                  <span className="font-medium">(702) 718-0043</span>
+                  <span className="font-medium">(702) 718-0042</span>
                 </a>
                 <Button
                   asChild

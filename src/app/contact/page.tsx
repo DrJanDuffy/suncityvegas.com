@@ -12,14 +12,14 @@ import CalendlyInline from "@components/CalendlyInline";
 export const metadata: Metadata = {
   title: "Contact & Schedule a Tour | Sun City Summerlin | Dr. Jan Duffy",
   description:
-    "Contact Dr. Jan Duffy to schedule a tour of Sun City Summerlin, Las Vegas' premier 55+ community. Call (702) 222-1964 or book online.",
+    "Contact Dr. Jan Duffy to schedule a tour of Sun City Summerlin, Las Vegas' premier 55+ community. Call (702) 718-0042 or book online.",
   alternates: {
     canonical: "https://www.suncityvegas.com/contact",
   },
   openGraph: {
     title: "Contact & Schedule a Tour | Sun City Summerlin | Dr. Jan Duffy",
     description:
-      "Schedule a tour of Sun City Summerlin, Las Vegas' premier 55+ community. Call (702) 222-1964.",
+      "Schedule a tour of Sun City Summerlin, Las Vegas' premier 55+ community. Call (702) 718-0042.",
     url: "https://www.suncityvegas.com/contact",
     siteName: "Sun City Summerlin Homes for Sale | Dr. Jan Duffy",
     locale: "en_US",
@@ -254,10 +254,10 @@ export default function ContactPage() {
                             Phone
                           </h3>
                           <a
-                            href="tel:7022221964"
+                            href="tel:7027180042"
                             className="text-[#2D2A26] hover:text-[#8B5E3C] transition-colors text-lg"
                           >
-                            (702) 222-1964
+                            (702) 718-0042
                           </a>
                           <p className="text-sm text-gray-500 mt-1">
                             Call or text anytime
@@ -340,11 +340,11 @@ export default function ContactPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
-                  href="tel:7022221964"
+                  href="tel:7027180042"
                   className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#8B5E3C] text-white rounded-md font-semibold hover:bg-[#8B5E3C]/90 transition-colors"
                 >
                   <Phone className="w-5 h-5" />
-                  Call (702) 222-1964
+                  Call (702) 718-0042
                 </a>
                 <ScheduleTour variant="accent" size="lg" />
               </div>

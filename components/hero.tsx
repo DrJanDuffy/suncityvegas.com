@@ -61,8 +61,8 @@ export default function Hero() {
             </Button>
           </div>
           <div className="mt-8 text-sm text-gray-200 drop-shadow-[0_1px_2px_rgba(0,0,0,0.7)]">
-            <a href="tel:+17027180043" className="hover:text-[#D4AF37] transition-colors">
-              Call Dr. Jan Duffy: (702) 718-0043
+            <a href="tel:7027180042" className="hover:text-[#D4AF37] transition-colors">
+              Call Dr. Jan Duffy: (702) 718-0042
             </a>
           </div>
         </div>

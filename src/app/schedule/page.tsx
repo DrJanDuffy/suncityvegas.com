@@ -71,10 +71,10 @@ export default function SchedulePage() {
                   <Phone className="w-10 h-10 text-[#8B5E3C] mx-auto mb-3" />
                   <h3 className="font-semibold text-[#8B5E3C] mb-2">Questions?</h3>
                   <a
-                    href="tel:+17027180043"
+                    href="tel:7027180042"
                     className="text-[#D4AF37] hover:text-[#8B5E3C] transition-colors"
                   >
-                    (702) 718-0043
+                    (702) 718-0042
                   </a>
                 </div>
               </div>
@@ -113,11 +113,11 @@ export default function SchedulePage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
-                  href="tel:+17027180043"
+                  href="tel:7027180042"
                   className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#8B5E3C] text-white rounded-md font-semibold hover:bg-[#8B5E3C]/90 transition-colors"
                 >
                   <Phone className="w-5 h-5" />
-                  Call (702) 718-0043
+                  Call (702) 718-0042
                 </a>
                 <a
                   href="mailto:jan@drjanduffy.com"

@@ -34,6 +34,13 @@ const exploreCards = [
     image: '/images/about/dr-jan-duffy.jpg',
   },
   {
+    title: 'Contact & Schedule',
+    description: 'Schedule a tour or get in touch with Dr. Jan Duffy',
+    href: '/contact',
+    icon: Phone,
+    image: '/images/amenities/resort-pool.jpeg',
+  },
+  {
     title: 'FAQ',
     description: 'Get answers about Sun City Summerlin living',
     href: '/faq',

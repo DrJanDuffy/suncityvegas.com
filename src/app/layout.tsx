@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     template: "%s | Sun City Summerlin | Dr. Jan Duffy",
   },
   description:
-    "Find your dream 55+ retirement home in Sun City Summerlin, Las Vegas. With over 25 years of experience in active adult communities, Dr. Jan Duffy has helped countless retirees discover the perfect home. Sun City Summerlin offers world-class amenities—golf, fitness, pools, 80+ clubs. Call (702) 718-0043.",
+    "Find your dream 55+ retirement home in Sun City Summerlin, Las Vegas. With over 25 years of experience in active adult communities, Dr. Jan Duffy has helped countless retirees discover the perfect home. Sun City Summerlin offers world-class amenities—golf, fitness, pools, 80+ clubs. Call (702) 718-0042.",
   keywords: [
     "Sun City Summerlin",
     "Sun City Summerlin homes for sale",
@@ -66,11 +66,11 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://www.suncityvegas.com",
+    url: "https://www.suncityvegas.com/",
     siteName: "Sun City Summerlin 55+ Real Estate | Homes by Dr. Jan Duffy",
     title: "Sun City Summerlin 55+ Real Estate | Homes by Dr. Jan Duffy",
     description:
-      "Find your dream 55+ retirement home in Sun City Summerlin, Las Vegas. With over 25 years of experience in active adult communities, Dr. Jan Duffy has helped countless retirees discover the perfect home. Call (702) 718-0043.",
+      "Find your dream 55+ retirement home in Sun City Summerlin, Las Vegas. With over 25 years of experience in active adult communities, Dr. Jan Duffy has helped countless retirees discover the perfect home. Call (702) 718-0042.",
     images: [
       {
         url: "/images/hero/hero-bg.jpg",
@@ -85,7 +85,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Sun City Summerlin 55+ Real Estate | Homes by Dr. Jan Duffy",
     description:
-      "Find your dream 55+ retirement home in Sun City Summerlin. Dr. Jan Duffy—over 25 years in active adult communities. Call (702) 718-0043.",
+      "Find your dream 55+ retirement home in Sun City Summerlin. Dr. Jan Duffy—over 25 years in active adult communities. Call (702) 718-0042.",
     images: ["/images/hero/hero-bg.jpg"],
     creator: "@drjanduffy",
   },
@@ -101,7 +101,11 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://www.suncityvegas.com",
+    // Use trailing slash for root so Google's chosen canonical matches (fixes "Duplicate, Google chose different canonical than user")
+    canonical: "https://www.suncityvegas.com/",
+    languages: {
+      "x-default": "https://www.suncityvegas.com/",
+    },
   },
   verification: {
     // Add Google Search Console verification code here when available
@@ -124,8 +128,8 @@ export default function RootLayout({
     alternateName: ["Sun City Vegas Real Estate", "Homes by Dr. Jan Duffy"],
     description: "Find your dream 55+ retirement home in Sun City Summerlin, Las Vegas. With over 25 years of experience in active adult communities, Dr. Duffy has helped countless retirees discover the perfect home to suit their lifestyle and needs. Sun City Summerlin offers a variety of beautiful options. This vibrant community is designed specifically for active adults, featuring world-class amenities such as golf courses, fitness centers, pools, walking trails, and social clubs. Dr. Duffy provides expert guidance and personalized service every step of the way, ensuring your transition into this exciting new chapter is seamless and stress-free. Start your journey toward a fulfilling and active retirement today!",
     image: "https://www.suncityvegas.com/images/about/dr-jan-duffy.jpg",
-    url: "https://www.suncityvegas.com",
-    telephone: "+1-702-718-0043",
+    url: "https://www.suncityvegas.com/",
+    telephone: "+1-702-718-0042",
     email: "jan@drjanduffy.com",
     foundingDate: "2013-09-20",
     address: {
@@ -285,7 +289,7 @@ export default function RootLayout({
       latitude: "36.2108",
       longitude: "-115.2950",
     },
-    url: "https://www.suncityvegas.com",
+    url: "https://www.suncityvegas.com/",
     image: "https://www.suncityvegas.com/images/hero/hero-bg.jpg",
     amenityFeature: [
       { "@type": "LocationFeatureSpecification", name: "Golf Courses", value: "4" },
